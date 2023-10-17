@@ -3,6 +3,13 @@
   font-weight: 600;
 }
 
+.bodyContainer {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .infoContainer {
   max-width: 600px;
   text-align: left;
@@ -13,6 +20,25 @@
   gap: 0.5em;
   margin-top: 2em;
   max-width: 95%;
+}
+
+.toggleButton {
+  width: 8em;
+}
+
+.dark-mode {
+  background-color: black;
+  color: lightgray;
+}
+
+.dark-mode button,
+.dark-mode a {
+  background-color: salmon;
+  color: black;
+}
+
+.dark-mode .highlight {
+  color: salmon;
 }
 
 @media (max-width: 600px) {

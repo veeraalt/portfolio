@@ -1,6 +1,6 @@
 .iconButton {
-  background-color: #00626d;
-  color: white;
+  background-color: #025a64;
+  color: #f3f3f3;
   font-size: 1em;
   font-weight: 600;
   flex: 1 1;
@@ -11,6 +11,26 @@
   justify-content: center;
   gap: 0.5em;
   padding: 0.4em;
+}
+
+a:focus,
+button:focus {
+  background-color: black;
+}
+
+.dark-mode a:focus,
+.dark-mode button:focus {
+  background-color: #ff709f;
+}
+
+a:hover,
+button:hover {
+  background-color: #024047;
+}
+
+.dark-mode a:hover,
+.dark-mode button:hover {
+  background-color: #fba9a0;
 }
 
 .icon {

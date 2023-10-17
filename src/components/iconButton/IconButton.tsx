@@ -1,11 +1,23 @@
 import React from "react";
+import { FaCircleChevronRight as ArrowIcon } from "react-icons/fa6";
 import "./IconButton.css";
 
-function IconButton({ label, icon }: { label: string; icon: string }) {
+function IconButton({
+  label,
+  src,
+  target,
+  rel,
+}: {
+  label: string;
+  src: string;
+  target?: string;
+  rel?: string;
+}) {
   return (
-    <button className="iconButton">
-      {label} <img className="icon" src={icon} alt="" />
-    </button>
+    <a className="iconButton" href={src} target={target} rel={rel}>
+      {label}
+      <ArrowIcon />
+    </a>
   );
 }
 
