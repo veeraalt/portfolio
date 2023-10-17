@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IconButton from "../iconButton/IconButton";
 import cvFile from "../../assets/cv_veera_alt.pdf";
 import "./LandingPage.css";
 
 function LandingPage() {
-  const [isDarkModeOn, setDarkModeOn] = useState(false);
+  const darkModeSaved = window.localStorage.getItem("dark-mode");
+  const [isDarkModeOn, setDarkModeOn] = useState(
+    darkModeSaved === "true" ? true : false
+  );
+
   const handleDarkModeToggle = () => {
+    if (!isDarkModeOn) {
+      window.localStorage.setItem("dark-mode", "true");
+    } else {
+      window.localStorage.removeItem("dark-mode");
+    }
     setDarkModeOn(!isDarkModeOn);
-    var element = document.body;
-    element.classList.toggle("dark-mode");
   };
+
+  useEffect(() => {
+    if (isDarkModeOn) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDarkModeOn]);
 
   return (
     <div className="bodyContainer">
