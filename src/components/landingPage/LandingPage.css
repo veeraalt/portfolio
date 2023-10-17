@@ -1,0 +1,22 @@
+.highlight {
+  color: #00626d;
+  font-weight: 600;
+}
+
+.infoContainer {
+  max-width: 600px;
+  text-align: left;
+}
+
+.linkContainer {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 2em;
+  max-width: 95%;
+}
+
+@media (max-width: 600px) {
+  .linkContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,19 @@
+.iconButton {
+  background-color: #00626d;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  flex: 1 1;
+  border-radius: 12px;
+  border: 0;
+  min-height: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  text-align: center;
+}
+
+.icon {
+  max-height: 16px;
+}
