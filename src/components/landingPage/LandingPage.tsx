@@ -1,30 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import IconButton from "../iconButton/IconButton";
 import cvFile from "../../assets/cv_veera_alt.pdf";
+import { useColorScheme } from "../../hooks/useColorScheme";
 import "./LandingPage.css";
 
 function LandingPage() {
-  const darkModeSaved = window.localStorage.getItem("dark-mode");
-  const [isDarkModeOn, setDarkModeOn] = useState(
-    darkModeSaved === "true" ? true : false
-  );
-
-  const handleDarkModeToggle = () => {
-    if (!isDarkModeOn) {
-      window.localStorage.setItem("dark-mode", "true");
-    } else {
-      window.localStorage.removeItem("dark-mode");
-    }
-    setDarkModeOn(!isDarkModeOn);
-  };
-
-  useEffect(() => {
-    if (isDarkModeOn) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [isDarkModeOn]);
+  const { isDarkModeOn, handleDarkModeToggle } = useColorScheme();
 
   return (
     <div className="bodyContainer">
