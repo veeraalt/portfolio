@@ -1,3 +1,13 @@
+:root {
+  --black: #131313;
+  --white: #f3f3f3;
+  --turquoise: #025a64;
+  --turquoise-dark: #024047;
+  --peach: #fa8072;
+  --peach-light: #fba9a0;
+  --pink: #ff709f;
+}
+
 * {
   font-family: "Source Code Pro", monospace;
 }
@@ -7,5 +17,43 @@ body {
   padding: 1.5em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f3f3f3;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+body.dark-mode {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+a,
+button {
+  background-color: var(--turquoise);
+  color: var(--white);
+}
+
+a:focus,
+button:focus {
+  background-color: var(--black);
+}
+
+a:hover,
+button:hover {
+  background-color: var(--turquoise-dark);
+}
+
+.dark-mode a,
+.dark-mode button {
+  background-color: var(--peach);
+  color: var(--black);
+}
+
+.dark-mode a:focus,
+.dark-mode button:focus {
+  background-color: var(--pink);
+}
+
+.dark-mode a:hover,
+.dark-mode button:hover {
+  background-color: var(--peach-light);
 }
