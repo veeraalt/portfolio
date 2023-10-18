@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a36719ad.css",
+    "main.js": "/portfolio/static/js/main.1ac100ce.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/cv_veera_alt.pdf": "/portfolio/static/media/cv_veera_alt.1bc0861cebd76fa0d59a.pdf",
+    "index.html": "/portfolio/index.html",
+    "main.a36719ad.css.map": "/portfolio/static/css/main.a36719ad.css.map",
+    "main.1ac100ce.js.map": "/portfolio/static/js/main.1ac100ce.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a36719ad.css",
+    "static/js/main.1ac100ce.js"
+  ]
+}
