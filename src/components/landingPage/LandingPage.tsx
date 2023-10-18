@@ -1,5 +1,6 @@
 import React from "react";
 import IconButton from "../iconButton/IconButton";
+import ToggleButton from "../toggleButton/ToggleButton";
 import cvFile from "../../assets/cv_veera_alt.pdf";
 import { useColorScheme } from "../../hooks/useColorScheme";
 import "./LandingPage.css";
@@ -31,14 +32,12 @@ function LandingPage() {
           <IconButton label="Contact" src="" />
         </div>
       </div>
-      <div className="toggleButtonContainer">
-        <button
-          className="toggleButton iconButton"
-          onClick={handleDarkModeToggle}
-        >
-          {isDarkModeOn ? "Light mode" : "Dark mode"}
-        </button>
-      </div>
+      <ToggleButton
+        onClick={handleDarkModeToggle}
+        value={isDarkModeOn}
+        offText="Light mode"
+        onText="Dark mode"
+      />
     </div>
   );
 }

@@ -32,7 +32,3 @@
 .dark-mode .highlight {
   color: var(--peach);
 }
-
-.toggleButton {
-  width: 8em;
-}

@@ -1,0 +1,35 @@
+.toggleButtonContainer {
+  position: relative;
+  height: 2.3rem;
+  width: 4.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.toggleButton {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  border: 0;
+  background-color: var(--peach);
+}
+
+.toggleButton:before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  left: 0.2rem;
+  top: 0.16rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.toggleButton.left {
+  background-color: var(--grey);
+}
+
+.toggleButton.right:before {
+  transform: translateX(100%);
+}
