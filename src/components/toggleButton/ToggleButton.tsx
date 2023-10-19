@@ -13,15 +13,16 @@ function ToggleButton({
   onText: string;
 }) {
   return (
-    <label>
-      <div className="toggleButtonContainer">
-        <button
-          className={`toggleButton ${value ? "right" : "left"}`}
-          onClick={onClick}
-        ></button>
-      </div>
-      {value ? onText : offText}
-    </label>
+    <div className="toggleButtonContainer">
+      <button
+        className={`toggleButton ${value ? "right" : "left"}`}
+        onClick={onClick}
+        aria-label={value ? onText : offText}
+      ></button>
+      <span className="toggleButtonLabel" aria-hidden="true">
+        {value ? onText : offText}
+      </span>
+    </div>
   );
 }
 
