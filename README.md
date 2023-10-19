@@ -1,5 +1,7 @@
 # Portfolio web app
 
+The app is hosted on on GitHub Pages on: https://veeraalt.github.io/portfolio/.
+
 This is a single-page React app created with [Create React App](https://github.com/facebook/create-react-app) and it uses TypeScript.
 
 ## Getting started
