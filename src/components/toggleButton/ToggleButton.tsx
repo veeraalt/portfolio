@@ -4,24 +4,24 @@ import "./ToggleButton.css";
 function ToggleButton({
   onClick,
   value,
-  offText,
-  onText,
+  offLabel,
+  onLabel,
 }: {
   onClick: () => void;
   value: boolean;
-  offText: string;
-  onText: string;
+  offLabel: string;
+  onLabel: string;
 }) {
   return (
-    <div className="toggleButtonContainer">
-      <button
-        className={`toggleButton ${value ? "right" : "left"}`}
-        onClick={onClick}
-        aria-label={value ? onText : offText}
-      ></button>
-      <span className="toggleButtonLabel" aria-hidden="true">
-        {value ? onText : offText}
-      </span>
+    <div className="toggleContainer">
+      <div className="toggleButtonContainer">
+        <button
+          className={`toggleButton ${value ? "right" : "left"}`}
+          onClick={onClick}
+          aria-label={value ? `Switch to ${offLabel}` : `Switch to ${onLabel}`}
+        ></button>
+      </div>
+      <span aria-hidden="true">{onLabel}</span>
     </div>
   );
 }
