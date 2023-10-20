@@ -23,8 +23,8 @@ function App() {
       <ToggleButton
         onClick={handleDarkModeToggle}
         value={isDarkModeOn}
-        offText="Light mode"
-        onText="Dark mode"
+        offLabel="Light mode"
+        onLabel="Dark mode"
       />
     </main>
   );

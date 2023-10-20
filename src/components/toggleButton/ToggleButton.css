@@ -1,8 +1,13 @@
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
 .toggleButtonContainer {
   position: relative;
   height: 2.3rem;
   width: 4.4rem;
-  margin-bottom: 0.2rem;
 }
 
 .toggleButton {
@@ -12,11 +17,6 @@
   border-radius: 25px;
   border: 0;
   background-color: var(--peach);
-}
-
-.toggleButtonLabel {
-  display: block;
-  width: 6rem;
 }
 
 .toggleButton:before {
