@@ -21,7 +21,7 @@ function LandingView() {
           Projects
           <ArrowIcon />
         </Link>
-        <Link to="/CV" className="redirectLink">
+        <Link to="/cv" className="redirectLink">
           CV
           <ArrowIcon />
         </Link>

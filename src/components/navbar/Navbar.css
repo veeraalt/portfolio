@@ -1,0 +1,43 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 2.7rem;
+  background-color: var(--grey-verylight);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  background-color: var(--grey-verylight);
+  color: var(--black);
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background-color: var(--grey-light);
+  border: 2px solid var(--grey-light);
+}
+
+.navbar a.active {
+  text-decoration: underline;
+}
+
+.dark-mode .navbar {
+  background-color: var(--grey-dark);
+}
+
+.dark-mode .navbar a {
+  background-color: var(--grey-dark);
+  color: var(--white);
+}
+
+.dark-mode .navbar a.active,
+.dark-mode .navbar a:hover {
+  background-color: var(--grey);
+  border: 2px solid var(--grey);
+}
