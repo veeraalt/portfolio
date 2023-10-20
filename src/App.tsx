@@ -10,8 +10,8 @@ import { useColorScheme } from "./hooks/useColorScheme";
 function App() {
   const { isDarkModeOn, handleDarkModeToggle } = useColorScheme();
   return (
-    <main>
-      <BrowserRouter basename="/portfolio">
+    <BrowserRouter basename="/portfolio">
+      <main>
         <Routes>
           <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/" element={<LandingView />} />
@@ -19,14 +19,14 @@ function App() {
           <Route path="/cv" element={<ResumeView />} />
           <Route path="/contact" element={<ContactView />} />
         </Routes>
-      </BrowserRouter>
-      <ToggleButton
-        onClick={handleDarkModeToggle}
-        value={isDarkModeOn}
-        offLabel="Light mode"
-        onLabel="Dark mode"
-      />
-    </main>
+        <ToggleButton
+          onClick={handleDarkModeToggle}
+          value={isDarkModeOn}
+          offLabel="Light mode"
+          onLabel="Dark mode"
+        />
+      </main>
+    </BrowserRouter>
   );
 }
 
