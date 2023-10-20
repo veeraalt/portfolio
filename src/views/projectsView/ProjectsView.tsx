@@ -2,10 +2,10 @@ import React from "react";
 
 function ProjectsView() {
   return (
-    <>
+    <div className="projectContainer">
       <h1>Projects</h1>
       <p>Work in progress, please come back later.</p>
-    </>
+    </div>
   );
 }
 
