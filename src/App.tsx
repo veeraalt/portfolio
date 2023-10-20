@@ -1,13 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import LandingPage from "./components/landingPage/LandingPage";
+import LandingView from "./views/landingView/LandingView";
+import ProjectsView from "./views/projectsView/ProjectsView";
+import ResumeView from "./views/resumeView/ResumeView";
+import ContactView from "./views/contactView/ContactView";
 
 function App() {
   return (
     <BrowserRouter basename="/portfolio">
       <Routes>
         <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingView />} />
+        <Route path="/projects" element={<ProjectsView />} />
+        <Route path="/cv" element={<ResumeView />} />
+        <Route path="/contact" element={<ContactView />} />
       </Routes>
     </BrowserRouter>
   );

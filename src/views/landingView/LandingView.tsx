@@ -1,11 +1,11 @@
 import React from "react";
-import IconButton from "../iconButton/IconButton";
-import ToggleButton from "../toggleButton/ToggleButton";
-import cvFile from "../../assets/cv_veera_alt.pdf";
+import { Link } from "react-router-dom";
+import { FaCircleChevronRight as ArrowIcon } from "react-icons/fa6";
+import ToggleButton from "../../components/toggleButton/ToggleButton";
 import { useColorScheme } from "../../hooks/useColorScheme";
-import "./LandingPage.css";
+import "./LandingView.css";
 
-function LandingPage() {
+function LandingView() {
   const { isDarkModeOn, handleDarkModeToggle } = useColorScheme();
 
   return (
@@ -22,14 +22,18 @@ function LandingPage() {
           responsive websites that work smoothly and are visually engaging.
         </p>
         <div className="linkContainer">
-          <IconButton label="Projects" src="" />
-          <IconButton
-            label="CV"
-            src={cvFile}
-            target="_blank"
-            rel="noreferrer"
-          />
-          <IconButton label="Contact" src="" />
+          <Link to="/projects" className="redirectLink">
+            Projects
+            <ArrowIcon />
+          </Link>
+          <Link to="/CV" className="redirectLink">
+            CV
+            <ArrowIcon />
+          </Link>
+          <Link to="/contact" className="redirectLink">
+            Contact
+            <ArrowIcon />
+          </Link>
         </div>
       </div>
       <ToggleButton
@@ -42,4 +46,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default LandingView;
