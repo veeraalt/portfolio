@@ -4,11 +4,11 @@ import LandingView from "./views/landingView/LandingView";
 import ProjectsView from "./views/projectsView/ProjectsView";
 import ResumeView from "./views/resumeView/ResumeView";
 import ContactView from "./views/contactView/ContactView";
-import ToggleButton from "./components/toggleButton/ToggleButton";
+import { ToggleButton } from "./components/toggleButton/ToggleButton";
 import { Navbar } from "./components/navbar/Navbar";
 import { useColorScheme } from "./hooks/useColorScheme";
 
-function App() {
+const App = () => {
   const { isDarkModeOn, handleDarkModeToggle } = useColorScheme();
   return (
     <BrowserRouter basename="/portfolio">
@@ -30,6 +30,6 @@ function App() {
       </main>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
