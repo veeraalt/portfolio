@@ -25,7 +25,15 @@ export function Navbar() {
       >
         <MenuIcon />
       </button>
-      {menuExpanded && <div>Expanded menu</div>}
+      {menuExpanded && (
+        <div className="menu">
+          <NavLink className="navlink" to="/projects">
+            Projects
+          </NavLink>
+          <NavLink to="/cv">CV</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </div>
+      )}
     </nav>
   );
 }
