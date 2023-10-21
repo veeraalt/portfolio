@@ -5,8 +5,8 @@
 
 .linkContainer {
   display: flex;
-  gap: 0.5em;
-  margin-top: 2em;
+  gap: 0.5rem;
+  margin-top: 2rem;
   max-width: 95%;
 }
 
@@ -18,16 +18,16 @@
 }
 
 .redirectLink {
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
   flex: 1 1;
-  border-radius: 1em;
+  border-radius: 1rem;
   border: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
-  padding: 0.4em;
+  gap: 0.5rem;
+  padding: 0.4rem;
 }
 
 .highlight {

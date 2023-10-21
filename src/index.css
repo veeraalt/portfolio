@@ -1,12 +1,19 @@
 :root {
   --black: #131313;
-  --grey: #8c8c8c;
+  --grey-extraextralight: #dcdcdc;
+  --grey-extralight: #cfcfcf;
+  --grey-light: #9f9f9f;
+  --grey: #494949;
+  --grey-dark: #2a2a2a;
+  --grey-extradark: #212121;
   --white: #f3f3f3;
   --turquoise: #025a64;
   --turquoise-dark: #024047;
   --peach: #fa8072;
   --peach-light: #fba9a0;
-  --pink: #ff709f;
+  --peach-dark: #f15d4b;
+  --button-disabled: #8c8c8c;
+  --button-disabled-dark: #777777;
 }
 
 * {
@@ -15,7 +22,7 @@
 
 body {
   margin: 0;
-  padding: 1.5em;
+  padding: 1.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--white);
@@ -28,7 +35,8 @@ body.dark-mode {
 }
 
 main {
-  height: calc(100vh - 2 * 1.5em);
+  margin-top: 1.2rem;
+  height: calc(100dvh - 2 * 1.5rem - 1.2rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,13 +48,10 @@ button {
   color: var(--white);
 }
 
+a:hover,
+button:hover,
 a:focus,
 button:focus {
-  background-color: var(--black);
-}
-
-a:hover,
-button:hover {
   background-color: var(--turquoise-dark);
 }
 
@@ -56,12 +61,9 @@ button:hover {
   color: var(--black);
 }
 
+.dark-mode a:hover,
+.dark-mode button:hover,
 .dark-mode a:focus,
 .dark-mode button:focus {
-  background-color: var(--pink);
-}
-
-.dark-mode a:hover,
-.dark-mode button:hover {
-  background-color: var(--peach-light);
+  background-color: var(--peach-dark);
 }
