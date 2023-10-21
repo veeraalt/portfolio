@@ -1,7 +1,7 @@
 import React from "react";
 import "./ToggleButton.css";
 
-function ToggleButton({
+export const ToggleButton = ({
   onClick,
   value,
   offLabel,
@@ -11,7 +11,7 @@ function ToggleButton({
   value: boolean;
   offLabel: string;
   onLabel: string;
-}) {
+}) => {
   return (
     <div className="toggleContainer">
       <div className="toggleButtonContainer">
@@ -24,6 +24,4 @@ function ToggleButton({
       <span aria-hidden="true">{onLabel}</span>
     </div>
   );
-}
-
-export default ToggleButton;
+};

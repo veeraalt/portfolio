@@ -4,7 +4,7 @@ import { FaBars as MenuIcon } from "react-icons/fa6";
 import { useOnClickOutsideRefs } from "../../hooks/useOnClickOutsideRefs";
 import "./Navbar.css";
 
-export function Navbar() {
+export const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
@@ -54,4 +54,4 @@ export function Navbar() {
       )}
     </nav>
   );
-}
+};

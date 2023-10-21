@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaCircleChevronRight as ArrowIcon } from "react-icons/fa6";
 import "./LandingView.css";
 
-function LandingView() {
+const LandingView = () => {
   return (
     <div className="infoContainer">
       <h1>Hi!</h1>
@@ -32,6 +32,6 @@ function LandingView() {
       </div>
     </div>
   );
-}
+};
 
 export default LandingView;
