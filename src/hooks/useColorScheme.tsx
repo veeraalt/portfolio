@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 /* Hook to toggle between light and dark modes.
  * Light mode is the default, and dark mode preference is saved to
  * local storage. */
-export function useColorScheme() {
+export const useColorScheme = () => {
   const darkModeSaved = window.localStorage.getItem("dark-mode");
   const [isDarkModeOn, setDarkModeOn] = useState(
     darkModeSaved === "true" ? true : false
@@ -30,4 +30,4 @@ export function useColorScheme() {
     isDarkModeOn,
     handleDarkModeToggle,
   };
-}
+};

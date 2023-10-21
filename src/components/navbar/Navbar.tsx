@@ -1,10 +1,27 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaBars as MenuIcon } from "react-icons/fa6";
+import { useOnClickOutsideRefs } from "../../hooks/useOnClickOutsideRefs";
 import "./Navbar.css";
 
 export function Navbar() {
-  const [menuExpanded, setMenuExpanded] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
+  const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
+
+  const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
+
+  useOnClickOutsideRefs(menuRefs, toggleMobileMenu);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    if (pathname && isMobileMenuOpen) {
+      toggleMobileMenu();
+    }
+  }, [pathname]);
+
   return (
     <nav className="navbar">
       <NavLink className="navlink" to="/">
@@ -18,15 +35,16 @@ export function Navbar() {
         <NavLink to="/contact">Contact</NavLink>
       </div>
       <button
+        ref={mobileMenuButtonRef}
         className="menuButton"
-        onClick={() => setMenuExpanded(!menuExpanded)}
-        aria-expanded={menuExpanded}
+        onClick={toggleMobileMenu}
+        aria-expanded={isMobileMenuOpen}
         aria-label="Menu"
       >
         <MenuIcon />
       </button>
-      {menuExpanded && (
-        <div className="menu">
+      {isMobileMenuOpen && (
+        <div ref={mobileMenuRef} className="menu">
           <NavLink className="navlink" to="/projects">
             Projects
           </NavLink>

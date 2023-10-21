@@ -22,6 +22,7 @@
   background-color: var(--grey-extralight);
   color: var(--black);
   display: inline-block;
+  border: 2px solid var(--grey-extralight);
 }
 
 .navbar a.active,
@@ -60,7 +61,6 @@
   top: calc(2.8rem + 2 * 2px);
   width: 250px;
   background-color: var(--grey-extraextralight);
-  padding: 0.2rem 0;
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
@@ -84,6 +84,7 @@
 
 .dark-mode .navbar a {
   background-color: var(--grey-extradark);
+  border: 2px solid var(--grey-extradark);
   color: var(--white);
 }
 
