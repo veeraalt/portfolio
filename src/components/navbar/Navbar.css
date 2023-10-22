@@ -32,7 +32,7 @@
 .menuButton:focus,
 .menu a:focus {
   background-color: var(--grey-light) !important;
-  border: 2px solid var(--grey-light);
+  border: 2px solid var(--grey-light) !important;
 }
 
 .navbar a.active {
@@ -79,7 +79,7 @@
 .dark-mode .menu,
 .dark-mode .menu a {
   background-color: var(--grey-dark) !important;
-  border: 2px solid var(--grey-dark);
+  border: 2px solid var(--grey-dark) !important;
 }
 
 .dark-mode .navbar a {
@@ -95,7 +95,7 @@
 .dark-mode .menuButton:focus,
 .dark-mode .menu a:focus {
   background-color: var(--grey) !important;
-  border: 2px solid var(--grey);
+  border: 2px solid var(--grey) !important;
 }
 
 .dark-mode .menuButton {
