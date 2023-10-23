@@ -16,7 +16,7 @@ const ResumeView = () => {
     <div className="resumeContainer">
       <h1>CV</h1>
       <Document file={cvFile}>
-        <Page pageNumber={1} />
+        <Page className="resumeFileContainer" pageNumber={1} />
       </Document>
     </div>
   );
