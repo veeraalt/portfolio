@@ -15,9 +15,16 @@
   display: flex;
   width: 280px;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .resumeButton {
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .resumeButtonContainer {
+    flex-direction: column;
+    width: 100%;
+  }
 }

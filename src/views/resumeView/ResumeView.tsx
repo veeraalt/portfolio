@@ -19,6 +19,10 @@ const ResumeView = () => {
   return (
     <div className="resumeContainer">
       <h1>CV</h1>
+      <p>
+        Check out my CV from below. You can also download it or open it in a new
+        tab.
+      </p>
       <div className="resumeButtonContainer">
         <a className="pageLink resumeButton" href={filePath} download>
           Download
