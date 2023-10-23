@@ -8,12 +8,9 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 import "./ResumeView.css";
 
 const ResumeView = () => {
-  /* react-pdf requires a PDF.js worker to work properly, the suggested
-     solution from https://www.npmjs.com/package/react-pdf used here */
-  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    "pdfjs-dist/build/pdf.worker.min.js",
-    import.meta.url
-  ).toString();
+  /* react-pdf requires a PDF.js worker to work properly, an external CDN from
+     https://www.npmjs.com/package/react-pdf used here */
+  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
   const filePath = "/portfolio/cv_veera_alt.pdf";
 
   return (
