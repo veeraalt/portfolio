@@ -1,16 +1,18 @@
 import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import cvFile from "../../assets/cv_veera.pdf";
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 /* Imported to display text content and links correctly */
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "./ResumeView.css";
 
 const ResumeView = () => {
-  /* react-pdf requires a PDF.js worker to work properly, 
-     worker from 'pdfjs-dist' used here */
-  pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+  /* react-pdf requires a PDF.js worker to work properly, the suggested
+     solution from https://www.npmjs.com/package/react-pdf used here */
+  pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    "pdfjs-dist/build/pdf.worker.min.js",
+    import.meta.url
+  ).toString();
 
   return (
     <div className="resumeContainer">

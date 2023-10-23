@@ -36,7 +36,8 @@ body.dark-mode {
 
 main {
   margin-top: 1.5rem;
-  min-height: calc(100dvh - 2 * 1.5rem - 1.5rem);
+  /* 100% device view height - navbar height and padding */
+  min-height: calc(100dvh - 3rem - 1.5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
