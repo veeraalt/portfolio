@@ -10,3 +10,14 @@
   width: 100% !important;
   height: auto !important;
 }
+
+.resumeButtonContainer {
+  display: flex;
+  width: 280px;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.resumeButton {
+  text-decoration: none;
+}
