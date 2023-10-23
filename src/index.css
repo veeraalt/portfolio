@@ -35,35 +35,10 @@ body.dark-mode {
 }
 
 main {
-  margin-top: 1.2rem;
-  height: calc(100dvh - 2 * 1.5rem - 1.2rem);
+  margin-top: 1.5rem;
+  /* 100% device view height - navbar height and padding */
+  min-height: calc(100dvh - 3rem - 1.5rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-a,
-button {
-  background-color: var(--turquoise);
-  color: var(--white);
-}
-
-a:hover,
-button:hover,
-a:focus,
-button:focus {
-  background-color: var(--turquoise-dark);
-}
-
-.dark-mode a,
-.dark-mode button {
-  background-color: var(--peach);
-  color: var(--black);
-}
-
-.dark-mode a:hover,
-.dark-mode button:hover,
-.dark-mode a:focus,
-.dark-mode button:focus {
-  background-color: var(--peach-dark);
 }

@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  z-index: 9999;
 }
 
 .navlinks {
@@ -16,7 +17,8 @@
 }
 
 .navbar a {
-  height: calc(2.8rem - 2 * 0.8rem);
+  /* navbar height - padding and border */
+  height: calc(3rem - 2 * 0.8rem - 2 * 2px);
   padding: 0.8rem 1rem;
   text-decoration: none;
   background-color: var(--grey-extralight);

@@ -17,15 +17,15 @@ const LandingView = () => {
         responsive websites that work smoothly and are visually engaging.
       </p>
       <div className="linkContainer">
-        <Link to="/projects" className="redirectLink">
+        <Link to="/projects" className="pageLink">
           Projects
           <ArrowIcon />
         </Link>
-        <Link to="/cv" className="redirectLink">
+        <Link to="/cv" className="pageLink">
           CV
           <ArrowIcon />
         </Link>
-        <Link to="/contact" className="redirectLink">
+        <Link to="/contact" className="pageLink">
           Contact
           <ArrowIcon />
         </Link>

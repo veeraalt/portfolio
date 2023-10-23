@@ -40,6 +40,12 @@
   transform: translateX(100%);
 }
 
-.toggleButton.left:hover {
+.toggleButton.left:hover,
+.toggleButton.left:focus {
   background-color: var(--button-disabled-dark);
+}
+
+.toggleButton.right:hover,
+.toggleButton.right:focus {
+  background-color: var(--peach-dark);
 }
