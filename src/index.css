@@ -2,7 +2,7 @@
   --black: #131313;
   --grey-extraextralight: #dcdcdc;
   --grey-extralight: #cfcfcf;
-  --grey-light: #9f9f9f;
+  --grey-light: #a3a3a3;
   --grey: #494949;
   --grey-dark: #2a2a2a;
   --grey-extradark: #212121;
@@ -46,4 +46,12 @@ main {
 
 main > div {
   max-width: 800px;
+}
+
+h1 {
+  color: var(--turquoise);
+}
+
+.dark-mode h1 {
+  color: var(--peach);
 }

@@ -1,0 +1,101 @@
+.contactContainer {
+  margin-top: 5%;
+}
+
+.inlineLink {
+  color: var(--turquoise);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 1rem;
+}
+
+.contactFormField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactFormInput {
+  background-color: var(--grey-extraextralight);
+  border: 2px solid var(--grey-light);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: medium;
+}
+
+.contactFormInput:focus,
+.contactFormInput:hover {
+  background-color: var(--grey-extralight);
+}
+
+.contactFormField textarea {
+  min-height: 8rem;
+}
+
+.submitButton:disabled,
+.submitButton:disabled:hover,
+.submitButton:disabled:focus {
+  background-color: var(--button-disabled-dark);
+}
+
+.contactLink {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 3rem;
+  width: 200px;
+  color: var(--black);
+  display: flex;
+  font-size: large;
+}
+
+.contactLink {
+  color: var(--turquoise);
+}
+
+.contactLink:focus,
+.contactLink:hover {
+  color: var(--turquoise-dark);
+}
+
+.alertMessage {
+  border-radius: 25px;
+  padding: 0.7rem;
+}
+
+.alertMessage.success {
+  border: 2px dashed green;
+}
+
+.alertMessage.error {
+  border: 2px dashed red;
+}
+
+.dark-mode .contactFormInput {
+  background-color: var(--grey-light);
+}
+
+.dark-mode .contactLink,
+.dark-mode .inlineLink {
+  color: var(--peach);
+}
+
+.dark-mode .contactLink:focus,
+.dark-mode .contactLink:hover {
+  color: var(--peach-dark);
+}
+
+.dark-mode .contactFormInput:focus,
+.dark-mode .contactFormInput:hover {
+  background-color: var(--grey-extralight);
+}
+
+@media (min-width: 500px) {
+  .submitButton {
+    width: 50%;
+  }
+}

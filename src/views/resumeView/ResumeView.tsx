@@ -11,7 +11,7 @@ const ResumeView = () => {
   /* react-pdf requires a PDF.js worker to work properly, an external CDN from
      https://www.npmjs.com/package/react-pdf used here */
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-  const filePath = "/portfolio/cv_veera_alt.pdf";
+  const filePath = process.env.REACT_APP_CV_URL;
 
   return (
     <div className="resumeContainer">
