@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaBars as MenuIcon } from "react-icons/fa6";
 import { useOnClickOutsideRefs } from "../../hooks/useOnClickOutsideRefs";
+import { ToggleButton } from "../toggleButton/ToggleButton";
+import { useColorScheme } from "../../hooks/useColorScheme";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -9,6 +11,7 @@ export const Navbar = () => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
+  const { isDarkModeOn, handleDarkModeToggle } = useColorScheme();
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
@@ -34,6 +37,14 @@ export const Navbar = () => {
         <NavLink to="/cv">CV</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </div>
+      <div className="darkModeButtonContainer">
+        <ToggleButton
+          onClick={handleDarkModeToggle}
+          value={isDarkModeOn}
+          offLabel="Light mode"
+          onLabel="Dark mode"
+        />
+      </div>
       <button
         ref={mobileMenuButtonRef}
         className="menuButton"
@@ -50,6 +61,17 @@ export const Navbar = () => {
           </NavLink>
           <NavLink to="/cv">CV</NavLink>
           <NavLink to="/contact">Contact</NavLink>
+          <div className="settingsContainer">
+            <p>
+              <strong>Settings</strong>
+            </p>
+            <ToggleButton
+              onClick={handleDarkModeToggle}
+              value={isDarkModeOn}
+              offLabel="Light mode"
+              onLabel="Dark mode"
+            />
+          </div>
         </div>
       )}
     </nav>

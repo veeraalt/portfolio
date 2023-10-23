@@ -41,6 +41,11 @@
   text-decoration: underline;
 }
 
+.darkModeButtonContainer {
+  position: fixed;
+  right: 1rem;
+}
+
 .menuButton {
   position: absolute;
   right: 0;
@@ -66,12 +71,22 @@
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
+  padding: 0.5rem 0.5rem 1rem;
 }
 
 .menu a {
   padding: 1rem;
   background-color: var(--grey-extraextralight);
   border: 2px solid var(--grey-extraextralight);
+}
+
+.settingsContainer {
+  border-top: 3px dashed var(--grey-light);
+  margin: 0.5rem;
+}
+
+.menu .toggleButtonContainer {
+  margin-left: 0.5rem;
 }
 
 .dark-mode .navbar {
@@ -104,8 +119,13 @@
   color: var(--white) !important;
 }
 
+.dark-mode .settingsContainer {
+  border-top: 3px dashed var(--grey);
+}
+
 @media (max-width: 500px) {
-  .navlinks {
+  .navlinks,
+  .darkModeButtonContainer {
     display: none;
   }
 }
@@ -114,5 +134,16 @@
   .menuButton,
   .menu {
     display: none;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 600px) {
+  .navbar,
+  .navlinks {
+    gap: 0.1rem;
+  }
+
+  .navbar a {
+    padding: 0.8rem 0.6rem;
   }
 }

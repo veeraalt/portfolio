@@ -6,7 +6,6 @@
 
 .resumeFileContainer > canvas,
 .resumeFileContainer > div {
-  max-width: 700px;
   width: 100% !important;
   height: auto !important;
 }
