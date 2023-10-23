@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaLinkedin as LinkedinIcon } from "react-icons/fa6";
+import { FaGithub as GithubIcon } from "react-icons/fa6";
 import "./ContactView.css";
 
 const ContactView = () => {
@@ -81,15 +82,26 @@ const ContactView = () => {
           disabled={!!successMessage}
         />
       </form>
-      <a
-        className="contactLink"
-        href={process.env.REACT_APP_LINKEDIN_URL}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <LinkedinIcon size="44" />
-        linkedin
-      </a>
+      <div className="contactLinkContainer">
+        <a
+          className="contactLink"
+          href={process.env.REACT_APP_LINKEDIN_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LinkedinIcon size="44" />
+          linkedin
+        </a>
+        <a
+          className="contactLink"
+          href={process.env.REACT_APP_GITHUB_URL}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon size="44" />
+          github
+        </a>
+      </div>
     </div>
   );
 };

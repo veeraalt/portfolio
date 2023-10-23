@@ -42,12 +42,18 @@
   background-color: var(--button-disabled-dark);
 }
 
+.contactLinkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
 .contactLink {
   display: flex;
   gap: 1rem;
+  padding-right: 1rem;
   align-items: center;
-  margin-top: 3rem;
-  width: 200px;
   color: var(--black);
   display: flex;
   font-size: large;
