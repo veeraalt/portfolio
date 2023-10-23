@@ -2,7 +2,6 @@ import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { FaCircleChevronRight as ArrowIcon } from "react-icons/fa6";
 import { FaDownload as DownloadIcon } from "react-icons/fa6";
-import cvFile from "../../assets/cv_veera.pdf";
 /* Imported to display text content and links correctly */
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
@@ -15,22 +14,19 @@ const ResumeView = () => {
     "pdfjs-dist/build/pdf.worker.min.js",
     import.meta.url
   ).toString();
+  const filePath = "/portfolio/cv_veera_alt.pdf";
 
   return (
     <div className="resumeContainer">
       <h1>CV</h1>
       <div className="resumeButtonContainer">
-        <a
-          className="pageLink resumeButton"
-          href={cvFile}
-          download="cv_veera_alt.pdf"
-        >
+        <a className="pageLink resumeButton" href={filePath} download>
           Download
           <DownloadIcon />
         </a>
         <a
           className="pageLink resumeButton"
-          href={cvFile}
+          href={filePath}
           target="_blank"
           rel="noreferrer"
         >
@@ -38,7 +34,7 @@ const ResumeView = () => {
           <ArrowIcon />
         </a>
       </div>
-      <Document file={cvFile}>
+      <Document file={filePath}>
         <Page className="resumeFileContainer" pageNumber={1} />
       </Document>
     </div>
