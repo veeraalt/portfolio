@@ -67,6 +67,8 @@ const ContactView = () => {
             className="contactFormInput"
             type="text"
             name="name"
+            id="name"
+            autoComplete="name"
             required
           />
         </label>
@@ -76,12 +78,20 @@ const ContactView = () => {
             className="contactFormInput"
             type="email"
             name="email"
+            id="email"
+            autoComplete="email"
             required
           />
         </label>
         <label className="contactFormField">
           Message *
-          <textarea className="contactFormInput" name="message" required />
+          <textarea
+            className="contactFormInput"
+            name="message"
+            id="message"
+            autoComplete="off"
+            required
+          />
         </label>
 
         {alertMessageType && (
@@ -113,6 +123,7 @@ const ContactView = () => {
           disabled={alertMessageType === "success"}
         />
       </form>
+
       <div className="contactLinkContainer">
         <a
           className="contactLink"
