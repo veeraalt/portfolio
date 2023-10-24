@@ -9,7 +9,7 @@
 .contactForm {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 420px;
   gap: 1rem;
 }
 
@@ -36,6 +36,10 @@
   min-height: 8rem;
 }
 
+.submitButton {
+  min-height: 2.1rem;
+}
+
 .submitButton:disabled,
 .submitButton:disabled:hover,
 .submitButton:disabled:focus {
@@ -53,13 +57,9 @@
   display: flex;
   gap: 1rem;
   padding-right: 1rem;
-  align-items: center;
-  color: var(--black);
   display: flex;
   font-size: large;
-}
-
-.contactLink {
+  align-items: center;
   color: var(--turquoise);
 }
 
@@ -69,16 +69,8 @@
 }
 
 .alertMessage {
+  max-width: calc(420px - 2 * 16px) !important;
   border-radius: 25px;
-  padding: 0.7rem;
-}
-
-.alertMessage.success {
-  border: 2px dashed green;
-}
-
-.alertMessage.error {
-  border: 2px dashed red;
 }
 
 .dark-mode .contactFormInput {
@@ -100,8 +92,14 @@
   background-color: var(--grey-extralight);
 }
 
-@media (min-width: 500px) {
+@media (max-width: 500px) {
+  .alertMessage {
+    max-width: calc(100% - 2 * 16px) !important;
+  }
+}
+
+@media (min-width: 501px) {
   .submitButton {
-    width: 50%;
+    width: 40%;
   }
 }

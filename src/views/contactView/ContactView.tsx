@@ -2,16 +2,28 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaLinkedin as LinkedinIcon } from "react-icons/fa6";
 import { FaGithub as GithubIcon } from "react-icons/fa6";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  Box,
+  CloseButton,
+} from "@chakra-ui/react";
 import "./ContactView.css";
 
 const ContactView = () => {
   const contactForm = useRef<HTMLFormElement>(null);
-  const [successMessage, setSuccessMessage] = useState<string>("");
-  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [alertMessageType, setAlertMessageType] = useState<
+    "success" | "error" | undefined
+  >(undefined);
+  const errorMessage =
+    "Something went wrong. Please try again later or contact me via Linkedin.";
+  const successMessage = "The email was sent successfully.";
 
+  /* Send email when form is submitted correctly */
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    setErrorMessage("");
-    setSuccessMessage("");
+    setAlertMessageType(undefined);
     e.preventDefault();
 
     contactForm.current &&
@@ -24,15 +36,14 @@ const ContactView = () => {
         )
         .then(
           (result: Response) => {
-            setSuccessMessage("The email was sent successfully.");
+            setAlertMessageType("success");
           },
           (error: Error) => {
-            setErrorMessage(
-              "Something went wrong. Please try again later or contact me via Linkedin."
-            );
+            setAlertMessageType("error");
           }
         );
   };
+
   return (
     <div className="contactContainer">
       <h1>Contact me</h1>
@@ -48,6 +59,7 @@ const ContactView = () => {
         </a>
         .
       </p>
+
       <form ref={contactForm} className="contactForm" onSubmit={sendEmail}>
         <label className="contactFormField">
           Name *
@@ -71,15 +83,34 @@ const ContactView = () => {
           Message *
           <textarea className="contactFormInput" name="message" required />
         </label>
-        {successMessage && (
-          <p className="alertMessage success">{successMessage}</p>
+
+        {alertMessageType && (
+          <Alert className="alertMessage" status={alertMessageType}>
+            <AlertIcon />
+            <Box>
+              <AlertTitle>
+                {alertMessageType === "error" ? "Bummer!" : "Success!"}
+              </AlertTitle>
+              <AlertDescription>
+                {alertMessageType === "error" ? errorMessage : successMessage}
+              </AlertDescription>
+            </Box>
+            <CloseButton
+              alignSelf="flex-start"
+              position="relative"
+              border="none"
+              right={-1}
+              top={-1}
+              onClick={() => setAlertMessageType(undefined)}
+            />
+          </Alert>
         )}
-        {errorMessage && <p className="alertMessage error">{errorMessage}</p>}
+
         <input
           className="pageLink submitButton"
           type="submit"
-          value="Send message"
-          disabled={!!successMessage}
+          value="Send"
+          disabled={alertMessageType === "success"}
         />
       </form>
       <div className="contactLinkContainer">
