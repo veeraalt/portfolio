@@ -55,3 +55,9 @@ h1 {
 .dark-mode h1 {
   color: var(--peach);
 }
+
+/* Hides all the chakra notification landmarks since they are not used,
+   workaround to fix 'landmarks should be unique' accessibility issue */
+.chakra-portal {
+  display: none;
+}
