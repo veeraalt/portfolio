@@ -21,7 +21,7 @@
 
 .contactFormInput {
   background-color: var(--grey-extraextralight);
-  border: 2px solid var(--grey-light);
+  border: 2px solid var(--grey-extralight);
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-size: medium;
@@ -74,7 +74,7 @@
 }
 
 .dark-mode .contactFormInput {
-  background-color: var(--grey-light);
+  background-color: var(--grey-extralight);
 }
 
 .dark-mode .contactLink,
@@ -89,7 +89,17 @@
 
 .dark-mode .contactFormInput:focus,
 .dark-mode .contactFormInput:hover {
-  background-color: var(--grey-extralight);
+  background-color: var(--grey-light);
+  border: 2px solid var(--grey-light);
+}
+
+.dark-mode .alertMessage {
+  color: var(--black);
+  filter: brightness(90%) saturate(150%);
+}
+
+.dark-mode .alertMessage span {
+  filter: saturate(70%);
 }
 
 @media (max-width: 500px) {
