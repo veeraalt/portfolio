@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "years": [
+      {
+        "start": "2022",
+        "end": "Present"
+      },
+      { "start": "2021" }
+    ],
+    "title": "Software Developer / Consultant",
+    "company": "Futurice",
+    "details": "Lorem ipsum",
+    "keywords": [
+      "react",
+      "typescript",
+      "accessibility",
+      "node.js",
+      "python",
+      "azure"
+    ]
+  },
+  {
+    "id": 2,
+    "years": [
+      {
+        "start": "2020",
+        "end": "2021"
+      }
+    ],
+    "title": "Teaching Assistant",
+    "company": "Aalto University",
+    "details": "Lorem ipsum",
+    "keywords": ["teaching", "programming", "database"]
+  },
+  {
+    "id": 3,
+    "years": [
+      {
+        "start": "2020"
+      }
+    ],
+    "title": "Software Developer / Research Assistant",
+    "company": "Aalto University",
+    "details": "Lorem ipsum",
+    "keywords": ["react", "python", "django"]
+  },
+  {
+    "id": 4,
+    "years": [
+      {
+        "start": "2018",
+        "end": "2020"
+      }
+    ],
+    "title": "Junior Back-end Developer",
+    "company": "PeopleCloud",
+    "details": "Lorem ipsum",
+    "keywords": ["php", "laravel", "postgresql"]
+  }
+]

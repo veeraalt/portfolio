@@ -1,0 +1,75 @@
+.projectContainer {
+  margin-top: 5%;
+}
+
+.projectCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.projectCard {
+  display: flex;
+  gap: 0.7rem;
+  padding: 1rem;
+  background-color: var(--grey-extraextralight);
+  border-radius: 25px;
+}
+
+.projectYear {
+  flex: 1;
+  color: var(--grey);
+}
+
+.projectDetails {
+  flex: 4;
+}
+
+.projectDetails > h3,
+.projectDetails > h4,
+.projectYear > p {
+  margin: 0;
+}
+
+.projectDetails > h4 {
+  color: var(--grey);
+  margin-top: 0.5rem;
+}
+
+.projectTagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectTag {
+  background-color: var(--turquoise);
+  color: var(--white);
+  border-radius: 25px;
+  padding: 0.1rem 0.5rem;
+}
+
+.dark-mode .projectCard {
+  background-color: var(--grey-extradark);
+}
+
+.dark-mode .projectYear {
+  color: var(--grey-light);
+}
+
+.dark-mode .projectDetails > h4 {
+  color: var(--grey-extralight);
+}
+
+.dark-mode .projectTag {
+  background-color: var(--peach-light);
+  color: var(--black);
+}
+
+@media (max-width: 500px) {
+  .projectCard {
+    flex-direction: column;
+  }
+}
