@@ -39,6 +39,12 @@
   text-decoration: underline;
 }
 
+.projectNameHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .projectCompany {
   display: flex;
   align-items: center;

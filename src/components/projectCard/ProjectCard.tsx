@@ -4,33 +4,50 @@ import { Project } from "../../interfaces/common";
 import { Tag } from "../tag/Tag";
 import "./ProjectCard.css";
 
-export const ProjectCard = ({ project }: { project: Project }) => {
+export const ProjectCard = ({
+  project: { name, title, years, website, company, details, keywords },
+}: {
+  project: Project;
+}) => {
   return (
     <div className="projectCard">
       <ul className="projectYear">
-        {project.years.map((year) => (
+        {years.map((year) => (
           <li key={year.start}>
             {year.end ? `${year.start} - ${year.end}` : year.start}
           </li>
         ))}
       </ul>
       <div className="projectDetails">
-        <a
-          className="projectHeader"
-          href={project.website}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`${project.company} website`}
-        >
-          <h3>{project.title}</h3>
-          <div className="projectCompany">
-            <h4>{project.company}</h4>
+        {name ? (
+          <a
+            className="projectHeader projectNameHeader"
+            href={website}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${name} website`}
+          >
+            <h3>{name}</h3>
             <ExternalLinkIcon size="14px" aria-hidden="true" />
-          </div>
-        </a>
-        <p>{project.details}</p>
+          </a>
+        ) : (
+          <a
+            className="projectHeader"
+            href={website}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${company} website`}
+          >
+            <h3>{title}</h3>
+            <div className="projectCompany">
+              <h4>{company}</h4>
+              <ExternalLinkIcon size="14px" aria-hidden="true" />
+            </div>
+          </a>
+        )}
+        <p>{details}</p>
         <ul className="projectTagList">
-          {project.keywords.map((keyword) => (
+          {keywords.map((keyword) => (
             <li key={keyword}>
               <Tag label={keyword} />
             </li>
