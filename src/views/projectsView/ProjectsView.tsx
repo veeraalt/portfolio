@@ -1,22 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FaArrowUpRightFromSquare as ExternalLinkIcon } from "react-icons/fa6";
-import { Tag } from "../../components/tag/Tag";
+import { Project } from "../../interfaces/common";
+import { ProjectCard } from "../../components/projectCard/ProjectCard";
 import "./ProjectsView.css";
-
-interface Year {
-  start: string;
-  end?: string;
-}
-
-interface Project {
-  id: number;
-  years: Array<Year>;
-  title: string;
-  company: string;
-  website: string;
-  details: string;
-  keywords: Array<string>;
-}
 
 const ProjectsView = () => {
   const [projectList, setProjectList] = useState<Array<Project> | undefined>(
@@ -35,38 +20,9 @@ const ProjectsView = () => {
       <h2>Work experience</h2>
       {projectList && (
         <ul className="projectCardList">
-          {projectList.map((project: Project) => (
-            <li className="projectCard" key={project.id}>
-              <div className="projectYear">
-                {project.years.map((year) => (
-                  <p key={year.start}>
-                    {year.end ? `${year.start} - ${year.end}` : year.start}
-                  </p>
-                ))}
-              </div>
-              <div className="projectDetails">
-                <a
-                  className="projectHeader"
-                  href={project.website}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${project.company} website`}
-                >
-                  <h3>{project.title}</h3>
-                  <div className="projectCompany">
-                    <h4>{project.company}</h4>
-                    <ExternalLinkIcon size="14px" aria-hidden="true" />
-                  </div>
-                </a>
-                <p>{project.details}</p>
-                <ul className="projectTagList">
-                  {project.keywords.map((keyword) => (
-                    <li key={keyword}>
-                      <Tag label={keyword} />
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          {projectList.map((project) => (
+            <li key={project.id}>
+              <ProjectCard project={project} />
             </li>
           ))}
         </ul>
