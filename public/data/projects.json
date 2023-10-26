@@ -10,7 +10,7 @@
     ],
     "title": "Software Developer / Consultant",
     "company": "Futurice",
-    "details": "Lorem ipsum",
+    "details": "Developing high-quality tested code in multiple projects using modern web technologies. Projects include a public sector client with high accessibility and usability standards, where I renewed the whole frontend UI with a designer for an outdated website.",
     "keywords": [
       "react",
       "typescript",
@@ -30,7 +30,7 @@
     ],
     "title": "Teaching Assistant",
     "company": "Aalto University",
-    "details": "Lorem ipsum",
+    "details": "Assisting university students with programming exercises, and grading exercise and exam submissions. Worked in courses titled 'Programming 1' and 'Databases'.",
     "keywords": ["teaching", "programming", "database"]
   },
   {
@@ -40,9 +40,9 @@
         "start": "2020"
       }
     ],
-    "title": "Software Developer / Research Assistant",
+    "title": "Software Developer",
     "company": "Aalto University",
-    "details": "Lorem ipsum",
+    "details": "Developing maintainable frontend and backend code for a website used in courses of the second largest university in Finland.",
     "keywords": ["react", "python", "django"]
   },
   {
@@ -55,7 +55,7 @@
     ],
     "title": "Junior Back-end Developer",
     "company": "PeopleCloud",
-    "details": "Lorem ipsum",
+    "details": "Creating backend and databases from scratch for an IT staffing website as part of a small developer team.",
     "keywords": ["php", "laravel", "postgresql"]
   }
 ]

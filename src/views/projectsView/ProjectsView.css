@@ -12,6 +12,7 @@
 
 .projectCard {
   display: flex;
+  flex-direction: column;
   gap: 0.7rem;
   padding: 1rem;
   background-color: var(--grey-extraextralight);
@@ -59,8 +60,12 @@
   color: var(--grey-extralight);
 }
 
-@media (max-width: 500px) {
+@media (min-width: 501px) {
   .projectCard {
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .projectDetails {
+    margin-right: 1rem;
   }
 }
