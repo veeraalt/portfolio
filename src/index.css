@@ -25,6 +25,8 @@
   --color-postgresql: #336791;
   --color-sql: #f29111;
   --color-docker: #0db7ed;
+  --color-css: #2b6bc0;
+  --color-html: #e34f26;
 }
 
 * {

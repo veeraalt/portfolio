@@ -17,7 +17,9 @@
       "node.js",
       "python",
       "azure",
-      "accessibility"
+      "accessibility",
+      "css",
+      "html"
     ]
   },
   {
@@ -43,7 +45,7 @@
     "title": "Software Developer",
     "company": "Aalto University",
     "details": "Developing maintainable frontend and backend code for a website used in courses of the second largest university in Finland.",
-    "keywords": ["react", "python", "django"]
+    "keywords": ["react", "python", "django", "css", "html"]
   },
   {
     "id": 4,
@@ -56,6 +58,6 @@
     "title": "Junior Back-end Developer",
     "company": "PeopleCloud",
     "details": "Creating backend and databases from scratch for an IT staffing website as part of a small developer team.",
-    "keywords": ["php", "laravel", "postgresql", "sql", "docker"]
+    "keywords": ["php", "laravel", "postgresql", "sql", "docker", "html"]
   }
 ]
