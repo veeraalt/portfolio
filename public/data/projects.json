@@ -31,7 +31,7 @@
     "title": "Teaching Assistant",
     "company": "Aalto University",
     "details": "Assisting university students with programming exercises, and grading exercise and exam submissions. Worked in courses titled 'Programming 1' and 'Databases'.",
-    "keywords": ["teaching", "programming", "database"]
+    "keywords": ["teaching", "programming", "sql"]
   },
   {
     "id": 3,
@@ -56,6 +56,6 @@
     "title": "Junior Back-end Developer",
     "company": "PeopleCloud",
     "details": "Creating backend and databases from scratch for an IT staffing website as part of a small developer team.",
-    "keywords": ["php", "laravel", "postgresql"]
+    "keywords": ["php", "laravel", "postgresql", "sql", "docker"]
   }
 ]

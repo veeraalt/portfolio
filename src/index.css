@@ -23,6 +23,8 @@
   --color-php: #8892be;
   --color-laravel: #f55247;
   --color-postgresql: #336791;
+  --color-sql: #f29111;
+  --color-docker: #0db7ed;
 }
 
 * {
