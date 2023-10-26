@@ -32,7 +32,7 @@
 }
 
 .toggleButton.left {
-  background-color: var(--button-disabled);
+  background-color: var(--color-button-disabled);
 }
 
 .toggleButton.right:before {
@@ -41,7 +41,7 @@
 
 .toggleButton.left:hover,
 .toggleButton.left:focus {
-  background-color: var(--button-disabled-dark);
+  background-color: var(--color-button-disabled-dark);
 }
 
 .toggleButton.right:hover,

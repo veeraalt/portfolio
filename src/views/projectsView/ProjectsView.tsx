@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Tag } from "../../components/tag/Tag";
 import "./ProjectsView.css";
 
 interface Year {
@@ -45,13 +46,13 @@ const ProjectsView = () => {
                 <h3>{project.title}</h3>
                 <h4>{project.company}</h4>
                 <p>{project.details}</p>
-                <div className="projectTagList">
+                <ul className="projectTagList">
                   {project.keywords.map((keyword) => (
-                    <div className="projectTag" key={keyword}>
-                      {keyword}
-                    </div>
+                    <li key={keyword}>
+                      <Tag label={keyword} />
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </li>
           ))}
