@@ -62,7 +62,7 @@
       "title": "Junior Back-end Developer",
       "company": "PeopleCloud",
       "website": "https://peoplecloudpro.com",
-      "details": "Creating backend and databases from scratch for an IT staffing website as part of a small developer team.",
+      "details": "Creating backend and databases from scratch for an IT staffing website as a part of a small developer team.",
       "keywords": ["php", "laravel", "postgresql", "sql", "docker", "html"]
     }
   ],
@@ -76,7 +76,7 @@
       ],
       "name": "Portfolio",
       "website": "https://veeraalt.github.io/portfolio/",
-      "details": "Portfolio site created for displaying and improving skills. Built in React using TypeScript and deployed on Github Pages. 100% designed and developed by yours truly.",
+      "details": "Portfolio site created for displaying and improving web developer skills. Built with React using TypeScript and deployed on Github Pages. 100% designed and developed by yours truly.",
       "keywords": ["react", "typescript", "chakra", "css", "html"]
     }
   ]
