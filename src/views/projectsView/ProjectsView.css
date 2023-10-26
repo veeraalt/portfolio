@@ -1,0 +1,12 @@
+.projectContainer {
+  margin-top: 5%;
+}
+
+.projectCardList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
