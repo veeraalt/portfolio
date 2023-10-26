@@ -9,12 +9,13 @@ const LandingView = () => {
       <h1>Hi!</h1>
       <h2>My name is Veera Alt.</h2>
       <p>
-        I'm a fullstack developer with emphasis on frontend. I'm also interested
-        in design and accessibility.
+        I'm a <span className="highlight">fullstack developer</span> with
+        emphasis on <span className="highlight">frontend</span>.
       </p>
       <p>
-        My driving <span className="highlight">passion</span> is to build
-        responsive websites that work smoothly and are visually engaging.
+        I'm also interested in design and accessibility. My driving passion is
+        to build responsive websites that work smoothly and are visually
+        engaging.
       </p>
       <div className="linkContainer">
         <Link to="/projects" className="pageLink">
