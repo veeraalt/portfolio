@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaArrowUpRightFromSquare as ExternalLinkIcon } from "react-icons/fa6";
 import { Tag } from "../../components/tag/Tag";
 import "./ProjectsView.css";
 
@@ -12,6 +13,7 @@ interface Project {
   years: Array<Year>;
   title: string;
   company: string;
+  website: string;
   details: string;
   keywords: Array<string>;
 }
@@ -43,8 +45,19 @@ const ProjectsView = () => {
                 ))}
               </div>
               <div className="projectDetails">
-                <h3>{project.title}</h3>
-                <h4>{project.company}</h4>
+                <a
+                  className="projectHeader"
+                  href={project.website}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${project.company} website`}
+                >
+                  <h3>{project.title}</h3>
+                  <div className="projectCompany">
+                    <h4>{project.company}</h4>
+                    <ExternalLinkIcon size="14px" aria-hidden="true" />
+                  </div>
+                </a>
                 <p>{project.details}</p>
                 <ul className="projectTagList">
                   {project.keywords.map((keyword) => (

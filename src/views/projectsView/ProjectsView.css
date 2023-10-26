@@ -28,13 +28,29 @@
   flex: 4;
 }
 
-.projectDetails > h3,
-.projectDetails > h4,
+.projectDetails h3,
+.projectDetails h4,
 .projectYear > p {
   margin: 0;
 }
 
-.projectDetails > h4 {
+.projectHeader {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--black);
+  padding: 0.2rem 0.8rem;
+  margin: -0.2rem -0.8rem;
+}
+
+.projectHeader:hover,
+.projectHeader:focus {
+  text-decoration: underline;
+}
+
+.projectCompany {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--grey);
   margin-top: 0.5rem;
 }
@@ -56,7 +72,11 @@
   color: var(--grey-light);
 }
 
-.dark-mode .projectDetails > h4 {
+.dark-mode .projectHeader {
+  color: var(--white);
+}
+
+.dark-mode .projectCompany {
   color: var(--grey-extralight);
 }
 

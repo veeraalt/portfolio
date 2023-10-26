@@ -10,6 +10,7 @@
     ],
     "title": "Software Developer / Consultant",
     "company": "Futurice",
+    "website": "https://futurice.com",
     "details": "Developing high-quality tested code in multiple projects using modern web technologies. Projects include a public sector client with high accessibility and usability standards, where I renewed the whole frontend UI with a designer for an outdated website.",
     "keywords": [
       "react",
@@ -32,6 +33,7 @@
     ],
     "title": "Teaching Assistant",
     "company": "Aalto University",
+    "website": "https://www.aalto.fi",
     "details": "Assisting university students with programming exercises, and grading exercise and exam submissions. Worked in courses titled 'Programming 1' and 'Databases'.",
     "keywords": ["teaching", "programming", "sql"]
   },
@@ -43,7 +45,8 @@
       }
     ],
     "title": "Software Developer",
-    "company": "Aalto University",
+    "company": "Aalto University - A+",
+    "website": "https://plus.cs.aalto.fi",
     "details": "Developing maintainable frontend and backend code for a website used in courses of the second largest university in Finland.",
     "keywords": ["react", "python", "django", "css", "html"]
   },
@@ -57,6 +60,7 @@
     ],
     "title": "Junior Back-end Developer",
     "company": "PeopleCloud",
+    "website": "https://peoplecloudpro.com",
     "details": "Creating backend and databases from scratch for an IT staffing website as part of a small developer team.",
     "keywords": ["php", "laravel", "postgresql", "sql", "docker", "html"]
   }
