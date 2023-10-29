@@ -1,33 +1,41 @@
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
-/* Hook to toggle between light and dark modes.
- * Light mode is the default, and dark mode preference is saved to
- * local storage. */
+/* Hook to decide whether light or dark mode should be used and to toggle between them.
+ * It first checks if preference is saved to local storage (that is, if the user has visited
+ * the website before with the same browser and used the dark mode switch. If no preference
+ * was found that way, system preference is checked. If no preference was found from
+ * system settings, light mode is used. */
 export const useColorScheme = () => {
-  const darkModeSaved = window.localStorage.getItem("dark-mode");
-  const [isDarkModeOn, setDarkModeOn] = useState(
-    darkModeSaved === "true" ? true : false
+  /* Check system preference */
+  const systemPrefersDark = useMediaQuery({
+    query: "(prefers-color-scheme: dark)",
+  });
+  /* Ensure we're in a browser environment and check preference saved in local storage */
+  const darkPreferenceSaved =
+    typeof window !== "undefined"
+      ? window.localStorage.getItem("data-theme")
+      : null;
+
+  const [isDark, setIsDark] = useState<boolean | null>(
+    darkPreferenceSaved === null ? null : darkPreferenceSaved === "dark"
   );
+  const value = isDark === null ? systemPrefersDark : isDark;
 
   const handleDarkModeToggle = () => {
-    if (!isDarkModeOn) {
-      window.localStorage.setItem("dark-mode", "true");
-    } else {
-      window.localStorage.removeItem("dark-mode");
-    }
-    setDarkModeOn(!isDarkModeOn);
+    const newValue = !value;
+    if (typeof window !== "undefined")
+      window.localStorage.setItem("data-theme", newValue ? "dark" : "light");
+    setIsDark(!value);
   };
 
   useEffect(() => {
-    if (isDarkModeOn) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [isDarkModeOn]);
+    if (typeof document !== "undefined")
+      document.body.setAttribute("data-theme", value ? "dark" : "light");
+  }, [value]);
 
   return {
-    isDarkModeOn,
+    isDark: value,
     handleDarkModeToggle,
   };
 };

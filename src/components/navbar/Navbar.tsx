@@ -11,7 +11,7 @@ export const Navbar = () => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
-  const { isDarkModeOn, handleDarkModeToggle } = useColorScheme();
+  const { isDark, handleDarkModeToggle } = useColorScheme();
 
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
@@ -40,7 +40,7 @@ export const Navbar = () => {
       <div className="darkModeButtonContainer">
         <ToggleButton
           onClick={handleDarkModeToggle}
-          value={isDarkModeOn}
+          value={isDark}
           offLabel="Light mode"
           onLabel="Dark mode"
         />
@@ -67,7 +67,7 @@ export const Navbar = () => {
             </p>
             <ToggleButton
               onClick={handleDarkModeToggle}
-              value={isDarkModeOn}
+              value={isDark}
               offLabel="Light mode"
               onLabel="Dark mode"
             />

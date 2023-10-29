@@ -27,30 +27,16 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.4rem;
-  background-color: var(--turquoise);
-  color: var(--white);
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
 }
 
 .pageLink:hover,
 .pageLink:focus {
-  background-color: var(--turquoise-dark);
-}
-
-.dark-mode .pageLink {
-  background-color: var(--peach);
-  color: var(--black);
-}
-
-.dark-mode .pageLink:hover,
-.dark-mode .pageLink:focus {
-  background-color: var(--peach-dark);
+  background-color: var(--focus-color);
 }
 
 .highlight {
-  color: var(--turquoise);
+  color: var(--primary-color);
   font-weight: 600;
-}
-
-.dark-mode .highlight {
-  color: var(--peach);
 }

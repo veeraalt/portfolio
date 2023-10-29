@@ -16,7 +16,7 @@
   height: 100%;
   border-radius: 25px;
   border: 0;
-  background-color: var(--peach);
+  background-color: var(--primary-color);
 }
 
 .toggleButton:before {
@@ -32,7 +32,7 @@
 }
 
 .toggleButton.left {
-  background-color: var(--color-button-disabled);
+  background-color: var(--button-disabled);
 }
 
 .toggleButton.right:before {
@@ -41,10 +41,10 @@
 
 .toggleButton.left:hover,
 .toggleButton.left:focus {
-  background-color: var(--color-button-disabled-dark);
+  background-color: var(--button-disabled-dark);
 }
 
 .toggleButton.right:hover,
 .toggleButton.right:focus {
-  background-color: var(--peach-dark);
+  background-color: var(--focus-color);
 }

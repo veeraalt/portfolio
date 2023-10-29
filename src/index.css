@@ -1,19 +1,24 @@
+/* Colors */
 :root {
-  --black: #131313;
+  --white: #f3f3f3;
   --grey-extraextralight: #dcdcdc;
   --grey-extralight: #cfcfcf;
   --grey-light: #a3a3a3;
   --grey: #494949;
   --grey-dark: #2a2a2a;
   --grey-extradark: #212121;
-  --white: #f3f3f3;
+  --black: #131313;
   --turquoise: #025a64;
   --turquoise-dark: #024047;
   --peach: #fa8072;
   --peach-light: #fba9a0;
   --peach-dark: #f15d4b;
-  --color-button-disabled: #8c8c8c;
-  --color-button-disabled-dark: #777777;
+  --button-disabled: #8c8c8c;
+  --button-disabled-dark: #777777;
+}
+
+/* Brand colors */
+:root {
   --color-react: #00d8ff;
   --color-typescript: #2966a8;
   --color-python: #ffde57;
@@ -30,8 +35,41 @@
   --color-chakra: #379795;
 }
 
-* {
-  font-family: "Source Code Pro", monospace;
+/* Layout */
+:root {
+  --background-color: var(--white);
+  --text-color: var(--black);
+  --primary-color: var(--turquoise);
+  --focus-color: var(--turquoise-dark);
+  --button-text-color: var(--white);
+  --navbar-background: var(--grey-extralight);
+  --navbar-menu: var(--grey-extraextralight);
+  --navbar-accent: var(--grey-extralight);
+  --navbar-focus: var(--grey-light);
+  --card-subheader: var(--grey);
+  --card-sidetext: var(--grey);
+  --form-background-color: var(--grey-extralight);
+  --form-focus-color: var(--grey-extraextralight);
+}
+
+/* Layout for dark color scheme */
+[data-theme="dark"] {
+  --background-color: var(--black);
+  --text-color: var(--white);
+  --primary-color: var(--peach);
+  --focus-color: var(--peach-dark);
+  --button-text-color: var(--black);
+  --navbar-background: var(--grey-extradark);
+  --navbar-menu: var(--grey-dark);
+  --navbar-accent: var(--grey);
+  --navbar-focus: var(--grey);
+  --card-subheader: var(--grey-extralight);
+  --card-sidetext: var(--grey-light);
+}
+
+/* Fonts */
+:root {
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -39,13 +77,16 @@ body {
   padding: 1.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-body.dark-mode {
-  background-color: var(--black);
-  color: var(--white);
+h1 {
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--text-color);
 }
 
 main {
@@ -60,18 +101,4 @@ main {
 
 main > div {
   max-width: 800px;
-}
-
-h1 {
-  color: var(--turquoise);
-}
-
-.dark-mode h1 {
-  color: var(--peach);
-}
-
-/* Hides all the chakra notification landmarks since they are not used,
-   workaround to fix 'landmarks should be unique' accessibility issue */
-.chakra-portal {
-  display: none;
 }
