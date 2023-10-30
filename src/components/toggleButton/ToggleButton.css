@@ -6,8 +6,8 @@
 
 .toggleButtonContainer {
   position: relative;
-  height: 2.3rem;
-  width: 4.4rem;
+  height: 2rem;
+  width: 3.6rem;
 }
 
 .toggleButton {
@@ -16,23 +16,23 @@
   height: 100%;
   border-radius: 25px;
   border: 0;
-  background-color: var(--peach);
+  background-color: var(--primary-color);
 }
 
 .toggleButton:before {
   content: "";
   position: absolute;
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   left: 0.2rem;
-  top: 0.16rem;
+  top: 0.2rem;
   border-radius: 50%;
   background-color: var(--white);
   transition: all 0.3s ease;
 }
 
 .toggleButton.left {
-  background-color: var(--color-button-disabled);
+  background-color: var(--button-disabled);
 }
 
 .toggleButton.right:before {
@@ -41,10 +41,10 @@
 
 .toggleButton.left:hover,
 .toggleButton.left:focus {
-  background-color: var(--color-button-disabled-dark);
+  background-color: var(--button-disabled-dark);
 }
 
 .toggleButton.right:hover,
 .toggleButton.right:focus {
-  background-color: var(--peach-dark);
+  background-color: var(--focus-color);
 }

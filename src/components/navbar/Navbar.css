@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   height: 3rem;
-  background-color: var(--grey-extralight);
+  background-color: var(--navbar-background);
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -23,9 +23,9 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  background-color: var(--grey-extralight);
-  border: 2px solid var(--grey-extralight);
-  color: var(--black);
+  background-color: var(--navbar-background);
+  border: 2px solid var(--navbar-background);
+  color: var(--text-color);
 }
 
 .navbar a.active,
@@ -34,8 +34,8 @@
 .menuButton:hover,
 .menuButton:focus,
 .menu a:focus {
-  background-color: var(--grey-light) !important;
-  border: 2px solid var(--grey-light) !important;
+  background-color: var(--navbar-focus) !important;
+  border: 2px solid var(--navbar-focus) !important;
 }
 
 .navbar a.active {
@@ -51,7 +51,7 @@
   position: absolute;
   right: 0;
   background-color: transparent !important;
-  color: var(--black) !important;
+  color: var(--text-color) !important;
   border: 0;
   height: 100%;
   width: 44px;
@@ -68,7 +68,7 @@
   right: 0;
   top: calc(2.8rem + 2 * 2px);
   width: 250px;
-  background-color: var(--grey-extraextralight);
+  background-color: var(--navbar-menu);
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
@@ -77,51 +77,17 @@
 
 .menu a {
   padding: 1rem;
-  background-color: var(--grey-extraextralight);
-  border: 2px solid var(--grey-extraextralight);
+  background-color: var(--navbar-menu);
+  border: 2px solid var(--navbar-menu);
 }
 
 .settingsContainer {
-  border-top: 3px dashed var(--grey-light);
+  border-top: 3px dashed var(--navbar-accent);
   margin: 0.5rem;
 }
 
 .menu .toggleButtonContainer {
   margin-left: 0.5rem;
-}
-
-.dark-mode .navbar {
-  background-color: var(--grey-extradark);
-}
-
-.dark-mode .menu,
-.dark-mode .menu a {
-  background-color: var(--grey-dark) !important;
-  border: 2px solid var(--grey-dark) !important;
-}
-
-.dark-mode .navbar a {
-  background-color: var(--grey-extradark);
-  border: 2px solid var(--grey-extradark);
-  color: var(--white);
-}
-
-.dark-mode .navbar a.active,
-.dark-mode .navbar a:hover,
-.dark-mode .navbar a:focus,
-.dark-mode .menuButton:hover,
-.dark-mode .menuButton:focus,
-.dark-mode .menu a:focus {
-  background-color: var(--grey) !important;
-  border: 2px solid var(--grey) !important;
-}
-
-.dark-mode .menuButton {
-  color: var(--white) !important;
-}
-
-.dark-mode .settingsContainer {
-  border-top: 3px dashed var(--grey);
 }
 
 @media (max-width: 500px) {

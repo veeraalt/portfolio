@@ -3,7 +3,7 @@
 }
 
 .inlineLink {
-  color: var(--turquoise);
+  color: var(--primary-color);
 }
 
 .contactLinkContainer {
@@ -20,20 +20,10 @@
   display: flex;
   font-size: large;
   align-items: center;
-  color: var(--turquoise);
+  color: var(--primary-color);
 }
 
 .contactLink:focus,
 .contactLink:hover {
-  color: var(--turquoise-dark);
-}
-
-.dark-mode .contactLink,
-.dark-mode .inlineLink {
-  color: var(--peach);
-}
-
-.dark-mode .contactLink:focus,
-.dark-mode .contactLink:hover {
-  color: var(--peach-dark);
+  color: var(--focus-color);
 }

@@ -77,7 +77,7 @@
       "name": "Portfolio",
       "website": "https://veeraalt.github.io/portfolio/",
       "details": "Portfolio site created for displaying and improving web developer skills. Built with React using TypeScript and deployed on Github Pages. 100% designed and developed by yours truly.",
-      "keywords": ["react", "typescript", "chakra", "css", "html"]
+      "keywords": ["react", "typescript", "material ui", "css", "html"]
     }
   ]
 }

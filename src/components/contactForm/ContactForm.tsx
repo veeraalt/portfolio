@@ -1,49 +1,60 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-  Box,
-  CloseButton,
-} from "@chakra-ui/react";
+import Alert from "@mui/material/Alert";
+import { ContactFormData } from "../../interfaces/common";
 import "./ContactForm.css";
 
 const ContactForm = () => {
-  const contactForm = useRef<HTMLFormElement>(null);
-  const [alertMessageType, setAlertMessageType] = useState<
-    "success" | "error" | undefined
-  >(undefined);
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [alertMessage, setAlertMessage] = useState<string | null>(null);
+  const [alertType, setAlertType] = useState<"success" | "error" | null>(null);
   const errorMessage =
     "Something went wrong. Please try again later or contact me via Linkedin.";
   const successMessage = "The email was sent successfully.";
 
+  const resetAlert = () => {
+    setAlertMessage(null);
+    setAlertType(null);
+  };
+
   /* Send email when form is submitted correctly */
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setAlertMessageType(undefined);
+    resetAlert();
 
-    contactForm.current &&
-      emailjs
-        .sendForm(
-          process.env.REACT_APP_MAIL_SERVICE_ID,
-          process.env.REACT_APP_MAIL_TEMPLATE_ID,
-          contactForm.current,
-          process.env.REACT_APP_MAIL_PUBLIC_KEY
-        )
-        .then(
-          (result: Response) => {
-            setAlertMessageType("success");
-          },
-          (error: Error) => {
-            setAlertMessageType("error");
-          }
-        );
+    emailjs
+      .send(
+        process.env.REACT_APP_MAIL_SERVICE_ID,
+        process.env.REACT_APP_MAIL_TEMPLATE_ID,
+        formData,
+        process.env.REACT_APP_MAIL_PUBLIC_KEY
+      )
+      .then(
+        (result: Response) => {
+          setAlertMessage(successMessage);
+          setAlertType("success");
+        },
+        (error: Error) => {
+          setAlertMessage(errorMessage);
+          setAlertType("error");
+        }
+      );
+  };
+
+  /* Handler to update form data */
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   return (
-    <form ref={contactForm} className="contactForm" onSubmit={sendEmail}>
+    <form className="contactForm" onSubmit={sendEmail}>
       <label className="contactFormField">
         Name *
         <input
@@ -51,6 +62,8 @@ const ContactForm = () => {
           type="text"
           name="name"
           id="name"
+          value={formData.name}
+          onChange={handleInputChange}
           autoComplete="name"
           required
         />
@@ -62,6 +75,8 @@ const ContactForm = () => {
           type="email"
           name="email"
           id="email"
+          value={formData.email}
+          onChange={handleInputChange}
           autoComplete="email"
           required
         />
@@ -72,30 +87,21 @@ const ContactForm = () => {
           className="contactFormInput"
           name="message"
           id="message"
+          value={formData.message}
+          onChange={handleInputChange}
           autoComplete="off"
           required
         />
       </label>
 
-      {alertMessageType && (
-        <Alert className="alertMessage" status={alertMessageType}>
-          <AlertIcon />
-          <Box>
-            <AlertTitle>
-              {alertMessageType === "error" ? "Bummer!" : "Success!"}
-            </AlertTitle>
-            <AlertDescription>
-              {alertMessageType === "error" ? errorMessage : successMessage}
-            </AlertDescription>
-          </Box>
-          <CloseButton
-            alignSelf="flex-start"
-            position="relative"
-            border="none"
-            right={-1}
-            top={-1}
-            onClick={() => setAlertMessageType(undefined)}
-          />
+      {alertType && (
+        <Alert
+          className="alertMessage"
+          severity={alertType}
+          variant="filled"
+          onClose={resetAlert}
+        >
+          {alertMessage}
         </Alert>
       )}
 
@@ -103,7 +109,7 @@ const ContactForm = () => {
         className="pageLink submitButton"
         type="submit"
         value="Send"
-        disabled={alertMessageType === "success"}
+        disabled={alertType === "success"}
       />
     </form>
   );

@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 0.7rem;
   padding: 1rem 1.2rem;
-  background-color: var(--grey-extraextralight);
+  background-color: var(--navbar-background);
   border-radius: 25px;
 }
 
@@ -16,7 +16,7 @@
 
 .projectYear {
   flex: 1;
-  color: var(--grey);
+  color: var(--card-sidetext);
 }
 
 .projectDetails {
@@ -31,7 +31,6 @@
 .projectHeader {
   text-decoration: none;
   display: inline-block;
-  color: var(--black);
 }
 
 .projectHeader:hover,
@@ -49,7 +48,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--grey);
+  color: var(--card-subheader);
   margin-top: 0.5rem;
 }
 
@@ -57,22 +56,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-}
-
-.dark-mode .projectCard {
-  background-color: var(--grey-extradark);
-}
-
-.dark-mode .projectYear {
-  color: var(--grey-light);
-}
-
-.dark-mode .projectHeader {
-  color: var(--white);
-}
-
-.dark-mode .projectCompany {
-  color: var(--grey-extralight);
 }
 
 @media (min-width: 501px) {
