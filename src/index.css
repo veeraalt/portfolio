@@ -1,4 +1,4 @@
-/* Colors */
+/* App colors */
 :root {
   --white: #f3f3f3;
   --grey-extraextralight: #dcdcdc;
@@ -35,7 +35,7 @@
   --color-material: #409aff;
 }
 
-/* Layout */
+/* Layout colors */
 :root {
   --background-color: var(--white);
   --text-color: var(--black);
@@ -52,7 +52,7 @@
   --form-focus-color: var(--grey-extraextralight);
 }
 
-/* Layout for dark color scheme */
+/* Layout colors for dark color scheme */
 [data-theme="dark"] {
   --background-color: var(--black);
   --text-color: var(--white);
@@ -65,6 +65,20 @@
   --navbar-focus: var(--grey);
   --card-subheader: var(--grey-extralight);
   --card-sidetext: var(--grey-light);
+}
+
+/* Layout */
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 2rem;
+  --spacing-xl: 3rem;
+  /* 100% device view height - navbar height, padding and margin */
+  --viewheight: calc(100dvh - var(--spacing-xl) - 3 * var(--spacing-l));
+  /* 100% device view width - padding */
+  --viewwidth: calc(100dvw - 2 * var(--spacing-l));
+  --max-content-width: 800px;
 }
 
 /* Fonts */
@@ -80,7 +94,7 @@ input {
 
 body {
   margin: 0;
-  padding: 1.5rem;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
@@ -96,15 +110,22 @@ a {
 }
 
 main {
-  margin-top: 1.5rem;
-  /* 100% device view height - navbar height and padding */
-  min-height: calc(100dvh - 3rem - 1.5rem);
+  min-height: var(--viewheight);
+  padding: var(--spacing-l);
+  margin: var(--spacing-xl) 0 var(--spacing-l);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 main > div {
-  max-width: 800px;
+  height: 100%;
+  width: calc(var(--max-content-width) - 2 * var(--spacing-l));
+}
+
+@media (max-width: 800px) {
+  main > div {
+    max-width: var(--viewwidth);
+  }
 }

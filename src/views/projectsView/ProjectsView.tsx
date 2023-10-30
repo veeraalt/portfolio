@@ -39,7 +39,7 @@ const ProjectsView = () => {
     <div className="projectContainer">
       <h1>Projects</h1>
       {!projectList ? (
-        <p>No projects found.</p>
+        <p>Loading projects...</p>
       ) : (
         <>
           {projectList.other &&
