@@ -7,6 +7,13 @@ This is a single-page React app created with [Create React App](https://github.c
 ## Getting started
 
 You can run this app locally by following these steps:
+
 - Clone this repository
 - Run `npm install` to install the dependencies
 - Run `npm start` to start the app in `localhost:3000` in the browser
+
+## Styling
+
+Pure CSS is mostly used for styling.
+
+[Material UI](https://mui.com/) is also used to ensure the accessibility of more complex components, such as alerts that pop up when the contact form is submitted.

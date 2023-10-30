@@ -4,8 +4,9 @@ import isDarkColor from "../../helpers/isDarkColor";
 const getTagProperties = (
   label: string
 ): { tagColor: string; textColor: string } => {
-  /* Take extensions such as ".js" off the label */
-  const trimmedLabel = label.split(".")[0].trim().toLowerCase();
+  /* Take extensions such as ".js" off the label, and in the case of labels containing
+   * spaces, only take the first part in consideration when deciding the color */
+  const trimmedLabel = label.split(".")[0].split(" ")[0].trim().toLowerCase();
   const computedStyle = getComputedStyle(document.documentElement);
 
   /* Use existing color if found from css, otherwise use default grey */

@@ -32,7 +32,7 @@
   --color-docker: #0db7ed;
   --color-css: #2b6bc0;
   --color-html: #e34f26;
-  --color-chakra: #379795;
+  --color-material: #409aff;
 }
 
 /* Layout */
@@ -70,6 +70,12 @@
 /* Fonts */
 :root {
   font-family: "Montserrat", sans-serif;
+}
+
+textarea,
+input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem !important;
 }
 
 body {
