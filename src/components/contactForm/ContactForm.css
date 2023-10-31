@@ -42,7 +42,7 @@
 .alertMessage {
   border-radius: 10px !important;
   margin-top: 0.5rem;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: var(--font) !important;
 }
 
 .alertMessage div:first-child {
