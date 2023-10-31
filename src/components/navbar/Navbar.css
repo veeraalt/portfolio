@@ -72,17 +72,14 @@
 .menu {
   display: none;
   position: fixed;
-  right: 0;
-  top: calc(var(--spacing-xl) + 2px);
-  width: 250px;
+  top: var(--spacing-xl);
+  width: calc(100dvw - 2 * var(--spacing-xs));
+  max-height: calc(100% - var(--spacing-xl) - 2 * var(--spacing-s));
+  padding: var(--spacing-s) var(--spacing-xs);
   background-color: var(--navbar-menu);
-  flex-direction: column;
   gap: var(--spacing-xs);
-  padding: var(--spacing-s);
-  border-bottom-left-radius: 25px;
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: calc(90dvh - var(--spacing-xl));
 }
 
 .menu a {
@@ -112,6 +109,7 @@
 
   .menu {
     display: flex;
+    flex-direction: column;
   }
 }
 
