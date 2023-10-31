@@ -30,7 +30,7 @@ export const Tag = ({ label }: { label: string }) => {
         backgroundColor: tagColor,
         color: textColor,
         borderRadius: "25px",
-        padding: "0 0.7rem 0.1rem",
+        padding: "0 0.6rem 0.15rem",
       }}
     >
       {label}

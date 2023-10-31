@@ -5,14 +5,14 @@
 .contactLinkContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 3rem;
+  gap: var(--spacing-l);
+  margin-top: var(--spacing-xl);
 }
 
 .contactLink {
   display: flex;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: var(--spacing-m);
+  padding-right: var(--spacing-m);
   display: flex;
   font-size: large;
   align-items: center;
