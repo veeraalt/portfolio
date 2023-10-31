@@ -6,6 +6,13 @@ import { ToggleButton } from "../toggleButton/ToggleButton";
 import { useColorScheme } from "../../hooks/useColorScheme";
 import "./Navbar.css";
 
+const navigationLinks = [
+  { to: "/", text: "Home" },
+  { to: "/projects", text: "Projects" },
+  { to: "/cv", text: "CV" },
+  { to: "/contact", text: "Contact" },
+];
+
 export const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -31,11 +38,11 @@ export const Navbar = () => {
         Home
       </NavLink>
       <div className="navlinks">
-        <NavLink className="navlink" to="/projects">
-          Projects
-        </NavLink>
-        <NavLink to="/cv">CV</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        {navigationLinks.map((link) => (
+          <NavLink className="navlink" to={link.to} key={link.to}>
+            {link.text}
+          </NavLink>
+        ))}
       </div>
       <div className="darkModeButtonContainer">
         <ToggleButton
@@ -56,11 +63,11 @@ export const Navbar = () => {
       </button>
       {isMobileMenuOpen && (
         <div ref={mobileMenuRef} className="menu">
-          <NavLink className="navlink" to="/projects">
-            Projects
-          </NavLink>
-          <NavLink to="/cv">CV</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          {navigationLinks.map((link) => (
+            <NavLink className="navlink" to={link.to} key={link.to}>
+              {link.text}
+            </NavLink>
+          ))}
           <div className="settingsContainer">
             <p>
               <strong>Settings</strong>
