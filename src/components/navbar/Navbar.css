@@ -3,23 +3,23 @@
   left: 0;
   top: 0;
   right: 0;
-  height: 3rem;
+  height: var(--spacing-xl);
   background-color: var(--navbar-background);
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: var(--spacing-xl);
   z-index: 9999;
 }
 
 .navlinks {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-l);
 }
 
 .navbar a {
   /* navbar height - padding and border */
-  height: calc(3rem - 2 * 0.8rem - 2 * 2px);
-  padding: 0.8rem 1rem;
+  height: calc(var(--spacing-xl) - 2 * var(--spacing-m) - 2 * 2px);
+  padding: var(--spacing-m);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -44,73 +44,75 @@
 
 .darkModeButtonContainer {
   position: fixed;
-  right: 1rem;
+  right: var(--spacing-m);
 }
 
 .menuButton {
+  display: none;
   position: absolute;
   right: 0;
   background-color: transparent !important;
   color: var(--text-color) !important;
   border: 0;
   height: 100%;
-  width: 44px;
+  width: var(--spacing-xl);
 }
 
 .menuButton svg {
-  margin-top: 0.3rem;
-  height: 1.2rem;
-  width: 1.2rem;
+  margin-top: var(--spacing-xs);
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .menu {
+  display: none;
   position: fixed;
   right: 0;
-  top: calc(2.8rem + 2 * 2px);
+  top: var(--spacing-xl);
   width: 250px;
   background-color: var(--navbar-menu);
-  display: flex;
   flex-direction: column;
-  gap: 0.1rem;
-  padding: 0.5rem 0.5rem 1rem;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-s);
+  border-bottom-left-radius: 25px;
 }
 
 .menu a {
-  padding: 1rem;
+  padding: var(--spacing-m);
   background-color: var(--navbar-menu);
   border: 2px solid var(--navbar-menu);
 }
 
 .settingsContainer {
   border-top: 3px dashed var(--navbar-accent);
-  margin: 0.5rem;
+  margin: var(--spacing-s) var(--spacing-s) var(--spacing-m);
 }
 
 .menu .toggleButtonContainer {
-  margin-left: 0.5rem;
+  margin-left: var(--spacing-s);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .navlinks,
   .darkModeButtonContainer {
     display: none;
   }
-}
 
-@media (min-width: 501px) {
-  .menuButton,
+  .menuButton {
+    display: block;
+  }
+
   .menu {
-    display: none;
+    display: flex;
   }
 }
 
-@media (min-width: 501px) and (max-width: 600px) {
-  .navbar,
-  .navlinks {
-    gap: 0.1rem;
+@media (min-width: 601px) and (max-width: 700px) {
+  .navbar {
+    gap: var(--spacing-l);
   }
 
-  .navbar a {
-    padding: 0.8rem 0.7rem;
+  .navlinks {
+    gap: var(--spacing-m);
   }
 }

@@ -1,7 +1,7 @@
 .linkContainer {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 2rem;
+  gap: var(--spacing-s);
+  margin-top: var(--spacing-l);
   max-width: 95%;
 }
 
@@ -13,15 +13,15 @@
 }
 
 .pageLink {
-  font-size: 1rem;
+  font-size: var(--spacing-m);
   font-weight: 600;
   flex: 1 1;
-  border-radius: 1rem;
+  border-radius: var(--spacing-m);
   border: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--spacing-s);
   padding: 0.4rem;
   background-color: var(--primary-color);
   color: var(--button-text-color);
@@ -37,7 +37,7 @@
   font-weight: 600;
 }
 
-@media (min-height: 600px) {
+@media (min-height: 700px) {
   .infoContainer {
     margin-top: 10dvh;
   }

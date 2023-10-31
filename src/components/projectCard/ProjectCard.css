@@ -1,10 +1,10 @@
 .projectCard {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
-  padding: 1rem 1.2rem;
+  gap: var(--spacing-s);
+  padding: var(--spacing-m) 1.2rem;
   background-color: var(--navbar-background);
-  border-radius: 25px;
+  border-radius: var(--spacing-m);
 }
 
 .projectCard ul,
@@ -17,6 +17,10 @@
 .projectYear {
   flex: 1;
   color: var(--card-sidetext);
+}
+
+.projectYear li {
+  margin-bottom: var(--spacing-xs);
 }
 
 .projectDetails {
@@ -41,21 +45,21 @@
 .projectNameHeader {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-s);
 }
 
 .projectCompany {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--spacing-s);
   color: var(--card-subheader);
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-s);
 }
 
 .projectTagList {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: var(--spacing-s);
 }
 
 @media (min-width: 501px) {
@@ -64,6 +68,6 @@
   }
 
   .projectDetails {
-    margin-right: 1rem;
+    margin-right: var(--spacing-m);
   }
 }
