@@ -79,16 +79,17 @@
   /* 100% device view width - padding */
   --viewwidth: calc(100dvw - 2 * var(--spacing-l));
   --max-content-width: 800px;
+  --font: "Inter", "Roboto", sans-serif;
 }
 
 /* Fonts */
 :root {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font);
 }
 
 textarea,
 input {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font);
   font-size: 1rem !important;
 }
 
