@@ -4,13 +4,11 @@ import "./ToggleButton.css";
 export const ToggleButton = ({
   onClick,
   value,
-  offLabel,
-  onLabel,
+  label,
 }: {
   onClick: () => void;
   value: boolean;
-  offLabel: string;
-  onLabel: string;
+  label: string;
 }) => {
   return (
     <div className="toggleContainer">
@@ -18,10 +16,10 @@ export const ToggleButton = ({
         <button
           className={`toggleButton ${value ? "right" : "left"}`}
           onClick={onClick}
-          aria-label={value ? `Switch to ${offLabel}` : `Switch to ${onLabel}`}
+          aria-label={`Dark mode ${value ? "on" : "off"}`}
         ></button>
       </div>
-      <span aria-hidden="true">{onLabel}</span>
+      <span aria-hidden="true">{label}</span>
     </div>
   );
 };

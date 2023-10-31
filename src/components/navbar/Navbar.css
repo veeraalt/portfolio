@@ -5,6 +5,7 @@
   right: 0;
   height: var(--spacing-xl);
   background-color: var(--navbar-background);
+  border-bottom: 2px solid var(--navbar-shadow);
   display: flex;
   align-items: center;
   gap: var(--spacing-xl);
@@ -64,17 +65,24 @@
   width: 1.5rem;
 }
 
+.menu-open {
+  overflow: hidden;
+}
+
 .menu {
   display: none;
   position: fixed;
   right: 0;
-  top: var(--spacing-xl);
+  top: calc(var(--spacing-xl) + 2px);
   width: 250px;
   background-color: var(--navbar-menu);
   flex-direction: column;
   gap: var(--spacing-xs);
   padding: var(--spacing-s);
   border-bottom-left-radius: 25px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(90dvh - var(--spacing-xl));
 }
 
 .menu a {

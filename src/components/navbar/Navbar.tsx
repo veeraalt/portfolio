@@ -7,7 +7,6 @@ import { useColorScheme } from "../../hooks/useColorScheme";
 import "./Navbar.css";
 
 const navigationLinks = [
-  { to: "/", text: "Home" },
   { to: "/projects", text: "Projects" },
   { to: "/cv", text: "CV" },
   { to: "/contact", text: "Contact" },
@@ -20,7 +19,14 @@ export const Navbar = () => {
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
   const { isDark, handleDarkModeToggle } = useColorScheme();
 
-  const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+    if (!isMobileMenuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+  };
 
   useOnClickOutsideRefs(menuRefs, toggleMobileMenu);
 
@@ -48,8 +54,7 @@ export const Navbar = () => {
         <ToggleButton
           onClick={handleDarkModeToggle}
           value={isDark}
-          offLabel="Light mode"
-          onLabel="Dark mode"
+          label="Dark mode"
         />
       </div>
       <button
@@ -57,12 +62,17 @@ export const Navbar = () => {
         className="menuButton"
         onClick={toggleMobileMenu}
         aria-expanded={isMobileMenuOpen}
-        aria-label="Menu"
+        aria-label={`${isMobileMenuOpen ? "Close" : "Open"} menu`}
       >
         <MenuIcon />
       </button>
       {isMobileMenuOpen && (
-        <div ref={mobileMenuRef} className="menu">
+        <div
+          className="menu"
+          ref={mobileMenuRef}
+          role="dialog"
+          aria-label="Menu"
+        >
           {navigationLinks.map((link) => (
             <NavLink className="navlink" to={link.to} key={link.to}>
               {link.text}
@@ -75,8 +85,7 @@ export const Navbar = () => {
             <ToggleButton
               onClick={handleDarkModeToggle}
               value={isDark}
-              offLabel="Light mode"
-              onLabel="Dark mode"
+              label="Dark mode"
             />
           </div>
         </div>
