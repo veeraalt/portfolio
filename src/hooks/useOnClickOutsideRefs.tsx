@@ -1,5 +1,7 @@
 import { RefObject, useEffect } from "react";
 
+/* Hook that detects whether user clicked outside the mobile menu
+ * when it's open, in which case it should close */
 export const useOnClickOutsideRefs = (
   refs: Array<RefObject<HTMLElement>>,
   callback: () => void
