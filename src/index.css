@@ -1,12 +1,13 @@
 /* App colors */
 :root {
   --white: #f3f3f3;
-  --grey-extraextralight: #dcdcdc;
+  --grey-lightest: #dcdcdc;
   --grey-extralight: #cfcfcf;
-  --grey-light: #a3a3a3;
-  --grey: #494949;
-  --grey-dark: #2a2a2a;
-  --grey-extradark: #212121;
+  --grey-light: #bababa;
+  --grey: #a3a3a3;
+  --grey-dark: #494949;
+  --grey-extradark: #2a2a2a;
+  --grey-darkest: #212121;
   --black: #131313;
   --turquoise: #025a64;
   --turquoise-dark: #024047;
@@ -43,13 +44,14 @@
   --focus-color: var(--turquoise-dark);
   --button-text-color: var(--white);
   --navbar-background: var(--grey-extralight);
-  --navbar-menu: var(--grey-extraextralight);
+  --navbar-menu: var(--grey-lightest);
   --navbar-accent: var(--grey-extralight);
-  --navbar-focus: var(--grey-light);
-  --card-subheader: var(--grey);
-  --card-sidetext: var(--grey);
+  --navbar-focus: var(--grey);
+  --navbar-shadow: var(--grey-light);
+  --card-subheader: var(--grey-dark);
+  --card-sidetext: var(--grey-dark);
   --form-background-color: var(--grey-extralight);
-  --form-focus-color: var(--grey-extraextralight);
+  --form-focus-color: var(--grey-lightest);
 }
 
 /* Layout colors for dark color scheme */
@@ -59,12 +61,13 @@
   --primary-color: var(--peach);
   --focus-color: var(--peach-dark);
   --button-text-color: var(--black);
-  --navbar-background: var(--grey-extradark);
-  --navbar-menu: var(--grey-dark);
-  --navbar-accent: var(--grey);
-  --navbar-focus: var(--grey);
+  --navbar-background: var(--grey-darkest);
+  --navbar-menu: var(--grey-extradark);
+  --navbar-accent: var(--grey-dark);
+  --navbar-focus: var(--grey-dark);
+  --navbar-shadow: var(--grey-extradark);
   --card-subheader: var(--grey-extralight);
-  --card-sidetext: var(--grey-light);
+  --card-sidetext: var(--grey);
 }
 
 /* Layout */
@@ -72,12 +75,15 @@
   --spacing-xs: 0.25rem;
   --spacing-s: 0.5rem;
   --spacing-m: 1rem;
+  --spacing-ml: 1.5rem;
   --spacing-l: 2rem;
   --spacing-xl: 3rem;
   /* 100% device view height - navbar height, padding and margin */
-  --viewheight: calc(100dvh - var(--spacing-xl) - 3 * var(--spacing-l));
+  --viewheight: calc(100dvh - 2 * var(--spacing-xl) - var(--spacing-l));
+  --viewheight-mobile: calc(100dvh - 2 * var(--spacing-xl));
   /* 100% device view width - padding */
   --viewwidth: calc(100dvw - 2 * var(--spacing-l));
+  --viewwidth-mobile: calc(100dvw - 2 * var(--spacing-ml));
   --max-content-width: 800px;
   --font: "Inter", "Roboto", sans-serif;
 }
@@ -100,6 +106,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--text-color);
+  height: calc(100dvh - var(--spacing-xl));
 }
 
 h1 {
@@ -113,7 +120,8 @@ a {
 main {
   min-height: var(--viewheight);
   padding: var(--spacing-l);
-  margin: var(--spacing-xl) 0 var(--spacing-l);
+  padding-bottom: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -125,7 +133,18 @@ main > div {
   width: calc(var(--max-content-width) - 2 * var(--spacing-l));
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
+  main {
+    padding-top: 0;
+    min-height: var(--viewheight-mobile);
+  }
+
+  main > div {
+    max-width: var(--viewwidth-mobile);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
   main > div {
     max-width: var(--viewwidth);
   }

@@ -5,10 +5,12 @@ import ProjectsView from "./views/projectsView/ProjectsView";
 import ResumeView from "./views/resumeView/ResumeView";
 import ContactView from "./views/contactView/ContactView";
 import { Navbar } from "./components/navbar/Navbar";
+import { useScrollToTopOnPathChange as ScrollToTop } from "./hooks/useScrollToTopOnPathChange";
 
 const App = () => {
   return (
     <BrowserRouter basename="/portfolio">
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>
