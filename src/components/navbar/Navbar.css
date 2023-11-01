@@ -76,7 +76,8 @@
 }
 
 .menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: calc(var(--spacing-xl) + 2px);
   left: 0;

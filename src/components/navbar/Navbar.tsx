@@ -15,14 +15,14 @@ const navigationLinks = [
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const mobileMenuContainerRef = useRef<HTMLDivElement>(null);
+  const navigationRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
   const { isDark, handleDarkModeToggle } = useColorScheme();
 
   // Trap focus inside mobile menu when it's open
-  useFocusTrap(isMobileMenuOpen, mobileMenuContainerRef);
+  useFocusTrap(isMobileMenuOpen, navigationRef);
 
   const toggleMobileMenu = () => {
     const newMobileMenuState = !isMobileMenuOpen;
@@ -30,8 +30,8 @@ export const Navbar = () => {
     if (newMobileMenuState) {
       // Open the menu
       document.body.style.pointerEvents = "none";
-      if (mobileMenuContainerRef.current) {
-        mobileMenuContainerRef.current.style.pointerEvents = "auto";
+      if (navigationRef.current) {
+        navigationRef.current.style.pointerEvents = "auto";
       }
       document.body.classList.add("menu-open");
     } else {
@@ -74,7 +74,7 @@ export const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navigationRef}>
       <NavLink className="navlink" to="/">
         Home
       </NavLink>
@@ -92,41 +92,39 @@ export const Navbar = () => {
           label="Dark mode"
         />
       </div>
-      <div ref={mobileMenuContainerRef}>
-        <button
-          ref={mobileMenuButtonRef}
-          className="menuButton"
-          onClick={toggleMobileMenu}
-          aria-expanded={isMobileMenuOpen}
-          aria-label={`${isMobileMenuOpen ? "Close" : "Open"} menu`}
+      <button
+        ref={mobileMenuButtonRef}
+        className="menuButton"
+        onClick={toggleMobileMenu}
+        aria-expanded={isMobileMenuOpen}
+        aria-label={`${isMobileMenuOpen ? "Close" : "Open"} menu`}
+      >
+        <MenuIcon />
+      </button>
+      {isMobileMenuOpen && (
+        <div
+          className="menu"
+          ref={mobileMenuRef}
+          role="dialog"
+          aria-label="Menu"
         >
-          <MenuIcon />
-        </button>
-        {isMobileMenuOpen && (
-          <div
-            className="menu"
-            ref={mobileMenuRef}
-            role="dialog"
-            aria-label="Menu"
-          >
-            {navigationLinks.map((link) => (
-              <NavLink className="navlink" to={link.to} key={link.to}>
-                {link.text}
-              </NavLink>
-            ))}
-            <div className="settingsContainer">
-              <p>
-                <strong>Settings</strong>
-              </p>
-              <ToggleButton
-                onClick={handleDarkModeToggle}
-                value={isDark}
-                label="Dark mode"
-              />
-            </div>
+          {navigationLinks.map((link) => (
+            <NavLink className="navlink" to={link.to} key={link.to}>
+              {link.text}
+            </NavLink>
+          ))}
+          <div className="settingsContainer">
+            <p>
+              <strong>Settings</strong>
+            </p>
+            <ToggleButton
+              onClick={handleDarkModeToggle}
+              value={isDark}
+              label="Dark mode"
+            />
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   );
 };
