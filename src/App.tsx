@@ -5,7 +5,7 @@ import ProjectsView from "./views/projectsView/ProjectsView";
 import ResumeView from "./views/resumeView/ResumeView";
 import ContactView from "./views/contactView/ContactView";
 import { Navbar } from "./components/navbar/Navbar";
-import { ScrollToTop } from "./hooks/scrollTopTop";
+import { useScrollToTopOnPathChange as ScrollToTop } from "./hooks/useScrollToTopOnPathChange";
 
 const App = () => {
   return (

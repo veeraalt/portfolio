@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-/* Hook that scrolls to the top of the page when location is changed */
-export const ScrollToTop = () => {
+/* Scroll to the top of the page when location is changed */
+export const useScrollToTopOnPathChange = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {

@@ -79,7 +79,8 @@
   --spacing-l: 2rem;
   --spacing-xl: 3rem;
   /* 100% device view height - navbar height, padding and margin */
-  --viewheight: calc(100dvh - var(--spacing-xl) - 3 * var(--spacing-l));
+  --viewheight: calc(100dvh - 2 * var(--spacing-xl) - var(--spacing-l));
+  --viewheight-mobile: calc(100dvh - 2 * var(--spacing-xl));
   /* 100% device view width - padding */
   --viewwidth: calc(100dvw - 2 * var(--spacing-l));
   --viewwidth-mobile: calc(100dvw - 2 * var(--spacing-ml));
@@ -105,6 +106,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--text-color);
+  height: calc(100dvh - var(--spacing-xl));
 }
 
 h1 {
@@ -118,7 +120,8 @@ a {
 main {
   min-height: var(--viewheight);
   padding: var(--spacing-l);
-  margin: var(--spacing-xl) 0 var(--spacing-ml);
+  padding-bottom: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -130,9 +133,10 @@ main > div {
   width: calc(var(--max-content-width) - 2 * var(--spacing-l));
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   main {
-    padding-top: var(--spacing-s);
+    padding-top: 0;
+    min-height: var(--viewheight-mobile);
   }
 
   main > div {
@@ -140,7 +144,7 @@ main > div {
   }
 }
 
-@media (min-width: 501px) and (max-width: 800px) {
+@media (min-width: 601px) and (max-width: 800px) {
   main > div {
     max-width: var(--viewwidth);
   }

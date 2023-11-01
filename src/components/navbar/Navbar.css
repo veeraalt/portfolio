@@ -49,9 +49,10 @@
 }
 
 .menuButton {
-  display: none;
+  display: block;
   position: absolute;
   right: 0;
+  top: 0;
   background-color: transparent !important;
   color: var(--text-color) !important;
   border: 0;
@@ -69,10 +70,16 @@
   overflow: hidden;
 }
 
+.menu-open main {
+  filter: brightness(50%);
+  background-color: var(--background-color);
+}
+
 .menu {
-  display: none;
+  display: block;
   position: fixed;
-  top: var(--spacing-xl);
+  top: calc(var(--spacing-xl) + 2px);
+  left: 0;
   width: calc(100dvw - 2 * var(--spacing-xs));
   max-height: calc(100% - var(--spacing-xl) - 2 * var(--spacing-s));
   padding: var(--spacing-s) var(--spacing-xs);
@@ -102,14 +109,12 @@
   .darkModeButtonContainer {
     display: none;
   }
+}
 
-  .menuButton {
-    display: block;
-  }
-
+@media (min-width: 601px) {
+  .menuButton,
   .menu {
-    display: flex;
-    flex-direction: column;
+    display: none;
   }
 }
 
