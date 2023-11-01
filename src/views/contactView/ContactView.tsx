@@ -1,22 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaLinkedin as LinkedinIcon } from "react-icons/fa6";
 import { FaGithub as GithubIcon } from "react-icons/fa6";
 import ContactForm from "../../components/contactForm/ContactForm";
 import "./ContactView.css";
 
 const ContactView = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="contactContainer">
-      <h1>Contact me</h1>
+      <h1>{t("contact.title")}</h1>
       <p>
-        Interested in working with me? Shoot me a message here or in{" "}
+        {t("contact.intro")}{" "}
         <a
           className="inlineLink"
           href={process.env.REACT_APP_LINKEDIN_URL}
           target="_blank"
           rel="noreferrer"
         >
-          linkedin
+          {t("contact.linkedin")}
         </a>
         .
       </p>

@@ -1,0 +1,49 @@
+{
+  "common": {
+    "title": "Veera's portfolio",
+    "home": "Home",
+    "projects": "Projects",
+    "cv": "CV",
+    "contact": "Contact",
+    "settings": "Settings",
+    "darkMode": "Dark mode",
+    "open": "Open",
+    "close": "Close",
+    "menu": "Menu",
+    "website": "website",
+    "on": "on",
+    "off": "off"
+  },
+
+  "home": {
+    "hi": "Hi!",
+    "shortIntro": "My name is Veera Alt.",
+    "longIntro1": "I'm a",
+    "longIntro2": "with emphasis on",
+    "longIntro3": "I'm also interested in design and accessibility. My driving passion is to build responsive websites that work smoothly and are visually engaging.",
+    "keyword1": "fullstack developer",
+    "keyword2": "frontend"
+  },
+  "projects": {
+    "personal": "Personal projects",
+    "work": "Work experience"
+  },
+  "cv": {
+    "intro": "Check out my CV from below. You can also download it or open it in a new tab.",
+    "download": "Download",
+    "open": "Open"
+  },
+  "contact": {
+    "title": "Contact me",
+    "intro": "Interested in working with me? Shoot me a message here or in",
+    "linkedin": "linkedin",
+    "form": {
+      "name": "Name",
+      "email": "Email address",
+      "message": "Message",
+      "send": "Send",
+      "successMessage": "Yay! The message was sent successfully.",
+      "errorMessage": "Oh no! Something went wrong. Please try again later or contact me via Linkedin."
+    }
+  }
+}

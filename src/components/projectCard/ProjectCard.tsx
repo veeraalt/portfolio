@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaArrowUpRightFromSquare as ExternalLinkIcon } from "react-icons/fa6";
 import { Project } from "../../interfaces/common";
 import { Tag } from "../tag/Tag";
@@ -9,6 +10,8 @@ export const ProjectCard = ({
 }: {
   project: Project;
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="projectCard">
       <ul className="projectYear">
@@ -25,7 +28,7 @@ export const ProjectCard = ({
             href={website}
             target="_blank"
             rel="noreferrer"
-            aria-label={`${name} website`}
+            aria-label={`${name} ${t("common.website")}`}
           >
             <h3>{name}</h3>
             <ExternalLinkIcon size="14px" aria-hidden="true" />
@@ -36,7 +39,7 @@ export const ProjectCard = ({
             href={website}
             target="_blank"
             rel="noreferrer"
-            aria-label={`${company} website`}
+            aria-label={`${company} ${t("common.website")}`}
           >
             <h3>{title}</h3>
             <div className="projectCompany">

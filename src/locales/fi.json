@@ -1,0 +1,49 @@
+{
+  "common": {
+    "darkMode": "Tumma teema",
+    "home": "Koti",
+    "projects": "Projektit",
+    "cv": "CV",
+    "contact": "Ota yhteyttä",
+    "settings": "Asetukset",
+    "title": "Veeran portfolio",
+    "open": "Avaa",
+    "close": "Sulje",
+    "menu": "Menu",
+    "website": "nettisivu",
+    "on": "päällä",
+    "off": "pois päältä"
+  },
+
+  "home": {
+    "hi": "Hei!",
+    "shortIntro": "Minun nimeni on Veera Alt.",
+    "longIntro1": "Olen",
+    "longIntro2": "joka on keskittynyt",
+    "longIntro3": "Olen myös kiinnostunut nettisivujen suunnittelemisesta ja saavutettavuudesta. Intohimoni on rakentaa responsiivisia nettisivuja jotka toimivat sulavasti ja ovat visuaalisesti näyttäviä.",
+    "keyword1": "fullstack-kehittäjä",
+    "keyword2": "frontendiin"
+  },
+  "projects": {
+    "personal": "Henkilökohtaiset projektit",
+    "work": "Työkokemus"
+  },
+  "cv": {
+    "intro": "Kurkkaa CV:ni alhaalta. Voit myös ladata sen tai avata sen uudessa välilehdessä.",
+    "download": "Lataa",
+    "open": "Avaa"
+  },
+  "contact": {
+    "title": "Ota yhteyttä",
+    "intro": "Kiinnostuitko työskentelemään kanssani? Pistä viestiä tässä tai",
+    "linkedin": "linkedinissä",
+    "form": {
+      "name": "Nimi",
+      "email": "Sähköpostiosoite",
+      "message": "Viesti",
+      "send": "Lähetä",
+      "successMessage": "Jes! Viestisi on lähetetty onnistuneesti.",
+      "errorMessage": "Oi ei! Jokin meni pieleen. Kokeile uudestaan myöhemmin tai ota yhteyttä Linkedinin kautta."
+    }
+  }
+}

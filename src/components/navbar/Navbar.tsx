@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaBars as MenuIcon } from "react-icons/fa6";
 import { useOnClickOutsideRefs } from "../../hooks/useOnClickOutsideRefs";
@@ -7,19 +8,20 @@ import { useColorScheme } from "../../hooks/useColorScheme";
 import { useFocusTrap } from "../../hooks/useFocusTrap";
 import "./Navbar.css";
 
-const navigationLinks = [
-  { to: "/projects", text: "Projects" },
-  { to: "/cv", text: "CV" },
-  { to: "/contact", text: "Contact" },
-];
-
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigationRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
   const { isDark, handleDarkModeToggle } = useColorScheme();
+
+  const navigationLinks = [
+    { to: "/projects", text: t("common.projects") },
+    { to: "/cv", text: t("common.cv") },
+    { to: "/contact", text: t("common.contact") },
+  ];
 
   // Trap focus inside mobile menu when it's open
   useFocusTrap(isMobileMenuOpen, navigationRef);
@@ -76,7 +78,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar" ref={navigationRef}>
       <NavLink className="navlink" to="/">
-        Home
+        {t("common.home")}
       </NavLink>
       <div className="navlinks">
         {navigationLinks.map((link) => (
@@ -89,7 +91,7 @@ export const Navbar = () => {
         <ToggleButton
           onClick={handleDarkModeToggle}
           value={isDark}
-          label="Dark mode"
+          label={t("common.darkMode")}
         />
       </div>
       <button
@@ -97,7 +99,9 @@ export const Navbar = () => {
         className="menuButton"
         onClick={toggleMobileMenu}
         aria-expanded={isMobileMenuOpen}
-        aria-label={`${isMobileMenuOpen ? "Close" : "Open"} menu`}
+        aria-label={`${
+          isMobileMenuOpen ? t("common.close") : t("common.open")
+        } ${t("common.menu")}`}
       >
         <MenuIcon />
       </button>
@@ -106,7 +110,7 @@ export const Navbar = () => {
           className="menu"
           ref={mobileMenuRef}
           role="dialog"
-          aria-label="Menu"
+          aria-label={t("common.menu")}
         >
           {navigationLinks.map((link) => (
             <NavLink className="navlink" to={link.to} key={link.to}>
@@ -115,12 +119,12 @@ export const Navbar = () => {
           ))}
           <div className="settingsContainer">
             <p>
-              <strong>Settings</strong>
+              <strong>{t("common.settings")}</strong>
             </p>
             <ToggleButton
               onClick={handleDarkModeToggle}
               value={isDark}
-              label="Dark mode"
+              label={t("common.darkMode")}
             />
           </div>
         </div>
