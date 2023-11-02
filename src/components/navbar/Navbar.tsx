@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaBars as MenuIcon } from "react-icons/fa6";
+import { NavigationLink } from "../../interfaces/common";
 import { useOnClickOutsideRefs } from "../../hooks/useOnClickOutsideRefs";
-import { ToggleButton } from "../toggleButton/ToggleButton";
 import { useColorScheme } from "../../hooks/useColorScheme";
 import { useFocusTrap } from "../../hooks/useFocusTrap";
+import { ToggleButton } from "../toggleButton/ToggleButton";
 import { LanguageMenu } from "../languageMenu/LanguageMenu";
+import { MobileMenu } from "../mobileMenu/MobileMenu";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -18,7 +20,7 @@ export const Navbar = () => {
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
   const { isDark, handleDarkModeToggle } = useColorScheme();
 
-  const navigationLinks = [
+  const navigationLinks: Array<NavigationLink> = [
     { to: "/projects", text: t("common.projects") },
     { to: "/cv", text: t("common.cv") },
     { to: "/contact", text: t("common.contact") },
@@ -45,6 +47,7 @@ export const Navbar = () => {
     setMobileMenuOpen(newMobileMenuState);
   };
 
+  // Close mobile menu when clicked outside it
   useOnClickOutsideRefs(menuRefs, toggleMobileMenu);
 
   const { pathname } = useLocation();
@@ -79,12 +82,12 @@ export const Navbar = () => {
   return (
     <nav className="navbar" ref={navigationRef}>
       <div>
-        <NavLink className="navlink" to="/">
+        <NavLink className="navLink" to="/">
           {t("common.home")}
         </NavLink>
-        <div className="navlinks">
+        <div className="navLinks">
           {navigationLinks.map((link) => (
-            <NavLink className="navlink" to={link.to} key={link.to}>
+            <NavLink className="navLink" to={link.to} key={link.to}>
               {link.text}
             </NavLink>
           ))}
@@ -96,7 +99,7 @@ export const Navbar = () => {
           <ToggleButton
             onClick={handleDarkModeToggle}
             value={isDark}
-            label={t("common.darkMode")}
+            label={t("settings.theme.dark")}
           />
         </div>
         <button
@@ -111,28 +114,10 @@ export const Navbar = () => {
           <MenuIcon />
         </button>
         {isMobileMenuOpen && (
-          <div
-            className="menu"
-            ref={mobileMenuRef}
-            role="dialog"
-            aria-label={t("common.menu")}
-          >
-            {navigationLinks.map((link) => (
-              <NavLink className="navlink" to={link.to} key={link.to}>
-                {link.text}
-              </NavLink>
-            ))}
-            <div className="settingsContainer">
-              <p>
-                <strong>{t("common.settings")}</strong>
-              </p>
-              <ToggleButton
-                onClick={handleDarkModeToggle}
-                value={isDark}
-                label={t("common.darkMode")}
-              />
-            </div>
-          </div>
+          <MobileMenu
+            navigationLinks={navigationLinks}
+            forwardedRef={mobileMenuRef}
+          />
         )}
       </div>
     </nav>

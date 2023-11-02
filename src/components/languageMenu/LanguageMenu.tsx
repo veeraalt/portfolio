@@ -6,17 +6,14 @@ import { FaLanguage as LanguageIcon } from "react-icons/fa6";
 import { FaAngleDown as ArrowDownIcon } from "react-icons/fa6";
 import { FaAngleUp as ArrowUpIcon } from "react-icons/fa6";
 import { FaCheck as CheckmarkIcon } from "react-icons/fa6";
+import { LanguageSelector } from "../languageSelector/LanguageSelector";
 import "./LanguageMenu.css";
 
 export const LanguageMenu = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const isLanguageMenuOpen = Boolean(anchorEl);
-  const { t, i18n } = useTranslation();
-  const currentLanguage = i18n.language;
-  const options = [
-    { value: "en", label: "English" },
-    { value: "fi", label: "Suomi" },
-  ];
+  const { t } = useTranslation();
+  const { currentLanguage, languages, changeLanguage } = LanguageSelector();
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     isLanguageMenuOpen ? handleClose() : setAnchorEl(event.currentTarget);
@@ -27,7 +24,7 @@ export const LanguageMenu = () => {
   };
 
   const handleLanguageChange = (lang: string) => {
-    i18n.changeLanguage(lang);
+    changeLanguage(lang);
     handleClose();
   };
 
@@ -39,7 +36,7 @@ export const LanguageMenu = () => {
         aria-controls={isLanguageMenuOpen ? "languageMmenu" : undefined}
         aria-haspopup="true"
         aria-expanded={isLanguageMenuOpen ? "true" : undefined}
-        aria-label={t("language.select")}
+        aria-label={t("settings.language.select")}
       >
         <LanguageIcon size="44" className="languageIcon" />
         <span aria-hidden="true">{currentLanguage}</span>
@@ -53,7 +50,7 @@ export const LanguageMenu = () => {
         onClose={handleClose}
         onClick={handleClose}
       >
-        {options.map((option, index) => (
+        {languages.map((option, index) => (
           <MenuItem
             key={index}
             className="languageOption"

@@ -24,3 +24,8 @@ export interface ContactFormData {
   email: string;
   message: string;
 }
+
+export interface NavigationLink {
+  to: string;
+  text: string;
+}

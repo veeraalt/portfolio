@@ -5,7 +5,6 @@
     "projects": "Projektit",
     "cv": "CV",
     "contact": "Ota yhteyttä",
-    "settings": "Asetukset",
     "title": "Veeran portfolio",
     "open": "Avaa",
     "close": "Sulje",
@@ -47,7 +46,15 @@
       "errorMessage": "Oi ei! Jokin meni pieleen. Kokeile uudestaan myöhemmin tai ota yhteyttä Linkedinin kautta."
     }
   },
-  "language": {
-    "select": "Valitse kieli"
+  "settings": {
+    "title": "Asetukset",
+    "language": {
+      "title": "Kieli",
+      "select": "Valitse kieli"
+    },
+    "theme": {
+      "title": "Teema",
+      "dark": "Tumma tila"
+    }
   }
 }

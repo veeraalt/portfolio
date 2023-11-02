@@ -5,8 +5,6 @@
     "projects": "Projects",
     "cv": "CV",
     "contact": "Contact",
-    "settings": "Settings",
-    "darkMode": "Dark mode",
     "open": "Open",
     "close": "Close",
     "menu": "Menu",
@@ -47,7 +45,15 @@
       "errorMessage": "Oh no! Something went wrong. Please try again later or contact me via Linkedin."
     }
   },
-  "language": {
-    "select": "Select language"
+  "settings": {
+    "title": "Settings",
+    "language": {
+      "title": "Language",
+      "select": "Select language"
+    },
+    "theme": {
+      "title": "Theme",
+      "dark": "Dark mode"
+    }
   }
 }

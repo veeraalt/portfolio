@@ -9,7 +9,7 @@ https://gist.github.com/krabs-github/ec56e4f1c12cddf86ae9c551aa9d9e04
 and
 https://stackoverflow.com/a/5624139
 */
-export default function isDarkColor(color: string) {
+export const isDarkColor = (color: string) => {
   // Store the red, green and blue values in separate variables
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
   if (!result) {
@@ -25,4 +25,4 @@ export default function isDarkColor(color: string) {
     // Using the HSP value, determine whether the color is light or dark
     return hsp < 127.5;
   }
-}
+};

@@ -1,13 +1,12 @@
 .languageButton {
   background-color: transparent;
-  border: 2px solid transparent;
+  border: none;
   color: var(--text-color);
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: var(--spacing-s);
   font-size: medium;
-  cursor: pointer;
 }
 
 .languageButton:hover,
@@ -24,7 +23,7 @@
 
 .languageMenu div {
   border-radius: 0;
-  box-shadow: 0px 0px 7px var(--grey);
+  box-shadow: none;
 }
 
 .languageMenu ul {

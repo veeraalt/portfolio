@@ -1,5 +1,5 @@
 import React from "react";
-import isDarkColor from "../../helpers/isDarkColor";
+import { isDarkColor } from "../../helpers/isDarkColor";
 
 const getTagProperties = (
   label: string

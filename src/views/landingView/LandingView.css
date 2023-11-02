@@ -24,7 +24,7 @@
   gap: var(--spacing-s);
   padding: 0.4rem;
   background-color: var(--primary-color);
-  color: var(--button-text-color);
+  color: var(--button-text-color) !important;
 }
 
 .pageLink:hover,

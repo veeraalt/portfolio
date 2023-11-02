@@ -20,12 +20,12 @@
   gap: var(--spacing-l);
 }
 
-.navlinks {
+.navLinks {
   display: flex;
   gap: var(--spacing-m);
 }
 
-.navbar a {
+.navLink {
   /* navbar height - padding and border */
   height: calc(var(--spacing-xl) - 2 * var(--spacing-m) - 2 * 2px);
   padding: var(--spacing-m);
@@ -37,24 +37,31 @@
   color: var(--text-color);
 }
 
-.navbar a.active,
-.navbar a:hover,
-.navbar a:focus,
+.navLink.active,
+.navLink:hover,
+.navLink:focus,
 .menuButton:hover,
-.menuButton:focus,
-.menu a:focus {
+.menuButton:focus {
   background-color: var(--navbar-focus) !important;
   border: 2px solid var(--navbar-focus) !important;
 }
 
-.navbar a.active {
+.navbuttons .toggleContainer {
+  padding: calc(var(--spacing-s) - 1px);
+}
+
+.navbuttons .toggleContainer:hover,
+.navbuttons .toggleContainer:focus {
+  background-color: var(--navbar-focus) !important;
+}
+
+.navLink.active {
   text-decoration: underline;
 }
 
 .navbuttons {
   display: none;
   gap: var(--spacing-s);
-  margin-right: var(--spacing-s);
 }
 
 .menuButton {
@@ -84,61 +91,20 @@
   background-color: var(--background-color);
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: calc(var(--spacing-xl) + 2px);
-  left: 0;
-  width: calc(100dvw - 2 * var(--spacing-xs));
-  max-height: calc(100% - var(--spacing-xl) - 2 * var(--spacing-s));
-  padding: var(--spacing-s) var(--spacing-xs);
-  background-color: var(--navbar-menu);
-  gap: var(--spacing-xs);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.menu a {
-  padding: var(--spacing-m);
-  background-color: var(--navbar-menu);
-  border: 2px solid var(--navbar-menu);
-}
-
-.settingsContainer {
-  border-top: 3px dashed var(--navbar-accent);
-  margin: var(--spacing-s) var(--spacing-s) var(--spacing-m);
-}
-
-.menu .toggleButtonContainer {
-  margin-left: var(--spacing-s);
-}
-
-@media (max-width: 600px) {
-  .navlinks,
+@media (max-width: 800px) {
+  .navLinks,
   .darkModeButtonContainer {
     display: none;
   }
 }
 
-@media (min-width: 601px) {
-  .menuButton,
-  .menu {
+@media (min-width: 801px) {
+  .menuButton {
     display: none;
   }
 
   .navbuttons {
     display: flex;
     align-items: center;
-  }
-}
-
-@media (min-width: 601px) and (max-width: 700px) {
-  .navbar {
-    gap: var(--spacing-l);
-  }
-
-  .navlinks {
-    gap: var(--spacing-m);
   }
 }
