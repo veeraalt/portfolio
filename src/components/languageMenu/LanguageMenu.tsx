@@ -33,9 +33,9 @@ export const LanguageMenu = () => {
       <button
         className="languageButton"
         onClick={handleClick}
-        aria-controls={isLanguageMenuOpen ? "languageMmenu" : undefined}
+        aria-controls="languageMenu"
         aria-haspopup="true"
-        aria-expanded={isLanguageMenuOpen ? "true" : undefined}
+        aria-expanded={isLanguageMenuOpen}
         aria-label={t("settings.language.select")}
       >
         <LanguageIcon size="44" className="languageIcon" />

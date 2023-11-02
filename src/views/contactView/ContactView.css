@@ -1,5 +1,5 @@
 .inlineLink {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 .contactLinkContainer {
@@ -16,7 +16,7 @@
   display: flex;
   font-size: large;
   align-items: center;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 
 .contactLink:focus,

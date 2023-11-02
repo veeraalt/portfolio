@@ -40,27 +40,30 @@ export const MobileMenu = ({
         <hr />
         <div className="languageContainer">
           <FormControl>
-            <FormLabel id="languageGroup" className="languageLabel">
-              {t("settings.language.title")}
-              <LanguageIcon size="28" />
+            <FormLabel>
+              <div className="languageLabel" aria-hidden="true">
+                {t("settings.language.title")}
+                <LanguageIcon size="28" />
+              </div>
+              <RadioGroup
+                className="languageRadioButtonGroup"
+                aria-label={t("settings.language.title")}
+                value={currentLanguage}
+                onChange={(e) => changeLanguage(e.target.value)}
+              >
+                {languages.map((option, index) => (
+                  <FormControlLabel
+                    className="languageRadioButton"
+                    key={index}
+                    value={option.value}
+                    control={<Radio />}
+                    label={option.label}
+                    aria-label={option.label}
+                    checked={currentLanguage === option.value}
+                  />
+                ))}
+              </RadioGroup>
             </FormLabel>
-            <RadioGroup
-              className="languageRadioButtonGroup"
-              aria-labelledby="languageGroup"
-              value={currentLanguage}
-              onChange={(e) => changeLanguage(e.target.value)}
-            >
-              {languages.map((option, index) => (
-                <FormControlLabel
-                  className="languageRadioButton"
-                  key={index}
-                  value={option.value}
-                  control={<Radio />}
-                  label={option.label}
-                  checked={currentLanguage === option.value}
-                />
-              ))}
-            </RadioGroup>
           </FormControl>
         </div>
         <div className="themeContainer">

@@ -3,6 +3,16 @@ import { initReactI18next } from "react-i18next";
 import enTranslation from "./locales/en.json";
 import fiTranslation from "./locales/fi.json";
 
+var lang = "en"; // default language
+
+// Get saved language from local storage
+if (typeof window !== "undefined") {
+  const storedLanguage = window.localStorage.getItem("lang");
+  if (storedLanguage) {
+    lang = storedLanguage;
+  }
+}
+
 i18n.use(initReactI18next).init({
   resources: {
     en: {
@@ -12,7 +22,7 @@ i18n.use(initReactI18next).init({
       translation: fiTranslation,
     },
   },
-  lng: "en", // default language
+  lng: lang,
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

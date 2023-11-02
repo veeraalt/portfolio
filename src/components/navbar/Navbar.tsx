@@ -94,7 +94,7 @@ export const Navbar = () => {
         </div>
       </div>
       <div>
-        <div className="navbuttons">
+        <div className="navButtons">
           <LanguageMenu />
           <ToggleButton
             onClick={handleDarkModeToggle}

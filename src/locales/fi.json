@@ -1,11 +1,10 @@
 {
   "common": {
-    "darkMode": "Tumma teema",
+    "title": "Veeran portfolio",
     "home": "Koti",
     "projects": "Projektit",
     "cv": "CV",
     "contact": "Ota yhteyttä",
-    "title": "Veeran portfolio",
     "open": "Avaa",
     "close": "Sulje",
     "menu": "Menu",
@@ -19,7 +18,7 @@
     "shortIntro": "Minun nimeni on Veera Alt.",
     "longIntro1": "Olen",
     "longIntro2": "joka on keskittynyt",
-    "longIntro3": "Olen myös kiinnostunut nettisivujen suunnittelemisesta ja saavutettavuudesta. Intohimoni on rakentaa responsiivisia nettisivuja jotka toimivat sulavasti ja ovat visuaalisesti näyttäviä.",
+    "longIntro3": "Olen myös kiinnostunut nettisivujen suunnittelusta ja saavutettavuudesta. Intohimoni on rakentaa responsiivisia nettisivuja jotka toimivat sulavasti ja ovat visuaalisesti näyttäviä.",
     "keyword1": "fullstack-kehittäjä",
     "keyword2": "frontendiin"
   },

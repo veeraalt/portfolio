@@ -46,12 +46,12 @@
   border: 2px solid var(--navbar-focus) !important;
 }
 
-.navbuttons .toggleContainer {
+.navButtons .toggleContainer {
   padding: calc(var(--spacing-s) - 1px);
 }
 
-.navbuttons .toggleContainer:hover,
-.navbuttons .toggleContainer:focus {
+.navButtons .toggleContainer:hover,
+.navButtons .toggleContainer:focus {
   background-color: var(--navbar-focus) !important;
 }
 
@@ -59,7 +59,7 @@
   text-decoration: underline;
 }
 
-.navbuttons {
+.navButtons {
   display: none;
   gap: var(--spacing-s);
 }
@@ -103,7 +103,7 @@
     display: none;
   }
 
-  .navbuttons {
+  .navButtons {
     display: flex;
     align-items: center;
   }

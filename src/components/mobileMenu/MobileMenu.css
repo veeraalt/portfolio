@@ -28,11 +28,6 @@
   border: 2px solid var(--navbar-focus) !important;
 }
 
-.menu a:focus {
-  background-color: var(--navbar-focus) !important;
-  border: 2px solid var(--navbar-focus) !important;
-}
-
 .settingsContainer {
   margin: 0 var(--spacing-s) var(--spacing-s);
 }
