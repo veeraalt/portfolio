@@ -1,0 +1,107 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: calc(var(--spacing-xl) + 2px);
+  left: 0;
+  width: calc(100dvw - 2 * var(--spacing-xs));
+  max-height: calc(100% - var(--spacing-xl) - 2 * var(--spacing-s));
+  padding: var(--spacing-s) var(--spacing-xs);
+  background-color: var(--navbar-menu);
+  gap: var(--spacing-xs);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.menuLink {
+  padding: var(--spacing-m);
+  padding-left: var(--spacing-sm);
+  background-color: var(--navbar-menu);
+  border: 2px solid var(--navbar-menu);
+  text-decoration: none;
+}
+
+.menuLink.active,
+.menuLink:hover,
+.menuLink:focus {
+  background-color: var(--navbar-focus) !important;
+  border: 2px solid var(--navbar-focus) !important;
+}
+
+.settingsContainer {
+  margin: 0 var(--spacing-s) var(--spacing-s);
+}
+
+.languageContainer {
+  margin: var(--spacing-ml) var(--spacing-s);
+}
+
+.languageContainer > div {
+  width: 100%;
+}
+
+.languageLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
+.languageLabel > svg {
+  color: var(--card-sidetext);
+  margin-bottom: 1px;
+}
+
+.languageRadioButtonGroup {
+  margin-left: var(--spacing-s);
+}
+
+.languageRadioButton {
+  margin-top: var(--spacing-s);
+  color: var(--text-color) !important;
+}
+
+.languageRadioButton:hover,
+.languageRadioButton:focus,
+.themeContainer .toggleContainer:hover,
+.themeContainer .toggleContainer:focus {
+  background-color: var(--navbar-focus);
+}
+
+.languageRadioButton > span:first-child {
+  color: var(--primary-color) !important;
+}
+
+.themeContainer {
+  height: 100px;
+}
+
+.themeContainer label {
+  margin: var(--spacing-m) var(--spacing-s);
+}
+
+/* Dark mode button */
+.themeContainer .toggleContainer {
+  margin-top: var(--spacing-m);
+  padding: var(--spacing-s);
+}
+
+/* Divider */
+hr {
+  background-color: var(--navbar-focus);
+  height: 1px;
+  border: none;
+}
+
+@media (min-width: 801px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+  .menu {
+    width: 300px;
+    right: 0;
+    left: auto;
+  }
+}

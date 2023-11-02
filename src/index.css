@@ -74,6 +74,7 @@
 :root {
   --spacing-xs: 0.25rem;
   --spacing-s: 0.5rem;
+  --spacing-sm: 0.75rem;
   --spacing-m: 1rem;
   --spacing-ml: 1.5rem;
   --spacing-l: 2rem;
@@ -113,8 +114,12 @@ h1 {
   color: var(--primary-color);
 }
 
-a {
-  color: var(--text-color);
+a,
+p,
+h2,
+h3,
+label {
+  color: var(--text-color) !important;
 }
 
 main {

@@ -1,25 +1,30 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 import { FaBars as MenuIcon } from "react-icons/fa6";
+import { NavigationLink } from "../../interfaces/common";
 import { useOnClickOutsideRefs } from "../../hooks/useOnClickOutsideRefs";
-import { ToggleButton } from "../toggleButton/ToggleButton";
 import { useColorScheme } from "../../hooks/useColorScheme";
 import { useFocusTrap } from "../../hooks/useFocusTrap";
+import { ToggleButton } from "../toggleButton/ToggleButton";
+import { LanguageMenu } from "../languageMenu/LanguageMenu";
+import { MobileMenu } from "../mobileMenu/MobileMenu";
 import "./Navbar.css";
 
-const navigationLinks = [
-  { to: "/projects", text: "Projects" },
-  { to: "/cv", text: "CV" },
-  { to: "/contact", text: "Contact" },
-];
-
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigationRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
   const { isDark, handleDarkModeToggle } = useColorScheme();
+
+  const navigationLinks: Array<NavigationLink> = [
+    { to: "/projects", text: t("common.projects") },
+    { to: "/cv", text: t("common.cv") },
+    { to: "/contact", text: t("common.contact") },
+  ];
 
   // Trap focus inside mobile menu when it's open
   useFocusTrap(isMobileMenuOpen, navigationRef);
@@ -42,6 +47,7 @@ export const Navbar = () => {
     setMobileMenuOpen(newMobileMenuState);
   };
 
+  // Close mobile menu when clicked outside it
   useOnClickOutsideRefs(menuRefs, toggleMobileMenu);
 
   const { pathname } = useLocation();
@@ -75,56 +81,45 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar" ref={navigationRef}>
-      <NavLink className="navlink" to="/">
-        Home
-      </NavLink>
-      <div className="navlinks">
-        {navigationLinks.map((link) => (
-          <NavLink className="navlink" to={link.to} key={link.to}>
-            {link.text}
-          </NavLink>
-        ))}
-      </div>
-      <div className="darkModeButtonContainer">
-        <ToggleButton
-          onClick={handleDarkModeToggle}
-          value={isDark}
-          label="Dark mode"
-        />
-      </div>
-      <button
-        ref={mobileMenuButtonRef}
-        className="menuButton"
-        onClick={toggleMobileMenu}
-        aria-expanded={isMobileMenuOpen}
-        aria-label={`${isMobileMenuOpen ? "Close" : "Open"} menu`}
-      >
-        <MenuIcon />
-      </button>
-      {isMobileMenuOpen && (
-        <div
-          className="menu"
-          ref={mobileMenuRef}
-          role="dialog"
-          aria-label="Menu"
-        >
+      <div>
+        <NavLink className="navLink" to="/">
+          {t("common.home")}
+        </NavLink>
+        <div className="navLinks">
           {navigationLinks.map((link) => (
-            <NavLink className="navlink" to={link.to} key={link.to}>
+            <NavLink className="navLink" to={link.to} key={link.to}>
               {link.text}
             </NavLink>
           ))}
-          <div className="settingsContainer">
-            <p>
-              <strong>Settings</strong>
-            </p>
-            <ToggleButton
-              onClick={handleDarkModeToggle}
-              value={isDark}
-              label="Dark mode"
-            />
-          </div>
         </div>
-      )}
+      </div>
+      <div>
+        <div className="navButtons">
+          <LanguageMenu />
+          <ToggleButton
+            onClick={handleDarkModeToggle}
+            value={isDark}
+            label={t("settings.theme.dark")}
+          />
+        </div>
+        <button
+          ref={mobileMenuButtonRef}
+          className="menuButton"
+          onClick={toggleMobileMenu}
+          aria-expanded={isMobileMenuOpen}
+          aria-label={`${
+            isMobileMenuOpen ? t("common.close") : t("common.open")
+          } ${t("common.menu")}`}
+        >
+          <MenuIcon />
+        </button>
+        {isMobileMenuOpen && (
+          <MobileMenu
+            navigationLinks={navigationLinks}
+            forwardedRef={mobileMenuRef}
+          />
+        )}
+      </div>
     </nav>
   );
 };

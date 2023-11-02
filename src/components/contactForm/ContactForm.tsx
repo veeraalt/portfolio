@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
 import { ContactFormData } from "../../interfaces/common";
 import "./ContactForm.css";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
@@ -12,9 +14,8 @@ const ContactForm = () => {
   });
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
   const [alertType, setAlertType] = useState<"success" | "error" | null>(null);
-  const errorMessage =
-    "Something went wrong. Please try again later or contact me via Linkedin.";
-  const successMessage = "The email was sent successfully.";
+  const errorMessage = t("contact.form.errorMessage");
+  const successMessage = t("contact.form.successMessage");
 
   const resetAlert = () => {
     setAlertMessage(null);
@@ -56,7 +57,7 @@ const ContactForm = () => {
   return (
     <form className="contactForm" onSubmit={sendEmail}>
       <label className="contactFormField">
-        Name *
+        {`${t("contact.form.name")} *`}
         <input
           className="contactFormInput"
           type="text"
@@ -69,7 +70,7 @@ const ContactForm = () => {
         />
       </label>
       <label className="contactFormField">
-        Email address *
+        {`${t("contact.form.email")} *`}
         <input
           className="contactFormInput"
           type="email"
@@ -82,7 +83,7 @@ const ContactForm = () => {
         />
       </label>
       <label className="contactFormField">
-        Message *
+        {`${t("contact.form.message")} *`}
         <textarea
           className="contactFormInput"
           name="message"
@@ -108,7 +109,7 @@ const ContactForm = () => {
       <input
         className="pageLink submitButton"
         type="submit"
-        value="Send"
+        value={t("contact.form.send")}
         disabled={alertType === "success"}
       />
     </form>

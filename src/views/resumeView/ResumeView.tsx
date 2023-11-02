@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Document, Page, pdfjs } from "react-pdf";
 import { FaCircleChevronRight as ArrowIcon } from "react-icons/fa6";
 import { FaDownload as DownloadIcon } from "react-icons/fa6";
@@ -8,6 +9,7 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 import "./ResumeView.css";
 
 const ResumeView = () => {
+  const { t } = useTranslation();
   /* react-pdf requires a PDF.js worker to work properly, an external CDN from
      https://www.npmjs.com/package/react-pdf used here */
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
@@ -15,14 +17,11 @@ const ResumeView = () => {
 
   return (
     <div className="resumeContainer">
-      <h1>CV</h1>
-      <p>
-        Check out my CV from below. You can also download it or open it in a new
-        tab.
-      </p>
+      <h1>{t("common.cv")}</h1>
+      <p>{t("cv.intro")}</p>
       <div className="resumeButtonContainer">
         <a className="pageLink resumeButton" href={filePath} download>
-          Download
+          {t("cv.download")}
           <DownloadIcon />
         </a>
         <a
@@ -31,7 +30,7 @@ const ResumeView = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Open
+          {t("cv.open")}
           <ArrowIcon />
         </a>
       </div>

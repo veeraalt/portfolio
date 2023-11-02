@@ -17,7 +17,6 @@ export const useOnClickOutsideRefs = (
       const targetElement = e.target as HTMLElement;
       const refHasTarget = refs.find((r) => r.current?.contains(targetElement));
       if (!refHasTarget) {
-        e.preventDefault();
         callback();
       }
     };
@@ -26,5 +25,6 @@ export const useOnClickOutsideRefs = (
     return () => {
       document.removeEventListener("click", onClick);
     };
-  }, [refs, callback]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [refs]);
 };
