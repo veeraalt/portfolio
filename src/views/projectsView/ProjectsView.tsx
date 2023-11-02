@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Project, ProjectList } from "../../interfaces/common";
 import { ProjectCard } from "../../components/projectCard/ProjectCard";
 import "./ProjectsView.css";
 
 const ProjectsView = () => {
+  const { t } = useTranslation();
   const [projectList, setProjectList] = useState<ProjectList | undefined>(
     undefined
   );
@@ -37,15 +39,15 @@ const ProjectsView = () => {
 
   return (
     <div className="projectContainer">
-      <h1>Projects</h1>
+      <h1>{t("common.projects")}</h1>
       {!projectList ? (
-        <p>Loading projects...</p>
+        <p>{t("projects.loading")}</p>
       ) : (
         <>
           {projectList.other &&
-            renderProjects(projectList.other, "Personal projects")}
+            renderProjects(projectList.other, t("projects.personal"))}
           {projectList.work &&
-            renderProjects(projectList.work, "Work experience")}
+            renderProjects(projectList.work, t("projects.work"))}
         </>
       )}
     </div>

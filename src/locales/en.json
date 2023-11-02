@@ -26,7 +26,8 @@
   },
   "projects": {
     "personal": "Personal projects",
-    "work": "Work experience"
+    "work": "Work experience",
+    "loading": "Loading projects..."
   },
   "cv": {
     "intro": "Check out my CV from below. You can also download it or open it in a new tab.",
@@ -45,5 +46,8 @@
       "successMessage": "Yay! The message was sent successfully.",
       "errorMessage": "Oh no! Something went wrong. Please try again later or contact me via Linkedin."
     }
+  },
+  "language": {
+    "select": "Select language"
   }
 }

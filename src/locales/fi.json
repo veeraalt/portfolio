@@ -25,8 +25,9 @@
     "keyword2": "frontendiin"
   },
   "projects": {
-    "personal": "Henkilökohtaiset projektit",
-    "work": "Työkokemus"
+    "personal": "Vapaa-ajan projektit",
+    "work": "Työkokemus",
+    "loading": "Ladataan projekteja..."
   },
   "cv": {
     "intro": "Kurkkaa CV:ni alhaalta. Voit myös ladata sen tai avata sen uudessa välilehdessä.",
@@ -45,5 +46,8 @@
       "successMessage": "Jes! Viestisi on lähetetty onnistuneesti.",
       "errorMessage": "Oi ei! Jokin meni pieleen. Kokeile uudestaan myöhemmin tai ota yhteyttä Linkedinin kautta."
     }
+  },
+  "language": {
+    "select": "Valitse kieli"
   }
 }

@@ -1,7 +1,8 @@
 .toggleContainer {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: var(--spacing-s);
+  margin: var(--spacing-s);
 }
 
 .toggleButtonContainer {

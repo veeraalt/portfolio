@@ -8,13 +8,21 @@
   border-bottom: 2px solid var(--navbar-shadow);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   gap: var(--spacing-xl);
   z-index: 9999;
 }
 
+.navbar > div {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-l);
+}
+
 .navlinks {
   display: flex;
-  gap: var(--spacing-l);
+  gap: var(--spacing-m);
 }
 
 .navbar a {
@@ -43,9 +51,10 @@
   text-decoration: underline;
 }
 
-.darkModeButtonContainer {
-  position: fixed;
-  right: var(--spacing-m);
+.navbuttons {
+  display: none;
+  gap: var(--spacing-s);
+  margin-right: var(--spacing-s);
 }
 
 .menuButton {
@@ -116,6 +125,11 @@
   .menuButton,
   .menu {
     display: none;
+  }
+
+  .navbuttons {
+    display: flex;
+    align-items: center;
   }
 }
 

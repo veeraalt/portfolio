@@ -16,4 +16,4 @@ You can run this app locally by following these steps:
 
 Pure CSS is mostly used for styling.
 
-[Material UI](https://mui.com/) is also used to ensure the accessibility of more complex components, such as alerts that pop up when the contact form is submitted.
+[Material UI](https://mui.com/) is also used to ensure the accessibility of more complex components, such as a language selection menu.
