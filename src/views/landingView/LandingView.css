@@ -1,3 +1,14 @@
+.shortIntro {
+  font-size: medium;
+  font-family: "Source Code Pro", monospace;
+}
+
+.name {
+  font-size: 48px;
+  margin-top: var(--spacing-s);
+  font-family: "Roboto Serif", serif;
+}
+
 .linkContainer {
   display: flex;
   gap: var(--spacing-s);

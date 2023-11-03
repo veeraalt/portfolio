@@ -14,8 +14,8 @@
   },
 
   "home": {
-    "hi": "Hi!",
-    "shortIntro": "My name is Veera Alt.",
+    "hi": "Hi, my name is",
+    "name": "Veera Alt",
     "longIntro1": "I'm a",
     "longIntro2": "with emphasis on",
     "longIntro3": "I'm also interested in design and accessibility. My driving passion is to build responsive websites that work smoothly and are visually engaging.",

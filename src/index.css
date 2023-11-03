@@ -1,21 +1,23 @@
 /* App colors */
 :root {
-  --white: #f3f3f3;
-  --grey-lightest: #dcdcdc;
-  --grey-extralight: #cfcfcf;
-  --grey-light: #bababa;
-  --grey: #a3a3a3;
-  --grey-dark: #494949;
-  --grey-extradark: #2a2a2a;
-  --grey-darkest: #212121;
+  --white: #fdfdfc;
+  --paper: #f5f4f2;
+  --cream: #efedea;
+  --beige-light: #c7c0b7;
+  --beige: #d6d1ca;
+  --beige-dark: #ada396;
+  --brown: #45413a;
+  --grey-light: #a3a3a3;
+  --grey: #2e2e2e;
+  --grey-dark: #222222;
+  --grey-darkest: #181818;
   --black: #131313;
-  --turquoise: #025a64;
-  --turquoise-dark: #024047;
-  --peach: #fa8072;
-  --peach-light: #fba9a0;
-  --peach-dark: #f15d4b;
-  --button-disabled: #8c8c8c;
-  --button-disabled-dark: #777777;
+  --neon-green: #63c073;
+  --neon-green-light: #81ce85;
+  --forest-green: #214e2f;
+  --forest-green-dark: #193a23;
+  --button-disabled: #837f7e;
+  --button-disabled-dark: #736f6e;
 }
 
 /* Brand colors */
@@ -38,36 +40,36 @@
 
 /* Layout colors */
 :root {
-  --background-color: var(--white);
+  --background-color: var(--cream);
   --text-color: var(--black);
-  --primary-color: var(--turquoise);
-  --focus-color: var(--turquoise-dark);
-  --button-text-color: var(--white);
-  --navbar-background: var(--grey-extralight);
-  --navbar-menu: var(--grey-lightest);
-  --navbar-accent: var(--grey-extralight);
-  --navbar-focus: var(--grey);
-  --navbar-shadow: var(--grey-light);
-  --card-subheader: var(--grey-dark);
-  --card-sidetext: var(--grey-dark);
-  --form-background-color: var(--grey-extralight);
-  --form-focus-color: var(--grey-lightest);
+  --primary-color: var(--forest-green);
+  --focus-color: var(--forest-green-dark);
+  --button-text-color: var(--cream);
+  --navbar-background: var(--beige-light);
+  --navbar-menu: var(--beige);
+  --navbar-focus: var(--beige-dark);
+  --navbar-shadow: var(--beige-dark);
+  --card-subheader: var(--brown);
+  --card-sidetext: var(--brown);
+  --form-background-color: var(--white);
+  --form-focus-color: var(--paper);
 }
 
 /* Layout colors for dark color scheme */
 [data-theme="dark"] {
-  --background-color: var(--black);
-  --text-color: var(--white);
-  --primary-color: var(--peach);
-  --focus-color: var(--peach-dark);
+  --background-color: var(--grey-darkest);
+  --text-color: var(--cream);
+  --primary-color: var(--neon-green);
+  --focus-color: var(--neon-green-light);
   --button-text-color: var(--black);
-  --navbar-background: var(--grey-darkest);
-  --navbar-menu: var(--grey-extradark);
-  --navbar-accent: var(--grey-dark);
-  --navbar-focus: var(--grey-dark);
-  --navbar-shadow: var(--grey-extradark);
-  --card-subheader: var(--grey-extralight);
-  --card-sidetext: var(--grey);
+  --navbar-background: var(--black);
+  --navbar-menu: var(--grey-dark);
+  --navbar-focus: var(--grey);
+  --navbar-shadow: var(--grey-dark);
+  --card-subheader: var(--grey-light);
+  --card-sidetext: var(--grey-light);
+  --form-background-color: var(--cream);
+  --form-focus-color: var(--beige-light);
 }
 
 /* Layout */
