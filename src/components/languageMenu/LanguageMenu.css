@@ -21,11 +21,6 @@
   color: var(--primary-color);
 }
 
-.languageIcon:focus,
-.languageIcon:hover {
-  color: var(--focus-color) !important;
-}
-
 .languageMenu div {
   border-radius: 0;
   box-shadow: none;
