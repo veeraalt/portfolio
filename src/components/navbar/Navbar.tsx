@@ -117,6 +117,8 @@ export const Navbar = () => {
           <MobileMenu
             navigationLinks={navigationLinks}
             forwardedRef={mobileMenuRef}
+            isDark={isDark}
+            handleDarkModeToggle={handleDarkModeToggle}
           />
         )}
       </div>

@@ -91,14 +91,14 @@
   background-color: var(--background-color);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   .navLinks,
   .darkModeButtonContainer {
     display: none;
   }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 751px) {
   .menuButton {
     display: none;
   }

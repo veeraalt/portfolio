@@ -8,7 +8,6 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { ToggleButton } from "../toggleButton/ToggleButton";
-import { useColorScheme } from "../../hooks/useColorScheme";
 import { LanguageSelector } from "../languageSelector/LanguageSelector";
 import { NavigationLink } from "../../interfaces/common";
 import "./MobileMenu.css";
@@ -16,12 +15,15 @@ import "./MobileMenu.css";
 export const MobileMenu = ({
   navigationLinks,
   forwardedRef,
+  isDark,
+  handleDarkModeToggle,
 }: {
   navigationLinks: Array<NavigationLink>;
   forwardedRef: React.RefObject<HTMLDivElement>;
+  isDark: boolean;
+  handleDarkModeToggle: () => void;
 }) => {
   const { t } = useTranslation();
-  const { isDark, handleDarkModeToggle } = useColorScheme();
   const { currentLanguage, languages, changeLanguage } = LanguageSelector();
 
   return (
