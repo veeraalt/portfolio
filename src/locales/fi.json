@@ -14,8 +14,8 @@
   },
 
   "home": {
-    "hi": "Hei!",
-    "shortIntro": "Minun nimeni on Veera Alt.",
+    "hi": "Moi, minun nimeni on",
+    "name": "Veera Alt",
     "longIntro1": "Olen",
     "longIntro2": "joka on keskittynyt",
     "longIntro3": "Olen myös kiinnostunut nettisivujen suunnittelusta ja saavutettavuudesta. Intohimoni on rakentaa responsiivisia nettisivuja jotka toimivat sulavasti ja ovat visuaalisesti näyttäviä.",

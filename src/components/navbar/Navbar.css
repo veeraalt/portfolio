@@ -87,7 +87,7 @@
 }
 
 .menu-open main {
-  filter: brightness(50%);
+  filter: brightness(70%) sepia(10%);
   background-color: var(--background-color);
 }
 

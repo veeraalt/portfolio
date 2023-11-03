@@ -9,8 +9,8 @@ const LandingView = () => {
 
   return (
     <div className="infoContainer">
-      <h1>{t("home.hi")}</h1>
-      <h2>{t("home.shortIntro")}</h2>
+      <h1 className="shortIntro">{t("home.hi")}</h1>
+      <h2 className="name">{t("home.name")}.</h2>
       <p>
         {t("home.longIntro1")}{" "}
         <span className="highlight">{t("home.keyword1")}</span>{" "}

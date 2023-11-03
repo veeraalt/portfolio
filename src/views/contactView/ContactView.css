@@ -20,8 +20,10 @@
 }
 
 .contactLink:focus,
-.contactLink:hover {
-  color: var(--focus-color);
+.contactLink:hover,
+.inlineLink:focus,
+.inlineLink:hover {
+  color: var(--focus-color) !important;
 }
 
 @media (min-height: 800px) {

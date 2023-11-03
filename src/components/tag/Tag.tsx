@@ -12,7 +12,7 @@ const getTagProperties = (
   /* Use existing color if found from css, otherwise use default grey */
   const tagColor =
     computedStyle.getPropertyValue(`--color-${trimmedLabel}`) ||
-    computedStyle.getPropertyValue("--grey-dark") ||
+    computedStyle.getPropertyValue("--grey-light") ||
     "darkgrey";
 
   /* Determine whether black or white text should be used based on the
