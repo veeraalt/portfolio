@@ -1,17 +1,13 @@
-export interface ProjectList {
-  work?: Array<Project>;
-  other?: Array<Project>;
-}
-
 export interface Project {
   id: number;
-  years: Array<ProjectYear>;
+  years: ProjectYear[];
   name?: string;
   title?: string;
   company?: string;
   website: string;
   details: string;
-  keywords: Array<string>;
+  keywords: string[];
+  type: "work" | "other";
 }
 
 interface ProjectYear {
