@@ -10,7 +10,7 @@
     "title": "Junior Back-end -kehittäjä",
     "company": "PeopleCloud",
     "website": "https://peoplecloudpro.com",
-    "details": "Backendin ja tietokantojen luonti tyhjästä IT-henkilöstövuokraukseen keskittyvälle nettisivulle osana pientä kehittäjätiimiä.",
+    "details": "Backendin ja tietokantojen luonti tyhjästä IT-henkilöstövuokraukseen keskittyvälle nettisivulle osana pientä dynaamista kehittäjätiimiä.",
     "keywords": ["php", "laravel", "postgresql", "sql", "docker", "html"],
     "type": "work"
   },
@@ -21,10 +21,10 @@
         "start": "2020"
       }
     ],
-    "title": "Ohjelmistökehittäjä",
+    "title": "Ohjelmistokehittäjä",
     "company": "Aalto University - A+",
     "website": "https://plus.cs.aalto.fi/en",
-    "details": "Ylläpidettävän koodin kehittäminen nettisivulle, joka on käytössä Suomen toisiksi suurimman yliopiston kursseilla.",
+    "details": "Ylläpidettävän koodin kehittäminen nettisivulle, joka on käytössä Suomen toisiksi suurimman yliopiston kursseilla. Sivusto kävi läpi päivityksiä optimaalisen toiminnallisuuden ja käyttökokemuksen varmistamiseksi.",
     "keywords": ["react", "python", "django", "css", "html"],
     "type": "work"
   },
@@ -39,7 +39,7 @@
     "title": "Opetusavustaja",
     "company": "Aalto University",
     "website": "https://www.aalto.fi/fi",
-    "details": "Yliopisto-opiskelijoiden avustus ohjelmointitehtävissä, sekä kurssitehtävien ja kokeiden arviointi. Kursseilla 'Ohjelmointi 1' ja 'Tietokannat'.",
+    "details": "Yliopisto-opiskelijoiden tukeminen ohjelmointitehtävissä, sekä kurssitehtävien ja kokeiden arviointi kursseilla 'Ohjelmointi 1' ja 'Tietokannat'.",
     "keywords": ["teaching", "programming", "sql"],
     "type": "work"
   },
@@ -55,7 +55,7 @@
     "title": "Ohjelmistokehittäjä / konsultti",
     "company": "Futurice",
     "website": "https://futurice.com",
-    "details": "Korkealaatuisen ja testatun koodin kehittäminen useissa projekteissa käyttäen moderneja web-teknologioita. Projekteihin kuului julkisen sektorin asiakas, jolla oli korkeat saavutettavuus- ja käytettävyysstandardit. Kyseisessä projektissa uudistin designerin kanssa vanhentuneen nettisivun koko käyttöliittymän.",
+    "details": "Korkealaatuisen ja testatun koodin kehittäminen useissa projekteissa käyttäen moderneja web-teknologioita. Projekteihin kuului vanhentuneen käyttöliittymän uudistaminen yhteistyössä designerin kanssa julkisen sektorin asiakkaalle, huolehtien samalla tiukkojen saavutettavuusstandardien täyttämisestä.",
     "keywords": [
       "react",
       "typescript",
@@ -79,7 +79,7 @@
     "title": "Fullstack-kehittäjä",
     "company": "Mezzoforte Oy / Huutokaupat.com",
     "website": "https://huutokaupat.com",
-    "details": "Korkealaatuisen ja testatun koodin kehittäminen ja ylläpito huutokauppasivulle, jolla on yli 5 miljoonaa kävijää kuukaudessa.",
+    "details": "Koodin kehittäminen ja ylläpito huutokauppasivulle, jolla vierailee yli miljoonaa kävijää kuukaudessa. Käyttäjäkokemuksen parantaminen samalla huolehtien vilkkaan alustan luotettavuudesta.",
     "keywords": ["react", "typescript", "php", "symfony", "css", "html"],
     "type": "work"
   },
@@ -93,7 +93,7 @@
     ],
     "name": "Portfolio",
     "website": "https://veeraalt.github.io/portfolio/",
-    "details": "Portfolio-sivu, jonka tarkoitus on esitellä ja parantaa web-kehittäjän taitoja. Luotu Reactilla käyttäen TypeScript-kirjastoa ja Github Pagesia. 100% suunnitellut ja toteuttanut allekirjoittanut.",
+    "details": "Henkilökohtaisen portfolio-sivun suunnittelu ja toteutus, tarkoituksena esitellä web-kehittäjän taitoja. Luotu Reactilla käyttäen TypeScript-kirjastoa ja Github Pagesia. 100% suunnitellut ja toteuttanut allekirjoittanut.",
     "keywords": ["react", "typescript", "material ui", "css", "html"],
     "type": "other"
   }
