@@ -16,11 +16,16 @@
   "home": {
     "hi": "Moi, minun nimeni on",
     "name": "Veera Alt",
-    "longIntro1": "Olen",
-    "longIntro2": "joka on keskittynyt",
-    "longIntro3": "Olen myös kiinnostunut nettisivujen suunnittelusta ja saavutettavuudesta. Intohimoni on rakentaa responsiivisia nettisivuja jotka toimivat sulavasti ja ovat visuaalisesti näyttäviä.",
-    "keyword1": "fullstack-kehittäjä",
-    "keyword2": "frontendiin"
+    "intro1": "Olen ",
+    "intro2": ", joka on kiinnostunut nettisivujen suunnittelusta ja saavutettavuudesta. Erikoisosaamiseni on luoda responsiivisia nettisivuja, jotka toimivat sulavasti ja ovat näyttäviä.",
+    "intro3": "Siitä asti kun aloitin IT-opintoni vuonna 2017, olen osallistunut monipuolisiin projekteihin, joihin kuuluu mm. ",
+    "intro4": "Kun en ole koodaamassa, nautin boulderoinnista ja erilaisten projektien aloittamisesta, kuten opetella neulomaan tai rakentamaan huonekaluja. Tutustu sivuihini saadaksesi lisätietoa projekteistani ja yhteystiedoistani.",
+    "keyword": "fullstack-kehittäjä",
+    "project1": "suuri yliopisto",
+    "project2": "vilkas nettihuutokauppa",
+    "project3": "kasvava IT-henkilöstöyritys",
+    "to": ", ",
+    "and": " ja "
   },
   "projects": {
     "personal": "Vapaa-ajan projektit",
