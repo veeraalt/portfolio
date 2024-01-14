@@ -10,7 +10,7 @@
     "title": "Junior Back-end Developer",
     "company": "PeopleCloud",
     "website": "https://peoplecloudpro.com",
-    "details": "Creating backend and databases from scratch for an IT staffing website as a part of a small developer team.",
+    "details": "Creating backend and databases from scratch for an IT staffing website as part of a small, dynamic developer team.",
     "keywords": ["php", "laravel", "postgresql", "sql", "docker", "html"],
     "type": "work"
   },
@@ -18,13 +18,13 @@
     "id": 2,
     "years": [
       {
-        "start": "2020"
+        "start": "Jun - Aug 2020"
       }
     ],
     "title": "Software Developer",
     "company": "Aalto University - A+",
     "website": "https://plus.cs.aalto.fi",
-    "details": "Developing maintainable code for a website used in courses of the second largest university in Finland.",
+    "details": "Developing maintainable code for a website used in courses of the second largest university in Finland. The website underwent enhancements to ensure optimal functionality and user experience.",
     "keywords": ["react", "python", "django", "css", "html"],
     "type": "work"
   },
@@ -39,7 +39,7 @@
     "title": "Teaching Assistant",
     "company": "Aalto University",
     "website": "https://www.aalto.fi",
-    "details": "Assisting university students with programming exercises, and grading exercise and exam submissions. Worked in courses titled 'Programming 1' and 'Databases'.",
+    "details": "Supporting university students by providing guidance on programming exercises, and grading exercise and exam submissions for courses 'Programming 1' and 'Databases'.",
     "keywords": ["teaching", "programming", "sql"],
     "type": "work"
   },
@@ -50,12 +50,12 @@
         "start": "2022",
         "end": "2023"
       },
-      { "start": "2021" }
+      { "start": "Jun - Sep 2021" }
     ],
     "title": "Software Developer / Consultant",
     "company": "Futurice",
     "website": "https://futurice.com",
-    "details": "Developing high-quality tested code in multiple projects using modern web technologies. Projects include a public sector client with high accessibility and usability standards, where I renewed the whole frontend UI with a designer for an outdated website.",
+    "details": "Developing high-quality tested code in multiple projects using modern web technologies. Projects include the renewal of an entire frontend UI in collaboration with a designer, transforming an outdated website into a modern, user-friendly platform, while adhering to high accessibility standards.",
     "keywords": [
       "react",
       "typescript",
@@ -72,14 +72,14 @@
     "id": 5,
     "years": [
       {
-        "start": "2023",
+        "start": "Nov 2023",
         "end": "Present"
       }
     ],
-    "title": "Fullstack developer",
+    "title": "Fullstack Developer",
     "company": "Mezzoforte Oy / Huutokaupat.com",
     "website": "https://huutokaupat.com",
-    "details": "Developing and maintaining high-quality tested code for an auction website with over 5 million visitors in a month.",
+    "details": "Developing and maintaining software of an auctioning website attracting over a million visitors in a month. Enhancing user experience while ensuring the platform's reliability in a high-traffic environment.",
     "keywords": ["react", "typescript", "php", "symfony", "css", "html"],
     "type": "work"
   },
@@ -93,7 +93,7 @@
     ],
     "name": "Portfolio",
     "website": "https://veeraalt.github.io/portfolio/",
-    "details": "Portfolio site created for displaying and improving web developer skills. Built with React using TypeScript and deployed on Github Pages. 100% designed and developed by yours truly.",
+    "details": "Designing and developing a personal portfolio site showcasing web development skills. Built with React using TypeScript and deployed on Github Pages. 100% designed and developed by yours truly.",
     "keywords": ["react", "typescript", "material ui", "css", "html"],
     "type": "other"
   }

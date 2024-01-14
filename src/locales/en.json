@@ -16,11 +16,16 @@
   "home": {
     "hi": "Hi, my name is",
     "name": "Veera Alt",
-    "longIntro1": "I'm a",
-    "longIntro2": "with emphasis on",
-    "longIntro3": "I'm also interested in design and accessibility. My driving passion is to build responsive websites that work smoothly and are visually engaging.",
-    "keyword1": "fullstack developer",
-    "keyword2": "frontend"
+    "intro1": "I'm a ",
+    "intro2": " with interest in design and accessibility. I specialize in creating responsive websites that work smoothly and are visually engaging.",
+    "intro3": "Since embarking on my computer science journey in 2017, I've had the privilege to contribute software to diverse projects, from ",
+    "intro4": "When I'm not coding, I enjoy bouldering and diving into various projects, from learning to knit to crafting furniture. Please explore my website for more about my projects and how to get in touch with me.",
+    "keyword": "fullstack developer",
+    "project1": "a large university",
+    "project2": "a bustling auctioning website",
+    "project3": "a growing IT staffing company",
+    "to": " to ",
+    "and": " and "
   },
   "projects": {
     "personal": "Personal projects",

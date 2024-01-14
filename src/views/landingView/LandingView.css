@@ -50,6 +50,10 @@
   font-weight: 600;
 }
 
+.highlight.inlineLink {
+  text-decoration: none;
+}
+
 @media (min-height: 600px) {
   .infoContainer {
     margin-top: 10dvh;

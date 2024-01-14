@@ -31,7 +31,7 @@ const ProjectsView = () => {
   const sortProjectsByYear = (projects: Project[]) => {
     return projects.sort(
       (a: Project, b: Project) =>
-        parseInt(b.years[0].start) - parseInt(a.years[0].start)
+      new Date(b.years[0].start).getTime() - new Date(a.years[0].start).getTime()
     );
   };
 
