@@ -35,7 +35,8 @@
   "cv": {
     "intro": "Kurkkaa CV:ni alhaalta. Voit myös ladata sen tai avata sen uudessa välilehdessä.",
     "download": "Lataa",
-    "open": "Avaa"
+    "open": "Avaa",
+    "downloadLight": "Lataa CV vaalealla taustalla"
   },
   "contact": {
     "title": "Ota yhteyttä",

@@ -35,7 +35,8 @@
   "cv": {
     "intro": "Check out my CV from below. You can also download it or open it in a new tab.",
     "download": "Download",
-    "open": "Open"
+    "open": "Open",
+    "downloadLight": "Download light background CV"
   },
   "contact": {
     "title": "Contact me",

@@ -1,4 +1,10 @@
-import { useEffect, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { useMediaQuery } from "react-responsive";
 
 enum Theme {
@@ -20,12 +26,13 @@ const storeTheme = (theme: Theme) => {
   }
 };
 
-/* Hook to decide whether light or dark mode should be used and to toggle between them.
- * It first checks if preference is saved to local storage (that is, if the user has visited
- * the website before with the same browser and used the dark mode switch. If no preference
- * was found that way, system preference is checked. If no preference was found from
- * system settings, light mode is used. */
-export const useColorScheme = () => {
+// Create a context
+const ThemeContext = createContext({
+  isDark: true,
+  toggleDarkMode: () => {},
+});
+
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   // Check system preference
   const systemPrefersDark = useMediaQuery({
     query: "(prefers-color-scheme: dark)",
@@ -37,10 +44,11 @@ export const useColorScheme = () => {
   const [isDark, setIsDark] = useState<boolean | null>(
     storedTheme ? storedTheme === Theme.DARK : null
   );
+
   const currentTheme = isDark === null ? systemPrefersDark : isDark;
 
   // Change the theme
-  const handleDarkModeToggle = () => {
+  const toggleDarkMode = () => {
     const newTheme = !currentTheme;
     storeTheme(newTheme ? Theme.DARK : Theme.LIGHT);
     setIsDark(newTheme);
@@ -56,8 +64,14 @@ export const useColorScheme = () => {
       );
   }, [currentTheme]);
 
-  return {
-    isDark: currentTheme,
-    handleDarkModeToggle,
-  };
+  return (
+    <ThemeContext.Provider value={{ isDark: currentTheme, toggleDarkMode }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+// Hook to use the color scheme
+export const useColorScheme = () => {
+  return useContext(ThemeContext);
 };

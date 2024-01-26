@@ -16,12 +16,12 @@ export const MobileMenu = ({
   navigationLinks,
   forwardedRef,
   isDark,
-  handleDarkModeToggle,
+  toggleDarkMode,
 }: {
   navigationLinks: Array<NavigationLink>;
   forwardedRef: React.RefObject<HTMLDivElement>;
   isDark: boolean;
-  handleDarkModeToggle: () => void;
+  toggleDarkMode: () => void;
 }) => {
   const { t } = useTranslation();
   const { currentLanguage, languages, changeLanguage } = LanguageSelector();
@@ -72,7 +72,7 @@ export const MobileMenu = ({
           <label>
             {t("settings.theme.title")}
             <ToggleButton
-              onClick={handleDarkModeToggle}
+              onClick={toggleDarkMode}
               value={isDark}
               label={t("settings.theme.dark")}
             />

@@ -18,7 +18,7 @@ export const Navbar = () => {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
   const menuRefs = [mobileMenuRef, mobileMenuButtonRef];
-  const { isDark, handleDarkModeToggle } = useColorScheme();
+  const { isDark, toggleDarkMode } = useColorScheme();
 
   const navigationLinks: Array<NavigationLink> = [
     { to: "/projects", text: t("common.projects") },
@@ -97,7 +97,7 @@ export const Navbar = () => {
         <div className="navButtons">
           <LanguageMenu />
           <ToggleButton
-            onClick={handleDarkModeToggle}
+            onClick={toggleDarkMode}
             value={isDark}
             label={t("settings.theme.dark")}
           />
@@ -118,7 +118,7 @@ export const Navbar = () => {
             navigationLinks={navigationLinks}
             forwardedRef={mobileMenuRef}
             isDark={isDark}
-            handleDarkModeToggle={handleDarkModeToggle}
+            toggleDarkMode={toggleDarkMode}
           />
         )}
       </div>
