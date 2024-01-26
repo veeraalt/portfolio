@@ -6,23 +6,26 @@ import ResumeView from "./views/resumeView/ResumeView";
 import ContactView from "./views/contactView/ContactView";
 import { Navbar } from "./components/navbar/Navbar";
 import { useScrollToTopOnPathChange as ScrollToTop } from "./hooks/useScrollToTopOnPathChange";
+import { ThemeProvider } from "./hooks/useColorScheme";
 import "./i18n";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/portfolio">
-      <ScrollToTop />
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="*" element={<Navigate to="/" replace />} />
-          <Route path="/" element={<LandingView />} />
-          <Route path="/projects" element={<ProjectsView />} />
-          <Route path="/cv" element={<ResumeView />} />
-          <Route path="/contact" element={<ContactView />} />
-        </Routes>
-      </main>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter basename="/portfolio">
+        <ScrollToTop />
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="/" element={<LandingView />} />
+            <Route path="/projects" element={<ProjectsView />} />
+            <Route path="/cv" element={<ResumeView />} />
+            <Route path="/contact" element={<ContactView />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 

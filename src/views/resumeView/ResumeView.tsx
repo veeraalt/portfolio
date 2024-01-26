@@ -1,19 +1,25 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Document, Page, pdfjs } from "react-pdf";
-import { FaCircleChevronRight as ArrowIcon } from "react-icons/fa6";
-import { FaDownload as DownloadIcon } from "react-icons/fa6";
+import {
+  FaCircleChevronRight as ArrowIcon,
+  FaDownload as DownloadIcon,
+} from "react-icons/fa6";
 /* Imported to display text content and links correctly */
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "./ResumeView.css";
+import { useColorScheme } from "../../hooks/useColorScheme";
 
 const ResumeView = () => {
   const { t } = useTranslation();
   /* react-pdf requires a PDF.js worker to work properly, an external CDN from
      https://www.npmjs.com/package/react-pdf used here */
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-  const filePath = process.env.REACT_APP_CV_URL;
+  const { isDark } = useColorScheme();
+  const filePath = isDark
+    ? process.env.REACT_APP_CV_URL_DARK
+    : process.env.REACT_APP_CV_URL;
 
   return (
     <div className="resumeContainer">
