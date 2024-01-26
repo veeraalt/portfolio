@@ -6,8 +6,8 @@
 
 .resumeOuterButtonContainer {
   display: flex;
-  flex-direction: column;
-  width: 350px;
+  flex-direction: row;
+  justify-content: space-between;
   gap: var(--spacing-s);
   margin-bottom: var(--spacing-m);
 }
@@ -22,9 +22,23 @@
   text-decoration: none;
 }
 
-@media (max-width: 500px) {
-  .resumeButtonContainer {
+@media (max-width: 700px) {
+  .resumeOuterButtonContainer {
     flex-direction: column;
     width: 100%;
+  }
+
+  .lightCvButton {
+    width: calc(100% - 2 * var(--spacing-s));
+  }
+}
+
+@media (min-width: 701px) {
+  .resumeButton {
+    min-width: 150px;
+  }
+
+  .lightCvButton {
+    max-width: 300px;
   }
 }

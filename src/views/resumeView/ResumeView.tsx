@@ -42,7 +42,11 @@ const ResumeView = () => {
           </a>
         </div>
         {isDark && (
-          <a className="pageLink resumeButton" href={lightModeCvPath} download>
+          <a
+            className="pageLink resumeButton lightCvButton"
+            href={lightModeCvPath}
+            download
+          >
             {t("cv.downloadLight")}
             <DownloadIcon />
           </a>
