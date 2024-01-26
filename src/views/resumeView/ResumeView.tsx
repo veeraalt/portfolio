@@ -17,28 +17,36 @@ const ResumeView = () => {
      https://www.npmjs.com/package/react-pdf used here */
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
   const { isDark } = useColorScheme();
-  const filePath = isDark
-    ? process.env.REACT_APP_CV_URL_DARK
-    : process.env.REACT_APP_CV_URL;
+  const lightModeCvPath = process.env.REACT_APP_CV_URL;
+  const darkModeCvPath = process.env.REACT_APP_CV_URL_DARK;
+  const filePath = isDark ? darkModeCvPath : lightModeCvPath;
 
   return (
     <div className="resumeContainer">
       <h1>{t("common.cv")}</h1>
       <p>{t("cv.intro")}</p>
-      <div className="resumeButtonContainer">
-        <a className="pageLink resumeButton" href={filePath} download>
-          {t("cv.download")}
-          <DownloadIcon />
-        </a>
-        <a
-          className="pageLink resumeButton"
-          href={filePath}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {t("cv.open")}
-          <ArrowIcon />
-        </a>
+      <div className="resumeOuterButtonContainer">
+        <div className="resumeButtonContainer">
+          <a className="pageLink resumeButton" href={filePath} download>
+            {t("cv.download")}
+            <DownloadIcon />
+          </a>
+          <a
+            className="pageLink resumeButton"
+            href={filePath}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("cv.open")}
+            <ArrowIcon />
+          </a>
+        </div>
+        {isDark && (
+          <a className="pageLink resumeButton" href={lightModeCvPath} download>
+            {t("cv.downloadLight")}
+            <DownloadIcon />
+          </a>
+        )}
       </div>
       <Document file={filePath}>
         <Page className="resumeFileContainer" pageNumber={1} />

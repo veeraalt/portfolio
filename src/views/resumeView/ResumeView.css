@@ -4,11 +4,18 @@
   height: auto !important;
 }
 
-.resumeButtonContainer {
+.resumeOuterButtonContainer {
   display: flex;
+  flex-direction: column;
   width: 350px;
   gap: var(--spacing-s);
   margin-bottom: var(--spacing-m);
+}
+
+.resumeButtonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-s);
 }
 
 .resumeButton {
