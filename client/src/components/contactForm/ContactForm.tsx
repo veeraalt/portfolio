@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import emailjs from "@emailjs/browser";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
 import { ContactFormData } from "../../interfaces/common";
 import "./ContactForm.css";
@@ -29,13 +29,13 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        process.env.REACT_APP_MAIL_SERVICE_ID,
-        process.env.REACT_APP_MAIL_TEMPLATE_ID,
+        import.meta.env.VITE_MAIL_SERVICE_ID,
+        import.meta.env.VITE_MAIL_TEMPLATE_ID,
         formData,
-        process.env.REACT_APP_MAIL_PUBLIC_KEY
+        import.meta.env.VITE_MAIL_PUBLIC_KEY
       )
       .then(
-        (result: Response) => {
+        (result: EmailJSResponseStatus) => {
           setAlertMessage(successMessage);
           setAlertType("success");
         },

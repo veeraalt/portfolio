@@ -2,7 +2,7 @@
 
 The app is hosted on GitHub Pages on: https://veeraalt.github.io/portfolio/.
 
-The app consists of Node.js backend and a single-page React frontend created with [Create React App](https://github.com/facebook/create-react-app) that uses TypeScript.
+The app consists of Node.js backend and a React frontend with TypeScript.
 
 ## Getting started
 

@@ -15,7 +15,7 @@ const ContactView = () => {
         {t("contact.intro")}{" "}
         <a
           className="inlineLink"
-          href={process.env.REACT_APP_LINKEDIN_URL}
+          href={import.meta.env.VITE_LINKEDIN_URL}
           target="_blank"
           rel="noreferrer"
         >
@@ -29,7 +29,7 @@ const ContactView = () => {
       <div className="contactLinkContainer">
         <a
           className="contactLink"
-          href={process.env.REACT_APP_LINKEDIN_URL}
+          href={import.meta.env.VITE_LINKEDIN_URL}
           target="_blank"
           rel="noreferrer"
         >
@@ -38,7 +38,7 @@ const ContactView = () => {
         </a>
         <a
           className="contactLink"
-          href={process.env.REACT_APP_GITHUB_URL}
+          href={import.meta.env.VITE_GITHUB_URL}
           target="_blank"
           rel="noreferrer"
         >
