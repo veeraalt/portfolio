@@ -13,7 +13,6 @@
   display: flex;
   gap: var(--spacing-m);
   padding-right: var(--spacing-m);
-  display: flex;
   font-size: large;
   align-items: center;
   color: var(--primary-color) !important;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Project } from "../../interfaces/common";
+import { getProjects } from "../../services/projects";
 import { ProjectCard } from "../../components/projectCard/ProjectCard";
 import "./ProjectsView.css";
 
@@ -12,13 +13,12 @@ const ProjectsView = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await fetch(`data/projects_${currentLanguage}.json`);
-      const data: Project[] = await response.json();
+      const projects = await getProjects(currentLanguage);
       const workProjects = sortProjectsByYear(
-        data.filter((project) => project.type === "work")
+        projects.filter((project: Project) => project.type === "work")
       );
       const personalProjects = sortProjectsByYear(
-        data.filter((project) => project.type === "other")
+        projects.filter((project: Project) => project.type === "other")
       );
       setWorkProjectList(workProjects);
       setPersonalProjectList(personalProjects);
@@ -31,7 +31,8 @@ const ProjectsView = () => {
   const sortProjectsByYear = (projects: Project[]) => {
     return projects.sort(
       (a: Project, b: Project) =>
-      new Date(b.years[0].start).getTime() - new Date(a.years[0].start).getTime()
+        new Date(b.years[0].start).getTime() -
+        new Date(a.years[0].start).getTime()
     );
   };
 

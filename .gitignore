@@ -14,7 +14,11 @@
 # misc
 /client/.DS_Store
 /client/.env
+/server/.env
+.env
 
 /client/npm-debug.log*
 /client/yarn-debug.log*
 /client/yarn-error.log*
+
+/requests

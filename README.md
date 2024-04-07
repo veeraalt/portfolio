@@ -2,15 +2,27 @@
 
 The app is hosted on GitHub Pages on: https://veeraalt.github.io/portfolio/.
 
-This is a single-page React app created with [Create React App](https://github.com/facebook/create-react-app) and it uses TypeScript.
+The app consists of Node.js backend and a single-page React frontend created with [Create React App](https://github.com/facebook/create-react-app) that uses TypeScript.
 
 ## Getting started
 
 You can run this app locally by following these steps:
 
-- Clone this repository
+1. Clone this repository
+
+2. Start the server / backend
+
+- Navigate to the `/server` folder
+- Run `npm install` to install the dependencies
+- Run `npm start` or `npm run dev` (hot reload) to start the server in `localhost:3001` in the browser
+
+3. Start the client / frontend
+
+- Navigate to the `/client` folder
 - Run `npm install` to install the dependencies
 - Run `npm start` to start the app in `localhost:3000` in the browser
+
+4. Navigate to `localhost:3000` to view the app
 
 ## Styling
 
