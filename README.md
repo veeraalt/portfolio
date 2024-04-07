@@ -2,7 +2,7 @@
 
 The app is hosted on GitHub Pages on: https://veeraalt.github.io/portfolio/.
 
-The app consists of Node.js backend and a React frontend with TypeScript.
+The app consists of Node.js backend and React frontend that uses TypeScript.
 
 ## Getting started
 
