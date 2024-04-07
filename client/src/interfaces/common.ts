@@ -15,11 +15,11 @@ interface ProjectYear {
   end?: string;
 }
 
-export interface ContactFormData {
+export type ContactFormData = Record<string, string> & {
   name: string;
   email: string;
   message: string;
-}
+};
 
 export interface NavigationLink {
   to: string;
