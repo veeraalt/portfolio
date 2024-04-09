@@ -3,9 +3,12 @@ const app = express()
 const cors = require('cors')
 const fs = require('fs');
 const path = require('path');
+const history = require('connect-history-api-fallback');
 
 app.use(express.json())
 app.use(cors())
+
+app.use(history());
 
 app.get('/api/projects/:lang', (request, response) => {
   const lang = request.params.lang;
