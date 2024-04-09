@@ -1,6 +1,6 @@
 # Portfolio web app
 
-The app is hosted on GitHub Pages on: https://veeraalt.github.io/portfolio/.
+The app is hosted on Render on: https://veeraalt.onrender.com.
 
 The app consists of Node.js backend and React frontend that uses TypeScript.
 
