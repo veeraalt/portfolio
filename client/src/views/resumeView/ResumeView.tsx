@@ -17,8 +17,10 @@ const ResumeView = () => {
      https://www.npmjs.com/package/react-pdf used here */
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
   const { isDark } = useColorScheme();
+
   const lightModeCvPath = import.meta.env.VITE_CV_URL;
   const darkModeCvPath = import.meta.env.VITE_CV_URL_DARK;
+
   const filePath = isDark ? darkModeCvPath : lightModeCvPath;
 
   return (
