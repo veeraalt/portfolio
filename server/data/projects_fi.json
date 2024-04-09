@@ -92,7 +92,7 @@
       }
     ],
     "name": "Portfolio",
-    "website": "https://veeraalt.github.io/portfolio/",
+    "website": "https://veeraalt.onrender.com",
     "details": "Henkilökohtaisen portfolio-sivun suunnittelu ja toteutus, tarkoituksena esitellä web-kehittäjän taitoja. Luotu Reactilla käyttäen TypeScript-kirjastoa ja Github Pagesia. 100% suunnitellut ja toteuttanut allekirjoittanut.",
     "keywords": ["react", "typescript", "material ui", "css", "html"],
     "type": "other"
