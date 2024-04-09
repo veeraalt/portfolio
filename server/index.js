@@ -4,10 +4,12 @@ const cors = require('cors')
 const fs = require('fs');
 const path = require('path');
 const history = require('connect-history-api-fallback');
+const emailjs = require('@emailjs/nodejs');
+
+require('dotenv').config();
 
 app.use(express.json())
 app.use(cors())
-
 app.use(history());
 
 app.get('/api/projects/:lang', (request, response) => {
@@ -23,6 +25,25 @@ app.get('/api/projects/:lang', (request, response) => {
     }
   });
 })
+
+app.post('/api/send-email', (req, res) => {
+  const formData = req.body;
+
+  emailjs
+    .send(
+      process.env.MAIL_SERVICE_ID,
+      process.env.MAIL_TEMPLATE_ID,
+      formData,
+      { 
+        publicKey: process.env.MAIL_PUBLIC_KEY,
+        privateKey: process.env.MAIL_PRIVATE_KEY
+      }
+    )
+    .then(
+      () => res.status(200).send('Email sent successfully'),
+      (error) => res.status(500).send(`Failed to send email: ${JSON.stringify(error)}`),
+    );
+});
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT)

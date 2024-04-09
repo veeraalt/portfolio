@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
 import { ContactFormData } from "../../interfaces/common";
+import { sendEmail } from "../../services/emails";
 import "./ContactForm.css";
 
 const ContactForm = () => {
@@ -23,27 +23,20 @@ const ContactForm = () => {
   };
 
   /* Send email when form is submitted correctly */
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     resetAlert();
 
-    emailjs
-      .send(
-        import.meta.env.VITE_MAIL_SERVICE_ID,
-        import.meta.env.VITE_MAIL_TEMPLATE_ID,
-        formData,
-        import.meta.env.VITE_MAIL_PUBLIC_KEY
-      )
-      .then(
-        (result: EmailJSResponseStatus) => {
-          setAlertMessage(successMessage);
-          setAlertType("success");
-        },
-        (error: Error) => {
-          setAlertMessage(errorMessage);
-          setAlertType("error");
-        }
-      );
+    sendEmail(formData).then(
+      () => {
+        setAlertMessage(successMessage);
+        setAlertType("success");
+      },
+      () => {
+        setAlertMessage(errorMessage);
+        setAlertType("error");
+      }
+    );
   };
 
   /* Handler to update form data */
@@ -55,7 +48,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contactForm" onSubmit={sendEmail}>
+    <form className="contactForm" onSubmit={handleSubmit}>
       <label className="contactFormField">
         {`${t("contact.form.name")} *`}
         <input
