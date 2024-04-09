@@ -39,7 +39,6 @@ const ProjectsView = () => {
   // Fetch projects when view is loaded or language is changed
   useEffect(() => {
     fetchProjects();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentLanguage]);
 
   const renderProjects = (projects: Project[], title: string) => (
