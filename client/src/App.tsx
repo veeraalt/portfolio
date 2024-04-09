@@ -12,7 +12,7 @@ import "./i18n";
 const App = () => {
   return (
     <ThemeProvider>
-      <BrowserRouter basename="/portfolio">
+      <BrowserRouter basename="/">
         <ScrollToTop />
         <Navbar />
         <main>
