@@ -10,7 +10,10 @@
     "menu": "Menu",
     "website": "nettisivu",
     "on": "päällä",
-    "off": "pois päältä"
+    "off": "pois päältä",
+    "send": "Lähetä",
+    "sending": "Lähetetään...",
+    "loading": "Ladataan..."
   },
 
   "home": {
@@ -30,13 +33,14 @@
   "projects": {
     "personal": "Vapaa-ajan projektit",
     "work": "Työkokemus",
-    "loading": "Ladataan projekteja..."
+    "empty": "Ei projekteja."
   },
   "cv": {
     "intro": "Kurkkaa CV:ni alhaalta. Voit myös ladata sen tai avata sen uudessa välilehdessä.",
     "download": "Lataa",
     "open": "Avaa",
-    "downloadLight": "Lataa CV vaalealla taustalla"
+    "downloadLight": "Lataa CV vaalealla taustalla",
+    "fileNotFound": "Tiedostoa ei löytynyt :/"
   },
   "contact": {
     "title": "Ota yhteyttä",
@@ -46,7 +50,6 @@
       "name": "Nimi",
       "email": "Sähköpostiosoite",
       "message": "Viesti",
-      "send": "Lähetä",
       "successMessage": "Jes! Viestisi on lähetetty onnistuneesti.",
       "errorMessage": "Oi ei! Jokin meni pieleen. Kokeile uudestaan myöhemmin tai ota yhteyttä Linkedinin kautta."
     }

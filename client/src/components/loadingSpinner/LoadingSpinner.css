@@ -1,0 +1,9 @@
+.loadingSpinner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loadingSpinner svg {
+  color: var(--primary-color);
+}
