@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import Alert from "@mui/material/Alert";
 import { ContactFormData } from "../../interfaces/common";
 import { sendEmail } from "../../services/emails";
+import { LoadingSpinner } from "../loadingSpinner/LoadingSpinner";
 import "./ContactForm.css";
 
 const ContactForm = () => {
@@ -14,8 +15,7 @@ const ContactForm = () => {
   });
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
   const [alertType, setAlertType] = useState<"success" | "error" | null>(null);
-  const errorMessage = t("contact.form.errorMessage");
-  const successMessage = t("contact.form.successMessage");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const resetAlert = () => {
     setAlertMessage(null);
@@ -24,17 +24,20 @@ const ContactForm = () => {
 
   /* Send email when form is submitted correctly */
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setIsLoading(true);
     e.preventDefault();
     resetAlert();
 
     sendEmail(formData).then(
       () => {
-        setAlertMessage(successMessage);
+        setAlertMessage(t("contact.form.successMessage"));
         setAlertType("success");
+        setIsLoading(false);
       },
       () => {
-        setAlertMessage(errorMessage);
+        setAlertMessage(t("contact.form.errorMessage"));
         setAlertType("error");
+        setIsLoading(false);
       }
     );
   };
@@ -99,12 +102,16 @@ const ContactForm = () => {
         </Alert>
       )}
 
-      <input
-        className="pageLink submitButton"
-        type="submit"
-        value={t("contact.form.send")}
-        disabled={alertType === "success"}
-      />
+      {isLoading ? (
+        <LoadingSpinner text={t("common.sending")} />
+      ) : (
+        <input
+          className="pageLink submitButton"
+          type="submit"
+          value={t("common.send")}
+          disabled={alertType === "success"}
+        />
+      )}
     </form>
   );
 };
