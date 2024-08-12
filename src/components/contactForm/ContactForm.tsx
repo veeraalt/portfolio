@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
 import Alert from "@mui/material/Alert";
 import { ContactFormData } from "../../interfaces/common";
-import { sendEmail } from "../../services/emails";
 import { LoadingSpinner } from "../loadingSpinner/LoadingSpinner";
 import "./ContactForm.css";
 
@@ -28,18 +28,27 @@ const ContactForm = () => {
     e.preventDefault();
     resetAlert();
 
-    sendEmail(formData).then(
-      () => {
-        setAlertMessage(t("contact.form.successMessage"));
-        setAlertType("success");
-        setIsLoading(false);
-      },
-      () => {
-        setAlertMessage(t("contact.form.errorMessage"));
-        setAlertType("error");
-        setIsLoading(false);
-      }
-    );
+    emailjs
+      .send(
+        import.meta.env.VITE_MAIL_SERVICE_ID,
+        import.meta.env.VITE_MAIL_TEMPLATE_ID,
+        formData,
+        {
+          publicKey: import.meta.env.VITE_MAIL_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          setAlertMessage(t("contact.form.successMessage"));
+          setAlertType("success");
+          setIsLoading(false);
+        },
+        () => {
+          setAlertMessage(t("contact.form.errorMessage"));
+          setAlertType("error");
+          setIsLoading(false);
+        }
+      );
   };
 
   /* Handler to update form data */
