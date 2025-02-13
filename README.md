@@ -1,6 +1,6 @@
 # Portfolio web app
 
-The app is hosted on Render on: https://veeraalt.onrender.com.
+The app is hosted on Render on: https://veeraalt.com.
 
 The app is a React app that uses TypeScript.
 
