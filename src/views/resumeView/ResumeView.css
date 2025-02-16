@@ -27,10 +27,6 @@
     flex-direction: column;
     width: 100%;
   }
-
-  .lightCvButton {
-    width: calc(100% - 2 * var(--spacing-s));
-  }
 }
 
 @media (min-width: 701px) {

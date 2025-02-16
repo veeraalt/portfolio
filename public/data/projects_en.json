@@ -18,7 +18,7 @@
     "id": 2,
     "years": [
       {
-        "start": "Jun - Aug 2020"
+        "start": "2020"
       }
     ],
     "title": "Software Developer",
@@ -50,7 +50,9 @@
         "start": "2022",
         "end": "2023"
       },
-      { "start": "Jun - Sep 2021" }
+      { "start": "2021",
+        "end": "2021"
+      }
     ],
     "title": "Software Developer / Consultant",
     "company": "Futurice",
@@ -72,8 +74,8 @@
     "id": 5,
     "years": [
       {
-        "start": "Nov 2023",
-        "end": "Present"
+        "start": "2023",
+        "end": "2024"
       }
     ],
     "title": "Fullstack Developer",

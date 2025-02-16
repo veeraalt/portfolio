@@ -11,10 +11,11 @@ const ContactView = () => {
   return (
     <div className="contactContainer">
       <h1>{t("contact.title")}</h1>
-      <p>
+
+      <p className="card">
         {t("contact.intro")}{" "}
         <a
-          className="inlineLink"
+          className="highlight inlineLink"
           href={import.meta.env.VITE_LINKEDIN_URL}
           target="_blank"
           rel="noreferrer"
@@ -24,27 +25,31 @@ const ContactView = () => {
         .
       </p>
 
-      <ContactForm />
+      <div className="contactContent">
+        <ContactForm />
 
-      <div className="contactLinkContainer">
-        <a
-          className="contactLink"
-          href={import.meta.env.VITE_LINKEDIN_URL}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <LinkedinIcon size="44" />
-          linkedin
-        </a>
-        <a
-          className="contactLink"
-          href={import.meta.env.VITE_GITHUB_URL}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GithubIcon size="44" />
-          github
-        </a>
+        <div className="contactLinkContainer">
+          <a
+            className="contactLink"
+            href={import.meta.env.VITE_LINKEDIN_URL}
+            target="_blank"
+            rel="noreferrer"
+            tabIndex={0} // TODO: Why is this needed?
+          >
+            <LinkedinIcon size="44" />
+            linkedin
+          </a>
+          <a
+            className="contactLink"
+            href={import.meta.env.VITE_GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
+            tabIndex={0}
+          >
+            <GithubIcon size="44" />
+            github
+          </a>
+        </div>
       </div>
     </div>
   );

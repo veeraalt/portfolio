@@ -1,12 +1,28 @@
+.contactContent {
+  display: flex;
+  flex-direction: column;
+}
+
 .inlineLink {
   color: var(--primary-color) !important;
 }
 
+.card {
+  background-color: var(--card-color);
+  padding: var(--spacing-m);
+  border-radius: 0.25rem;
+}
+
 .contactLinkContainer {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   gap: var(--spacing-l);
   margin-top: var(--spacing-xl);
+}
+
+.contactLinkContainer :first-child svg {
+  margin-left: 0.65rem;
 }
 
 .contactLink {
@@ -22,11 +38,25 @@
 .contactLink:hover,
 .inlineLink:focus,
 .inlineLink:hover {
-  color: var(--focus-color) !important;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @media (min-height: 800px) {
   .contactContainer {
     margin-top: 5dvh;
+  }
+}
+
+@media (min-width: 601px) {
+  .contactContent {
+    flex-direction: row;
+  }
+
+  .contactLinkContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--spacing-l);
+    margin-top: var(--spacing-xl);
   }
 }
