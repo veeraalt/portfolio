@@ -34,11 +34,7 @@ const ProjectsView = () => {
 
   // Sort projects - most recent first
   const sortProjectsByYear = (projects: Project[]) => {
-    return projects.sort(
-      (a: Project, b: Project) =>
-        new Date(b.years[0].start).getTime() -
-        new Date(a.years[0].start).getTime()
-    );
+    return projects.reverse();
   };
 
   // Fetch projects when view is loaded or language is changed

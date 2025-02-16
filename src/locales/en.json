@@ -3,7 +3,7 @@
     "title": "Veera's portfolio",
     "home": "Home",
     "projects": "Projects",
-    "cv": "CV",
+    "cv": "Resume",
     "contact": "Contact",
     "open": "Open",
     "close": "Close",
@@ -19,11 +19,9 @@
   "home": {
     "hi": "Hi, my name is",
     "name": "Veera Alt",
-    "intro1": "I'm a ",
-    "intro2": " with interest in design and accessibility. I specialize in creating responsive websites that work smoothly and are visually engaging.",
-    "intro3": "Since embarking on my computer science journey in 2017, I've had the privilege to contribute software to diverse projects, from ",
-    "intro4": "When I'm not coding, I enjoy bouldering and diving into various projects, from learning to knit to crafting furniture. Please explore my website for more about my projects and how to get in touch with me.",
-    "keyword": "fullstack developer",
+    "intro1": "I'm a fullstack developer based in Sydney, Australia. I specialize in creating responsive and accessible websites that are aesthetically pleasing.",
+    "intro2": "I've had the privilege to contribute software to diverse projects, from ",
+    "intro3": "When I'm not coding, I enjoy bouldering and diving into various projects, from learning to knit to crafting furniture.",
     "project1": "a large university",
     "project2": "a bustling auctioning website",
     "project3": "a growing IT staffing company",
@@ -36,7 +34,7 @@
     "empty": "No projects to show."
   },
   "cv": {
-    "intro": "Check out my CV from below. You can also download it or open it in a new tab.",
+    "intro": "Find my resume/CV below. You can also download it or open it in a new tab.",
     "download": "Download",
     "open": "Open",
     "downloadLight": "Download light background CV",

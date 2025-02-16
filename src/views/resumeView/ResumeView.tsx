@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Document, Page, pdfjs } from "react-pdf";
 import {
-  FaCircleChevronRight as ArrowIcon,
+  FaChevronRight as ArrowIcon,
   FaDownload as DownloadIcon,
 } from "react-icons/fa6";
 import { useColorScheme } from "../../hooks/useColorScheme";
@@ -32,7 +32,7 @@ const ResumeView = () => {
         error={<p>{t("cv.fileNotFound")}</p>}
         loading={<LoadingSpinner text={t("common.loading")} />}
       >
-        <p>{t("cv.intro")}</p>
+        <p className="card">{t("cv.intro")}</p>
         <div className="resumeOuterButtonContainer">
           <div className="resumeButtonContainer">
             <a className="pageLink resumeButton" href={filePath} download>
