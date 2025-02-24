@@ -90,6 +90,10 @@
 }
 
 @media (max-width: 750px) {
+  .navbar {
+    border-bottom: 2px solid var(--navbar-focus);
+  }
+
   .navLinks,
   .darkModeButtonContainer {
     display: none;

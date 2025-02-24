@@ -20,13 +20,8 @@
     "hi": "Hi, my name is",
     "name": "Veera Alt",
     "intro1": "I'm a fullstack developer based in Sydney, Australia. I specialize in creating responsive and accessible websites that are aesthetically pleasing.",
-    "intro2": "I've had the privilege to contribute software to diverse projects, from ",
-    "intro3": "When I'm not coding, I enjoy bouldering and diving into various projects, from learning to knit to crafting furniture.",
-    "project1": "a large university",
-    "project2": "a bustling auctioning website",
-    "project3": "a growing IT staffing company",
-    "to": " to ",
-    "and": " and "
+    "intro2": "I've had the privilege to contribute software to diverse projects, from a large university to a bustling auctioning website and a growing IT staffing company.",
+    "intro3": "When I'm not coding, I enjoy bouldering and diving into various projects, from learning to knit to crafting furniture."
   },
   "projects": {
     "personal": "Personal projects",
@@ -62,5 +57,12 @@
       "title": "Theme",
       "dark": "Dark mode"
     }
+  },
+  "art": {
+    "title": "CSS art",
+    "intro": "This is a collection of CSS graphics I have created. Feel free to use them on your projects. Read more about CSS art on ",
+    "heart": "Heart",
+    "smiley": "Smiley",
+    "peace": "Peace sign"
   }
 }

@@ -20,14 +20,8 @@
     "hi": "Moi, minun nimeni on",
     "name": "Veera Alt",
     "intro1": "Olen fullstack-kehittäjä ja asun Sydneyssä, Australiassa. Erikoisosaamiseni on luoda responsiivisia ja saavutettavia nettisivuja, jotka myös näyttävät hyvältä.",
-    "intro2": "Olen saanut osallistua kehittäjän roolissa monipuolisiin projekteihin, joihin kuuluu mm. ",
-    "intro3": "Kun en ole koodaamassa, nautin boulderoinnista ja erilaisiin projekteihin uppoutumisesta, kuten opetella neulomaan tai rakentamaan huonekaluja.",
-    "keyword": "fullstack-kehittäjä",
-    "project1": "suuri yliopisto",
-    "project2": "vilkas nettihuutokauppa",
-    "project3": "kasvava IT-henkilöstöyritys",
-    "to": ", ",
-    "and": " ja "
+    "intro2": "Olen saanut osallistua kehittäjän roolissa monipuolisiin projekteihin, joihin kuuluu mm. suuri yliopisto, vilkas nettihuutokauppa ja kasvava IT-henkilöstöyritys.",
+    "intro3": "Kun en ole koodaamassa, nautin boulderoinnista ja erilaisiin projekteihin uppoutumisesta, kuten opetella neulomaan tai rakentamaan huonekaluja."
   },
   "projects": {
     "personal": "Vapaa-ajan projektit",
@@ -63,5 +57,12 @@
       "title": "Teema",
       "dark": "Tumma tila"
     }
+  },
+  "art": {
+    "title": "CSS-taide",
+    "intro": "Täältä löydät kokoelman tekemiäni CSS-grafiikkoja. Voit käyttää niitä vapaasti omiin projekteihisi. Lue lisää CSS-taiteesta englanniksi osoitteessa ",
+    "heart": "Sydän",
+    "smiley": "Hymiö",
+    "peace": "Rauhanmerkki"
   }
 }

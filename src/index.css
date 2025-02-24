@@ -1,22 +1,19 @@
 /* App colors */
 :root {
-  --white: #fdfdfc;
-  --paper: #f5f4f2;
-  --cream-light: #e5e1dd;
-  --cream: #efedea;
-  --beige-light: #d6d1ca;
-  --beige: #c7c0b7;
-  --beige-dark: #ada396;
+  --white: #f5f4f2;
+  --cream: #e4e5f7;
   --brown: #45413a;
   --grey-light: #a3a3a3;
-  --grey: #2e2e2e;
-  --grey-medium: #454443;
-  --grey-dark: #222222;
+  --grey: #494949;
+  --grey-dark: #323232;
   --grey-darkest: #181818;
-  --black: #131313;
-  --blue-light: #9bf0ff;
-  --blue: #80ecff;
-  --blue-dark: #3520d6;
+  --button-disabled: #837f7e;
+  --button-disabled-dark: #736f6e;
+  --lilac-light: #d5d5f7;
+  --lilac: #a09af1;
+  --lilac-dark: #8a7fd7;
+  --blue: #7cd1d9;
+  --blue-dark: #5b48e0;
 }
 
 /* Brand colors */
@@ -40,41 +37,39 @@
 /* Layout colors */
 :root {
   --background-color: var(--cream);
-  --text-color: var(--black);
+  --text-color: black;
   --primary-color: var(--blue-dark);
-  --button-outline-color: var(--blue-dark);
-  --button-text-color: var(--cream);
-  --button-focus-color: var(--paper);
-  --card-color: var(--cream-light);
-  --navbar-background: var(--beige-light);
-  --navbar-menu: var(--beige-light);
-  --navbar-focus: var(--beige);
+  --focus-color: var(--black);
+  --button-focus-color: var(--lilac-light);
+  --button-outline-color: var(--primary-color);
+  --navbar-background: var(--lilac);
+  --navbar-focus: var(--lilac-dark);
+  --navbar-shadow: var(--lilac-dark);
+  --card-color: var(--lilac-light);
   --card-subheader: var(--brown);
   --card-sidetext: var(--brown);
   --form-background-color: var(--white);
   --form-focus-color: var(--blue-dark);
   --button-disabled: var(--grey-light);
-  --toggle-button-outline-color: var(--button-disabled);
+  --footer-background: var(--lilac-light);
 }
 
 /* Layout colors for dark color scheme */
 [data-theme="dark"] {
   --background-color: var(--grey-darkest);
-  --text-color: var(--paper);
+  --text-color: var(--white);
   --primary-color: var(--blue);
   --button-outline-color: var(--primary-color);
-  --button-text-color: var(--cream);
-  --button-focus-color: var(--grey-medium);
-  --card-color: var(--grey-dark);
-  --navbar-background: var(--black);
-  --navbar-menu: var(--grey-dark);
+  --button-focus-color: var(--grey-dark);
+  --button-focus-outline-color: var(--primary-color);
+  --navbar-background: var(--grey-dark);
   --navbar-focus: var(--grey);
-  --card-subheader: var(--grey-light);
-  --card-sidetext: var(--grey-light);
-  --form-background-color: var(--cream);
-  --form-focus-color: var(--blue);
-  --button-disabled: var(--grey-medium);
-  --toggle-button-outline-color: var(--primary-color);
+  --card-color: var(--grey-dark);
+  --card-subheader: var(--white);
+  --card-sidetext: var(--white);
+  --form-background-color: var(--white);
+  --form-focus-color: var(--primary-color);
+  --footer-background: var(--grey);
 }
 
 /* Layout */
@@ -86,8 +81,10 @@
   --spacing-ml: 1.5rem;
   --spacing-l: 2rem;
   --spacing-xl: 3rem;
-  /* 100% device view height - navbar height, padding and margin */
-  --viewheight: calc(100dvh - 2 * var(--spacing-xl) - var(--spacing-l));
+  /* 100% device view height - navbar height - footer height, padding and margin */
+  --viewheight: calc(
+    100dvh - 2 * var(--spacing-xl) - 3.5rem - var(--spacing-l)
+  );
   --viewheight-mobile: calc(100dvh - 2 * var(--spacing-xl));
   /* 100% device view width - padding */
   --viewwidth: calc(100dvw - 2 * var(--spacing-l));
@@ -109,12 +106,9 @@ input {
 
 body {
   margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color);
-  color: var(--text-color);
   height: calc(100dvh - var(--spacing-xl));
+  background-color: var(--background-color);
+  opacity: 0.9;
 }
 
 h1 {
@@ -125,8 +119,13 @@ a,
 p,
 h2,
 h3,
-label {
+label,
+span {
   color: var(--text-color) !important;
+}
+
+svg {
+  fill: var(--primary-color);
 }
 
 main {

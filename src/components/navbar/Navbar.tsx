@@ -23,6 +23,7 @@ export const Navbar = () => {
   const navigationLinks: Array<NavigationLink> = [
     { to: "/projects", text: t("common.projects") },
     { to: "/cv", text: t("common.cv") },
+    { to: "/cssart", text: "CSS art" },
     { to: "/contact", text: t("common.contact") },
   ];
 
