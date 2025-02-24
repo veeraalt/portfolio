@@ -2,9 +2,6 @@
 :root {
   --white: #f5f4f2;
   --cream: #e4e5f7;
-  --beige-light: #c7c0b7;
-  --beige: #d6d1ca;
-  --beige-dark: #ada396;
   --brown: #45413a;
   --grey-light: #a3a3a3;
   --grey: #494949;
@@ -54,7 +51,6 @@
   --form-background-color: var(--white);
   --form-focus-color: var(--blue-dark);
   --button-disabled: var(--grey-light);
-  --toggle-button-outline-color: var(--button-disabled);
   --footer-background: var(--lilac-light);
 }
 
@@ -73,7 +69,6 @@
   --card-sidetext: var(--white);
   --form-background-color: var(--white);
   --form-focus-color: var(--primary-color);
-  --toggle-button-outline-color: var(--primary-color);
   --footer-background: var(--grey);
 }
 
