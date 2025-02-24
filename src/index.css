@@ -2,21 +2,18 @@
 :root {
   --white: #fdfdfc;
   --paper: #f5f4f2;
-  --cream-light: #e5e1dd;
-  --cream: #efedea;
-  --beige-light: #d6d1ca;
-  --beige: #c7c0b7;
-  --beige-dark: #ada396;
+  --cream: #e5e5ff;
   --brown: #45413a;
   --grey-light: #a3a3a3;
-  --grey: #2e2e2e;
-  --grey-medium: #454443;
-  --grey-dark: #222222;
+  --grey: #464646;
+  --grey-dark: #2f2f2f;
   --grey-darkest: #181818;
-  --black: #131313;
+  --lilac-light: #d6d5fd;
+  --lilac: #adacfb;
+  --lilac-dark: #918ef9;
   --blue-light: #9bf0ff;
   --blue: #80ecff;
-  --blue-dark: #3520d6;
+  --blue-dark: #4733da;
 }
 
 /* Brand colors */
@@ -40,21 +37,22 @@
 /* Layout colors */
 :root {
   --background-color: var(--cream);
-  --text-color: var(--black);
+  --text-color: black;
   --primary-color: var(--blue-dark);
   --button-outline-color: var(--blue-dark);
   --button-text-color: var(--cream);
   --button-focus-color: var(--paper);
-  --card-color: var(--cream-light);
-  --navbar-background: var(--beige-light);
-  --navbar-menu: var(--beige-light);
-  --navbar-focus: var(--beige);
+  --card-color: var(--lilac-light);
+  --navbar-background: var(--lilac);
+  --navbar-menu: var(--lilac);
+  --navbar-focus: var(--lilac-dark);
   --card-subheader: var(--brown);
   --card-sidetext: var(--brown);
   --form-background-color: var(--white);
   --form-focus-color: var(--blue-dark);
   --button-disabled: var(--grey-light);
   --toggle-button-outline-color: var(--button-disabled);
+  --footer-background: var(--lilac-light);
 }
 
 /* Layout colors for dark color scheme */
@@ -66,15 +64,16 @@
   --button-text-color: var(--cream);
   --button-focus-color: var(--grey-medium);
   --card-color: var(--grey-dark);
-  --navbar-background: var(--black);
+  --navbar-background: var(--grey-dark);
   --navbar-menu: var(--grey-dark);
   --navbar-focus: var(--grey);
   --card-subheader: var(--grey-light);
   --card-sidetext: var(--grey-light);
   --form-background-color: var(--cream);
   --form-focus-color: var(--blue);
-  --button-disabled: var(--grey-medium);
+  --button-disabled: var(--grey);
   --toggle-button-outline-color: var(--primary-color);
+  --footer-background: var(--grey);
 }
 
 /* Layout */
@@ -86,8 +85,10 @@
   --spacing-ml: 1.5rem;
   --spacing-l: 2rem;
   --spacing-xl: 3rem;
-  /* 100% device view height - navbar height, padding and margin */
-  --viewheight: calc(100dvh - 2 * var(--spacing-xl) - var(--spacing-l));
+  /* 100% device view height - navbar height - footer height, padding and margin */
+  --viewheight: calc(
+    100dvh - 2 * var(--spacing-xl) - 3.5rem - var(--spacing-l)
+  );
   --viewheight-mobile: calc(100dvh - 2 * var(--spacing-xl));
   /* 100% device view width - padding */
   --viewwidth: calc(100dvw - 2 * var(--spacing-l));
@@ -109,12 +110,9 @@ input {
 
 body {
   margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-color);
-  color: var(--text-color);
   height: calc(100dvh - var(--spacing-xl));
+  background-color: var(--background-color);
+  opacity: 0.9;
 }
 
 h1 {
@@ -125,8 +123,13 @@ a,
 p,
 h2,
 h3,
-label {
+label,
+span {
   color: var(--text-color) !important;
+}
+
+svg {
+  fill: var(--primary-color);
 }
 
 main {

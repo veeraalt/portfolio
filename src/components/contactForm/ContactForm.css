@@ -15,7 +15,7 @@
 .contactFormInput {
   background-color: var(--form-background-color);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--spacing-s);
   padding: var(--spacing-m);
   font-size: medium;
 }

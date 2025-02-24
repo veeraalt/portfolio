@@ -1,0 +1,36 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.cardTitleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
+.cardTitleContainer h2 {
+  margin: 0;
+}
+
+.cardContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+  margin-left: var(--spacing-s);
+}
+
+.cardContentContainer h3 {
+  margin-bottom: 0;
+}
+
+code {
+  background-color: var(--background-color);
+  padding: var(--spacing-m);
+  border-radius: var(--spacing-s);
+  white-space: pre-wrap;
+  color: var(--text-color);
+}

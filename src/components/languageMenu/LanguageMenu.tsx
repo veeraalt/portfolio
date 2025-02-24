@@ -38,7 +38,7 @@ export const LanguageMenu = () => {
         aria-expanded={isLanguageMenuOpen}
         aria-label={t("settings.language.select")}
       >
-        <LanguageIcon size="44" className="languageIcon" />
+        <LanguageIcon size="44" />
         <span aria-hidden="true">{currentLanguage}</span>
         {isLanguageMenuOpen ? <ArrowUpIcon /> : <ArrowDownIcon />}
       </button>

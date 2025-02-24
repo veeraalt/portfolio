@@ -1,0 +1,44 @@
+#smiley {
+  position: relative;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #f8ef71;
+}
+
+#eyes:before,
+#eyes:after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  background-color: black;
+  border-radius: 50%;
+  top: 30%;
+  left: 25%;
+}
+
+#eyes:after {
+  left: 60%;
+  right: 25%;
+}
+
+#mouth {
+  position: relative;
+  background-color: #391619;
+  width: 60%;
+  height: 30%;
+  border-radius: 0 0 50px 50px;
+  top: 60%;
+  left: 20%;
+}
+
+#teeth {
+  position: relative;
+  width: 90%;
+  height: 40%;
+  background-color: white;
+  border-radius: 0 0 40px 40px;
+  top: 10%;
+  left: 5%;
+}

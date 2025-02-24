@@ -1,0 +1,39 @@
+.footer {
+  height: 3.5rem;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: repeating-linear-gradient(
+      45deg,
+      var(--navbar-background) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--navbar-background) 75%,
+      var(--navbar-background)
+    ),
+    repeating-linear-gradient(
+      45deg,
+      var(--navbar-background) 25%,
+      var(--footer-background) 25%,
+      var(--footer-background) 75%,
+      var(--navbar-background) 75%,
+      var(--navbar-background)
+    );
+  background-position: 0 0, 14px 14px;
+  background-size: 28px 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-s);
+  margin: var(--spacing-s);
+}
+
+.footerText {
+  margin-right: 1rem;
+  color: var(--primary-color) !important;
+}

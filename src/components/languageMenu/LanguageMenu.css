@@ -16,11 +16,6 @@
   background-color: var(--navbar-focus) !important;
 }
 
-.languageIcon {
-  background-color: var(--navbar);
-  color: var(--primary-color);
-}
-
 .languageMenu div {
   border-radius: 0;
   box-shadow: none;
