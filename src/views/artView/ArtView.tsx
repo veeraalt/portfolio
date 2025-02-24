@@ -59,7 +59,7 @@ const ArtView = () => {
   position: absolute;
   width: 15%;
   height: 15%;
-  background-color: black;
+  background-color: #391619;
   border-radius: 50%;
   top: 30%;
   left: 25%;
@@ -108,25 +108,25 @@ const ArtView = () => {
 #circle {
   width: 100%;
   height: 100%;
-  border: 2px solid var(--primary-color);
+  border: 2px solid #5b48e0;
   border-radius: 50px;
   box-sizing: border-box;
 }
 
-#line1 {
+#line1,
+#line2,
+#line3 {
   position: relative;
   width: 7%;
+  background-color: #5b48e0;
   height: 100%;
-  background-color: var(--primary-color);
   left: 47%;
 }
 
 #line2,
 #line3 {
-  position: relative;
   width: 7%;
   height: 55%;
-  background-color: var(--primary-color);
   bottom: 55%;
   left: 28%;
   transform: rotate(45deg);

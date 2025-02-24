@@ -11,20 +11,20 @@
   box-sizing: border-box;
 }
 
-#line1 {
+#line1,
+#line2,
+#line3 {
   position: relative;
   width: 7%;
-  height: 100%;
   background-color: var(--primary-color);
+  height: 100%;
   left: 47%;
 }
 
 #line2,
 #line3 {
-  position: relative;
   width: 7%;
   height: 55%;
-  background-color: var(--primary-color);
   bottom: 55%;
   left: 28%;
   transform: rotate(45deg);
