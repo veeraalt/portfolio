@@ -7,7 +7,7 @@
   width: calc(100dvw - 2 * var(--spacing-xs));
   max-height: calc(100% - var(--spacing-xl) - 2 * var(--spacing-s));
   padding: var(--spacing-s) var(--spacing-xs);
-  background-color: var(--navbar-menu);
+  background-color: var(--navbar-background);
   gap: var(--spacing-xs);
   overflow-y: auto;
   overflow-x: hidden;
@@ -16,8 +16,8 @@
 .menuLink {
   padding: var(--spacing-m);
   padding-left: var(--spacing-sm);
-  background-color: var(--navbar-menu);
-  border: 2px solid var(--navbar-menu);
+  background-color: var(--navbar-background);
+  border: 2px solid var(--navbar-background);
   text-decoration: none;
 }
 

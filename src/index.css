@@ -1,23 +1,22 @@
 /* App colors */
 :root {
-  --white: #fdfdfc;
-  --paper: #f5f4f2;
-  --cream: #efedea;
+  --white: #f5f4f2;
+  --cream: #e4e5f7;
   --beige-light: #c7c0b7;
   --beige: #d6d1ca;
   --beige-dark: #ada396;
   --brown: #45413a;
   --grey-light: #a3a3a3;
-  --grey: #2e2e2e;
-  --grey-dark: #222222;
+  --grey: #494949;
+  --grey-dark: #323232;
   --grey-darkest: #181818;
-  --black: #131313;
-  --neon-green: #63c073;
-  --neon-green-light: #81ce85;
-  --forest-green: #214e2f;
-  --forest-green-dark: #193a23;
   --button-disabled: #837f7e;
   --button-disabled-dark: #736f6e;
+  --lilac-light: #d5d5f7;
+  --lilac: #a09af1;
+  --lilac-dark: #8a7fd7;
+  --blue: #7cd1d9;
+  --blue-dark: #5b48e0;
 }
 
 /* Brand colors */
@@ -41,17 +40,15 @@
 /* Layout colors */
 :root {
   --background-color: var(--cream);
-  --text-color: var(--black);
-  --primary-color: var(--forest-green);
-  --focus-color: var(--forest-green-dark);
-  --button-background-color: var(--forest-green);
-  --button-text-color: var(--cream);
-  --button-focus-color: var(--forest-green-dark);
-  --button-focus-outline-color: var(--forest-green-dark);
-  --navbar-background: var(--beige-light);
-  --navbar-menu: var(--beige);
-  --navbar-focus: var(--beige-dark);
-  --navbar-shadow: var(--beige-dark);
+  --text-color: black;
+  --primary-color: var(--blue-dark);
+  --focus-color: var(--black);
+  --button-focus-color: var(--lilac-light);
+  --button-outline-color: var(--primary-color);
+  --navbar-background: var(--lilac);
+  --navbar-focus: var(--lilac-dark);
+  --navbar-shadow: var(--lilac-dark);
+  --card-color: var(--lilac-light);
   --card-subheader: var(--brown);
   --card-sidetext: var(--brown);
   --form-background-color: var(--white);
@@ -64,19 +61,18 @@
 /* Layout colors for dark color scheme */
 [data-theme="dark"] {
   --background-color: var(--grey-darkest);
-  --text-color: var(--paper);
+  --text-color: var(--white);
   --primary-color: var(--blue);
   --button-outline-color: var(--primary-color);
-  --button-text-color: var(--cream);
   --button-focus-color: var(--grey-dark);
   --button-focus-outline-color: var(--primary-color);
-  --navbar-background: var(--black);
-  --navbar-menu: var(--grey-dark);
+  --navbar-background: var(--grey-dark);
   --navbar-focus: var(--grey);
-  --card-subheader: var(--grey-light);
-  --card-sidetext: var(--grey-light);
-  --form-background-color: var(--cream);
-  --form-focus-color: var(--beige-light);
+  --card-color: var(--grey-dark);
+  --card-subheader: var(--white);
+  --card-sidetext: var(--white);
+  --form-background-color: var(--white);
+  --form-focus-color: var(--primary-color);
   --toggle-button-outline-color: var(--primary-color);
   --footer-background: var(--grey);
 }

@@ -13,7 +13,7 @@ export const ProjectCard = ({
   const { t } = useTranslation();
 
   return (
-    <div className="projectCard">
+    <div className="card projectCard">
       <ul className="projectYear">
         {years.map((year) => (
           <li key={year.start}>
