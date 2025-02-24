@@ -14,31 +14,12 @@
   align-items: center;
 }
 
-.linkContainer {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-s);
-  margin-top: var(--spacing-l);
-}
-
 .introContainer > svg {
   flex: 1;
 }
 
 .introContainer > p {
   flex: 4;
-}
-
-.linkContainer > a {
-  background-color: var(--card-color);
-  color: var(--text-color) !important;
-  outline: none;
-}
-
-.linkContainer > a:hover,
-.linkContainer > a:focus {
-  background-color: var(--card-color);
-  text-decoration: underline;
 }
 
 .pageLink {
