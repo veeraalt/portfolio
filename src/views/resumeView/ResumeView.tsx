@@ -60,7 +60,11 @@ const ResumeView = () => {
             </a>
           )}
         </div>
-        <Page className="resumeFileContainer" pageNumber={1} />
+        <Page
+          className="resumeFileContainer"
+          pageNumber={1}
+          renderTextLayer={false}
+        />
       </Document>
     </div>
   );
