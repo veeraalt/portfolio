@@ -1,0 +1,52 @@
+.moon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.waningMoon {
+  box-shadow: inset 10px 0 #f9f985;
+}
+
+.waxingMoon {
+  box-shadow: inset -14px 0 #f9f985;
+}
+
+.quarterMoon {
+  width: 16px;
+  margin-right: 16px;
+  background-color: #f9f985;
+  border-radius: 50px 0 0 50px;
+}
+
+.fullMoon {
+  background-color: #f9f985;
+}
+
+.crater {
+  position: relative;
+  background-color: #f1c194;
+  border-radius: 50%;
+}
+
+.crater1 {
+  width: 20%;
+  height: 20%;
+  top: 55%;
+  left: 50%;
+}
+
+.crater2 {
+  width: 10%;
+  height: 10%;
+  top: 18%;
+  left: 18%;
+}
+
+.crater3 {
+  width: 15%;
+  height: 15%;
+  top: -9%;
+  left: 60%;
+}

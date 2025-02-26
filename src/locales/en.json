@@ -61,8 +61,36 @@
   "art": {
     "title": "CSS art",
     "intro": "This is a collection of CSS graphics I have created. Feel free to use them on your projects. Read more about CSS art on ",
-    "heart": "Heart",
-    "smiley": "Smiley",
-    "peace": "Peace sign"
+    "heart": {
+      "title": "Heart",
+      "description": "Heart looks simple, but it's a bit more complex than it seems. You can use the :before and :after pseudo-elements to create the two halves of the heart. The idea is to create two rectangles, rotate them to overlap with each other, and then round the corners to create the illusion of a heart shape. Maybe the most complex part is to get the heart to stay inside the borders of the outside div while keeping the shape."
+    },
+    "smiley": {
+      "title": "Smiley",
+      "description": "Smiley face is a fun and simple graphic to create, and also easy to modify for your liking. First you create the face, which is just a yellow circle. Then you add the eyes, which are two smaller circles. The mouth is a bit more complex, but you can create it by using a rectangle with rounded corners. Optionally add teeth, which are also a rectangle with rounded corners."
+    },
+    "peace": {
+      "title": "Peace sign",
+      "description": "Peace sign is very straightforward to create. You can use the border property to create the circle, and then create three thin rectangles to form the lines."
+    },
+    "moon": {
+      "title": "Moon",
+      "description1": " Moon is one of the simplest CSS graphics to create. You can use the ",
+      "description2": " property to create the different moon phases."
+    },
+    "fullMoon": {
+      "title": "Full moon",
+      "description": "Full moon is really simple, since it's just a circle. You can make it a little more interesting by adding a couple craters, which are darker circles of varying sizes and positions."
+    },
+    "waningMoon": {
+      "title": "Waning crescent moon"
+    },
+    "waxingMoon": {
+      "title": "Waxing crescent moon"
+    },
+    "quarterMoon": {
+      "title": "Third quarter moon",
+      "description": "Quarter moon, or half moon, is a little different but still simple. You can't just use a single box-shadow to create it. One option is to create a rectangle and rounding its two corners with border-radius."
+    }
   }
 }
