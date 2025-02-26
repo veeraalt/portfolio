@@ -4,40 +4,137 @@ import "./ArtView.css";
 import { Heart } from "../../components/graphics/heart/Heart";
 import { Smiley } from "../../components/graphics/smiley/Smiley";
 import { Peace } from "../../components/graphics/peace/Peace";
+import {
+  Moon,
+  WaningMoon,
+  WaxingMoon,
+  QuarterMoon,
+  FullMoon,
+} from "../../components/graphics/moon/Moon";
 
 const ArtView = () => {
   const { t } = useTranslation();
 
   const cssGraphics = [
     {
-      title: "heart",
-      component: <Heart />,
-      html: `<div id="heart" />`,
-      css: `#heart {
-  height: 32px;
+      title: "moon.title",
+      component: <Moon />,
+      description: (
+        <span>
+          {t("art.moon.description1")}
+          <a
+            className="highlight inlineLink"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            box-shadow
+          </a>
+          {t("art.moon.description2")}
+        </span>
+      ),
+      categories: [
+        {
+          title: "waningMoon.title",
+          component: <WaningMoon />,
+          html: `<div class="moon waningMoon" />`,
+          css: `.moon {
   width: 32px;
-  position: relative;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
 }
 
-#heart:before,
-#heart:after {
-  position: absolute;
-  content: "";
-  width: 55%;
-  height: 90%;
-  background: #ff9eac;
-  border-radius: 50px 50px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 50% 30%;
-}
-
-#heart:after {
-  transform: rotate(45deg);
-  transform-origin: 95% 100%;
+.waningMoon {
+  box-shadow: inset 10px 0  #f9f985;
 }`,
+        },
+        {
+          title: "waxingMoon.title",
+          component: <WaxingMoon />,
+          html: `<div class="moon waxingMoon" />`,
+          css: `.moon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.waxingMoon {
+  box-shadow: inset -14px 0 #f9f985;
+}`,
+        },
+        {
+          title: "fullMoon.title",
+          component: <FullMoon />,
+          description: t("art.fullMoon.description"),
+          html: `<div class="moon fullMoon">
+    <div class="crater crater1" />
+    <div class="crater crater2" />
+    <div class="crater crater3" />
+  </div>`,
+          css: `.moon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.fullMoon {
+  background-color: #f9f985;
+}
+
+.crater {
+  position: relative;
+  background-color: #f1c194;
+  border-radius: 50%;
+}
+
+.crater1 {
+  width: 20%;
+  height: 20%;
+  top: 55%;
+  left: 50%;
+}
+
+.crater2 {
+  width: 10%;
+  height: 10%;
+  top: 18%;
+  left: 18%;
+}
+
+.crater3 {
+  width: 15%;
+  height: 15%;
+  top: -9%;
+  left: 60%;
+}`,
+        },
+        {
+          title: "quarterMoon.title",
+          component: <QuarterMoon />,
+          description: t("art.quarterMoon.description"),
+          html: `<div class="moon quarterMoon" />`,
+          css: `.moon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.quarterMoon {
+  width: 16px;
+  margin-right: 16px;
+  background-color: #f9f985;
+  border-radius: 50px 0 0 50px;
+}`,
+        },
+      ],
     },
     {
-      title: "smiley",
+      title: "smiley.title",
+      description: t("art.smiley.description"),
       component: <Smiley />,
       html: `<div id="smiley">
   <div id="eyes" />
@@ -91,8 +188,37 @@ const ArtView = () => {
 }`,
     },
     {
-      title: "peace",
+      title: "heart.title",
+      description: t("art.heart.description"),
+      component: <Heart />,
+      html: `<div id="heart" />`,
+      css: `#heart {
+  height: 32px;
+  width: 32px;
+  position: relative;
+}
+
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  width: 55%;
+  height: 90%;
+  background: #ff9eac;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 50% 30%;
+}
+
+#heart:after {
+  transform: rotate(45deg);
+  transform-origin: 95% 100%;
+}`,
+    },
+    {
+      title: "peace.title",
       component: <Peace />,
+      description: t("art.peace.description"),
       html: `<div id="peace">
   <div id="circle">
     <div id="line1" />
@@ -163,10 +289,33 @@ const ArtView = () => {
               {graphic.component}
             </div>
             <div className="cardContentContainer">
-              <h3>HTML:</h3>
-              <code>{graphic.html}</code>
-              <h3>CSS:</h3>
-              <code>{graphic.css}</code>
+              {graphic.description && <p>{graphic.description}</p>}
+              {graphic.html && (
+                <>
+                  <h3>HTML:</h3>
+                  <code className="innerCard">{graphic.html}</code>
+                  <h3>CSS:</h3>
+                  <code className="innerCard">{graphic.css}</code>
+                </>
+              )}
+              <div className="categoriesContainer">
+                {graphic.categories &&
+                  graphic.categories.map((category) => (
+                    <div className="categoryContainer" key={category.title}>
+                      <div className="cardTitleContainer">
+                        <h3>{t(`art.${category.title}`)}</h3>
+                        {category.component}
+                      </div>
+                      <div className="cardContentContainer">
+                        {category.description && <p>{category.description}</p>}
+                        <h4>HTML:</h4>
+                        <code className="innerCard">{category.html}</code>
+                        <h4>CSS:</h4>
+                        <code className="innerCard">{category.css}</code>
+                      </div>
+                    </div>
+                  ))}
+              </div>
             </div>
           </div>
         ))}

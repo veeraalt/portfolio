@@ -61,8 +61,36 @@
   "art": {
     "title": "CSS-taide",
     "intro": "Täältä löydät kokoelman tekemiäni CSS-grafiikkoja. Voit käyttää niitä vapaasti omiin projekteihisi. Lue lisää CSS-taiteesta englanniksi osoitteessa ",
-    "heart": "Sydän",
-    "smiley": "Hymiö",
-    "peace": "Rauhanmerkki"
+    "heart": {
+      "title": "Sydän",
+      "description": "Sydän näyttää yksinkertaiselta, mutta se on hieman monimutkainen luoda. Voit hyödyntää :before ja :after -pseudoelementtejä luodaksesi sydämen kaksi puolikasta. Ideana on luoda kaksi suorakulmiota, kääntää ne päällekkäin ja pyöristää kulmat luodaksesi illuusion sydämen muodosta. Ehkä monimutkaisin osa on saada sydän pysymään ulomman divin rajojen sisällä niin että haluttu muoto säilyy."
+    },
+    "smiley": {
+      "title": "Hymiö",
+      "description": "Hymiö on hauska ja yksinkertainen luoda, ja sitä on myös helppo muokata mieltymystesi mukaan. Ensin luot kasvot, jotka ovat vain keltainen ympyrä. Sitten lisäät silmät, jotka ovat kaksi pienempää ympyrää. Suu on hieman monimutkaisempi, mutta voit luoda sen käyttämällä suorakulmiota, jossa on kaksi pyöristettyä kulmaa. Halutessasi voit lisää hampaat, jotka ovat myös suorakulmio pyöristetyillä kulmilla."
+    },
+    "peace": {
+      "title": "Rauhanmerkki",
+      "description": "Rauhanmerkki on hyvin suoraviivainen luoda. Voit käyttää border-ominaisuutta luodaksesi ympyrän, ja sitten luot kolme ohutta suorakulmiota muodostaaksesi viivat."
+    },
+    "moon": {
+      "title": "Kuu",
+      "description1": "Kuu on yksi yksinkertaisimmista CSS-grafiikoista luoda. Voit käyttää ",
+      "description2": " -ominaisuutta luodaksesi eri kuun vaiheet."
+    },
+    "fullMoon": {
+      "title": "Täysikuu",
+      "description": "Täysikuu on hyvin yksinkertainen, sillä se on vain ympyrä. Voit tehdä siitä hieman mielenkiintoisemman luomalla muutaman kraaterin, jotka ovat erikokoisia tummempia ympyröitä eri kohdissa."
+    },
+    "waningMoon": {
+      "title": "Vähenevä sirppi"
+    },
+    "waxingMoon": {
+      "title": "Kasvava sirppi"
+    },
+    "quarterMoon": {
+      "title": "Puolikuu",
+      "description": "Puolikuu on hieman erilainen, mutta kuitenkin yksinkertainen. Sen luomiseen ei voi käyttää pelkästään yhtä box-shadowia. Yksi vaihtoehto on luoda suorakulmio, jonka kaksi kulmaa on pyöristetty käyttämällä border-radius -ominaisuutta."
+    }
   }
 }
