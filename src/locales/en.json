@@ -90,7 +90,7 @@
     },
     "quarterMoon": {
       "title": "Third quarter moon",
-      "description": "Quarter moon, or half moon, is a little different but still simple. You can't just use a single box-shadow to create it. One option is to create a rectangle and rounding its two corners with border-radius."
+      "description": "Quarter moon, or half moon, is a little different but still simple. You can't just use a single box-shadow to create it. One option is to create a rectangle and round its two corners with border-radius."
     }
   }
 }
