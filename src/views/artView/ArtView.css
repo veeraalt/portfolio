@@ -3,34 +3,3 @@
   flex-direction: column;
   gap: var(--spacing-m);
 }
-
-.cardTitleContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--spacing-m);
-}
-
-.cardContentContainer {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-s);
-  margin-left: var(--spacing-s);
-}
-
-code {
-  white-space: pre-wrap;
-  color: var(--text-color);
-}
-
-.innerCard {
-  background-color: var(--background-color);
-  padding: var(--spacing-m);
-  border-radius: var(--spacing-s);
-}
-
-.categoriesContainer {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-m);
-}
