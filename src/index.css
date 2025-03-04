@@ -6,7 +6,8 @@
   --grey-light: #a3a3a3;
   --grey: #494949;
   --grey-dark: #323232;
-  --grey-darkest: #181818;
+  --grey-darkest: #242424;
+  --black: #040404;
   --button-disabled: #837f7e;
   --button-disabled-dark: #736f6e;
   --lilac-light: #d5d5f7;
@@ -56,13 +57,13 @@
 
 /* Layout colors for dark color scheme */
 [data-theme="dark"] {
-  --background-color: var(--grey-darkest);
+  --background-color: var(--black);
   --text-color: var(--white);
   --primary-color: var(--blue);
   --button-outline-color: var(--primary-color);
   --button-focus-color: var(--grey-dark);
   --button-focus-outline-color: var(--primary-color);
-  --navbar-background: var(--grey-dark);
+  --navbar-background: var(--grey-darkest);
   --navbar-focus: var(--grey);
   --card-color: var(--grey-dark);
   --card-subheader: var(--white);

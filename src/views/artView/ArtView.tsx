@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "./ArtView.css";
 import { Heart } from "../../components/graphics/heart/Heart";
 import { Smiley } from "../../components/graphics/smiley/Smiley";
 import { Peace } from "../../components/graphics/peace/Peace";
@@ -11,6 +10,8 @@ import {
   QuarterMoon,
   FullMoon,
 } from "../../components/graphics/moon/Moon";
+import { Card } from "../../components/card/Card";
+import "./ArtView.css";
 
 const ArtView = () => {
   const { t } = useTranslation();
@@ -267,7 +268,7 @@ const ArtView = () => {
   ];
 
   return (
-    <div className="contactContainer">
+    <div>
       <h1>{t("art.title")}</h1>
       <p className="card">
         {t("art.intro")}
@@ -283,41 +284,7 @@ const ArtView = () => {
 
       <div className="cardContainer">
         {cssGraphics.map((graphic) => (
-          <div className="card" key={graphic.title}>
-            <div className="cardTitleContainer">
-              <h2>{t(`art.${graphic.title}`)}</h2>
-              {graphic.component}
-            </div>
-            <div className="cardContentContainer">
-              {graphic.description && <p>{graphic.description}</p>}
-              {graphic.html && (
-                <>
-                  <h3>HTML:</h3>
-                  <code className="innerCard">{graphic.html}</code>
-                  <h3>CSS:</h3>
-                  <code className="innerCard">{graphic.css}</code>
-                </>
-              )}
-              <div className="categoriesContainer">
-                {graphic.categories &&
-                  graphic.categories.map((category) => (
-                    <div className="categoryContainer" key={category.title}>
-                      <div className="cardTitleContainer">
-                        <h3>{t(`art.${category.title}`)}</h3>
-                        {category.component}
-                      </div>
-                      <div className="cardContentContainer">
-                        {category.description && <p>{category.description}</p>}
-                        <h4>HTML:</h4>
-                        <code className="innerCard">{category.html}</code>
-                        <h4>CSS:</h4>
-                        <code className="innerCard">{category.css}</code>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-            </div>
-          </div>
+          <Card key={graphic.title} graphic={graphic} />
         ))}
       </div>
     </div>
