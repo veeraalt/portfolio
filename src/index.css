@@ -89,8 +89,8 @@
   --spacing-ml: 1.5rem;
   --spacing-l: 2rem;
   --spacing-xl: 3rem;
-  /* 100% device view height - navbar height - footer height */
-  --viewheight: calc(100dvh - 2 * var(--spacing-xl) - var(--spacing-l));
+  /* 100% device view height - navbar height */
+  --viewheight: calc(100dvh - var(--spacing-xl));
   /* 100% device view width - padding */
   --viewwidth: calc(100dvw - 2 * var(--spacing-l));
   --max-content-width: 800px;
@@ -149,7 +149,6 @@ button:hover svg {
 
 main {
   min-height: var(--viewheight);
-  margin: var(--spacing-xl) var(--spacing-m);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -159,7 +158,7 @@ main {
 }
 
 main > div {
-  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-m);
   height: 100%;
   display: flex;
   flex-direction: column;

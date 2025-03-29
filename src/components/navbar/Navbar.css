@@ -69,7 +69,7 @@
 
 .menu-open main,
 .menu-open footer {
-  filter: brightness(20%) sepia(10%);
+  filter: brightness(80%) sepia(10%);
   background-color: var(--background-color);
 }
 
