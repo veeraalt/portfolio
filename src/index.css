@@ -47,6 +47,7 @@
   --card-subheader: var(--brown);
   --card-sidetext: var(--brown);
   --subcard-color: var(--cactus);
+  --subcard-icon-color: var(--cactus-light);
   --form-background-color: var(--white);
   --form-focus-color: var(--cactus);
   --footer-background: var(--grey-lightest);
@@ -70,6 +71,7 @@
   --card-subheader: var(--grey-light);
   --card-sidetext: var(--white);
   --subcard-color: var(--grey-dark);
+  --subcard-icon-color: var(--cactus-dark);
   --form-background-color: var(--white);
   --form-focus-color: var(--primary-color);
   --footer-background: var(--grey-darkest);
