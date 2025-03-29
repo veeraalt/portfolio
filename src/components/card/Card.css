@@ -58,6 +58,10 @@ code {
   background-color: var(--subcard-color);
 }
 
+.categoriesContainer svg {
+  fill: var(--subcard-icon-color);
+}
+
 @media (max-width: 600px) {
   .cardTitleContainer {
     gap: var(--spacing-s);
