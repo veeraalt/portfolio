@@ -50,9 +50,7 @@
         "start": "2022",
         "end": "2023"
       },
-      { "start": "2021",
-        "end": "2021"
-      }
+      { "start": "2021", "end": "2021" }
     ],
     "title": "Software Developer / Consultant",
     "company": "Futurice",
@@ -95,7 +93,7 @@
     ],
     "name": "Portfolio",
     "website": "https://veeraalt.onrender.com",
-    "details": "Designing and developing a personal portfolio site showcasing web development skills. Built with React using TypeScript and deployed on Render. 100% designed and developed by yours truly.",
+    "details": "Designing and developing a personal portfolio site showcasing web development skills and trying new ideas. Built with React using TypeScript and deployed on Render. 100% designed and developed by yours truly.",
     "keywords": ["react", "typescript", "material ui", "css", "html"],
     "type": "other"
   }

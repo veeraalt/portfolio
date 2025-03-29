@@ -9,23 +9,27 @@
   flex-direction: row;
   justify-content: space-between;
   gap: var(--spacing-s);
-  margin-bottom: var(--spacing-m);
+  margin: var(--spacing-l) 0;
 }
 
 .resumeButtonContainer {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-s);
+  gap: var(--spacing-m);
 }
 
 .resumeButton {
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-s);
 }
 
 @media (max-width: 700px) {
   .resumeOuterButtonContainer {
     flex-direction: column;
     width: 100%;
+    gap: var(--spacing-m);
   }
 }
 

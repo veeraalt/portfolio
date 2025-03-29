@@ -62,7 +62,7 @@ const ContactForm = () => {
   return (
     <form className="contactForm" onSubmit={handleSubmit}>
       <label className="contactFormField">
-        {`${t("contact.form.name")} *`}
+        {t("contact.form.name")}
         <input
           className="contactFormInput"
           type="text"
@@ -75,7 +75,7 @@ const ContactForm = () => {
         />
       </label>
       <label className="contactFormField">
-        {`${t("contact.form.email")} *`}
+        {t("contact.form.email")}
         <input
           className="contactFormInput"
           type="email"
@@ -88,7 +88,7 @@ const ContactForm = () => {
         />
       </label>
       <label className="contactFormField">
-        {`${t("contact.form.message")} *`}
+        {t("contact.form.message")}
         <textarea
           className="contactFormInput"
           name="message"
@@ -114,12 +114,13 @@ const ContactForm = () => {
       {isLoading ? (
         <LoadingSpinner text={t("common.sending")} />
       ) : (
-        <input
-          className="pageLink submitButton"
+        <button
+          className="button submitButton"
           type="submit"
-          value={t("common.send")}
           disabled={alertType === "success"}
-        />
+        >
+          {t("common.send")}
+        </button>
       )}
     </form>
   );

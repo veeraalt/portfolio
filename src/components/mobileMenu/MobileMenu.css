@@ -21,11 +21,13 @@
   text-decoration: none;
 }
 
-.menuLink.active,
+.menuLink.active {
+  background-color: var(--navbar-shadow);
+}
+
 .menuLink:hover,
 .menuLink:focus {
-  background-color: var(--navbar-focus) !important;
-  border: 2px solid var(--navbar-focus) !important;
+  background-color: var(--navbar-focus);
 }
 
 .settingsContainer {

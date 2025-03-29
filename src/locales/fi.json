@@ -17,11 +17,16 @@
   },
 
   "home": {
-    "hi": "Moi, minun nimeni on",
     "name": "Veera Alt",
-    "intro1": "Olen fullstack-kehittäjä ja asun Sydneyssä, Australiassa. Erikoisosaamiseni on luoda responsiivisia ja saavutettavia nettisivuja, jotka myös näyttävät hyvältä.",
-    "intro2": "Olen saanut osallistua kehittäjän roolissa monipuolisiin projekteihin, joihin kuuluu mm. suuri yliopisto, vilkas nettihuutokauppa ja kasvava IT-henkilöstöyritys.",
-    "intro3": "Kun en ole koodaamassa, nautin boulderoinnista ja erilaisiin projekteihin uppoutumisesta, kuten opetella neulomaan tai rakentamaan huonekaluja."
+    "title": "fullstack-kehittäjä",
+    "intro1": "Fullstack-kehittäjä joka asuu Australiassa, ja on erikoistunut responsiivisiin ja saavutettaviin nettisivuihin, jotka näyttävät hyvältä. Olen innostunut koko prosessista suunnittelusta julkaisuun, ja pysyn ajan tasalla uusimmista teknologioista ja trendeistä.",
+    "intro2": "Olen saanut osallistua monipuolisiin projekteihin, joihin kuuluu mm. ",
+    "to": ", ",
+    "and": " ja ",
+    "intro3": "Kun en ole koodaamassa, nautin boulderoinnista, lukemisesta ja erilaisiin projekteihin uppoutumisesta, kuten opetella neulomaan tai rakentamaan huonekaluja.",
+    "keyword1": "suuri yliopisto",
+    "keyword2": "vilkas nettihuutokauppa",
+    "keyword3": "kasvava IT-henkilöstöyritys"
   },
   "projects": {
     "personal": "Vapaa-ajan projektit",
@@ -37,8 +42,7 @@
   },
   "contact": {
     "title": "Ota yhteyttä",
-    "intro": "Kiinnostuitko työskentelemään kanssani? Pistä viestiä tässä tai",
-    "linkedin": "linkedinissä",
+    "intro": "Kiinnostuitko työskentelemään kanssani? Pistä viestiä tässä tai linkedinissä.",
     "form": {
       "name": "Nimi",
       "email": "Sähköpostiosoite",

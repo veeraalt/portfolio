@@ -9,13 +9,6 @@
   font-size: medium;
 }
 
-.languageButton:hover,
-.languageButton:focus,
-.languageOption:hover,
-.languageOption:focus {
-  background-color: var(--navbar-focus) !important;
-}
-
 .languageMenu div {
   border-radius: 0;
   box-shadow: none;

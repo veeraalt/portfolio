@@ -35,12 +35,12 @@ const ResumeView = () => {
         <p className="card">{t("cv.intro")}</p>
         <div className="resumeOuterButtonContainer">
           <div className="resumeButtonContainer">
-            <a className="pageLink resumeButton" href={filePath} download>
+            <a className="button resumeButton" href={filePath} download>
               {t("cv.download")}
               <DownloadIcon />
             </a>
             <a
-              className="pageLink resumeButton"
+              className="button resumeButton"
               href={filePath}
               target="_blank"
               rel="noreferrer"
@@ -51,7 +51,7 @@ const ResumeView = () => {
           </div>
           {isDark && (
             <a
-              className="pageLink resumeButton lightCvButton"
+              className="button resumeButton lightCvButton"
               href={lightModeCvPath}
               download
             >

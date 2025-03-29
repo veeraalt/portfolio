@@ -1,12 +1,17 @@
-.shortIntro {
-  font-size: medium;
-  font-family: "Source Code Pro", monospace;
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .name {
-  font-size: 48px;
-  margin-top: var(--spacing-s);
-  font-family: "Roboto Serif", serif;
+  margin-bottom: 0;
+  font-size: var(--spacing-l);
+}
+
+.shortIntro {
+  font-family: "Source Code Pro", monospace;
+  margin: var(--spacing-s);
 }
 
 .introContainer {
@@ -22,9 +27,14 @@
   flex: 4;
 }
 
+.profileImage {
+  /*max-width: 400px;*/
+  right: 0;
+}
+
 .pageLink {
-  color: var(--button-outline-color) !important;
-  outline: 2px solid var(--button-outline-color);
+  color: var(--background-color) !important;
+  background-color: var(--navbar-focus);
   border-radius: 1rem;
   font-size: var(--spacing-m);
   font-weight: 600;
@@ -40,27 +50,26 @@
 
 .pageLink:hover,
 .pageLink:focus {
-  background-color: var(--button-focus-color);
+  background-color: var(--primary-color);
 }
 
-.highlight {
-  color: var(--primary-color);
-  font-weight: 600;
+.pageLink svg {
+  fill: var(--background-color);
 }
 
 .highlight.inlineLink {
   text-decoration: none;
 }
 
-@media (min-height: 600px) {
-  .infoContainer {
-    margin-top: 10dvh;
+@media (max-width: 600px) {
+  .shortIntro {
+    font-size: var(--spacing-m);
   }
 }
 
 @media (min-width: 601px) {
-  .introContainer > p {
-    flex: 6;
+  .name {
+    font-size: var(--spacing-xl);
   }
 
   .innerInfoContainer {
@@ -68,9 +77,11 @@
     gap: var(--spacing-m);
   }
 
-  .outerIntroContainer {
-    display: flex;
-    flex-direction: column;
-    flex: 3;
+  .introOuterContainer {
+    margin-top: var(--spacing-l);
+  }
+
+  .introContainer > p {
+    flex: 6;
   }
 }

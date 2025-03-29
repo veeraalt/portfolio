@@ -55,7 +55,7 @@ code {
 }
 
 .categoriesContainer > div {
-  outline: 1px solid var(--primary-color);
+  background-color: var(--subcard-color);
 }
 
 @media (max-width: 600px) {

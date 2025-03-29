@@ -1,39 +1,42 @@
 .footer {
-  height: 3.5rem;
-  background-color: #e5e5f7;
-  opacity: 0.8;
-  background-image: repeating-linear-gradient(
-      45deg,
-      var(--navbar-background) 25%,
-      transparent 25%,
-      transparent 75%,
-      var(--navbar-background) 75%,
-      var(--navbar-background)
-    ),
-    repeating-linear-gradient(
-      45deg,
-      var(--navbar-background) 25%,
-      var(--footer-background) 25%,
-      var(--footer-background) 75%,
-      var(--navbar-background) 75%,
-      var(--navbar-background)
-    );
-  background-position: 0 0, 14px 14px;
-  background-size: 28px 28px;
+  width: 100%;
+  height: var(--spacing-xl);
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  background-color: var(--footer-background);
+  opacity: 0.9;
+  backdrop-filter: blur(30px);
+  position: relative;
 }
 
-.footerContent {
+.footerLinks {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-s);
-  margin: var(--spacing-s);
+  gap: var(--spacing-l);
+  padding: 0.25rem;
+  position: relative;
 }
 
-.footerText {
-  margin-right: 1rem;
-  color: var(--primary-color) !important;
+.profileImage {
+  height: calc(var(--viewwidth) * 0.5);
+  max-height: 300px;
+  transform: scaleX(-1);
+  margin-left: 1rem;
+  z-index: -1;
+  position: absolute;
+  right: 1rem;
+  filter: brightness(80%);
+}
+
+@media (max-width: 700px) {
+  .footer {
+    justify-content: flex-start;
+  }
+
+  .footerLinks {
+    margin-left: var(--spacing-l);
+  }
 }

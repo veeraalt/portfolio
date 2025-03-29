@@ -4,24 +4,20 @@
   top: 0;
   right: 0;
   height: var(--spacing-xl);
-  background-color: var(--navbar-background);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  gap: var(--spacing-xl);
+  flex-direction: column;
   z-index: 9999;
 }
 
-.navbar > div {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-l);
+.navLinks {
+  display: none;
 }
 
-.navLinks {
-  display: flex;
-  gap: var(--spacing-m);
+.navLinks span {
+  text-transform: lowercase;
 }
 
 .navLink {
@@ -32,34 +28,21 @@
   align-items: center;
   text-decoration: none;
   background-color: var(--navbar-background);
-  color: var(--text-color);
+  text-transform: lowercase;
 }
 
-.navLink:hover,
-.navLink:focus,
-.menuButton:hover,
-.menuButton:focus {
-  background-color: var(--navbar-focus) !important;
+.navLink.active {
+  box-shadow: var(--navbar-focus) 0px -5px inset;
 }
 
-.navButtons .toggleContainer {
-  padding: calc(var(--spacing-s) - 1px);
-}
-
-.navButtons .toggleContainer:hover,
-.navButtons .toggleContainer:focus {
-  background-color: var(--navbar-focus) !important;
-}
-
-.navLink.active,
 .navLink:hover,
 .navLink:focus {
-  text-decoration: underline;
+  box-shadow: var(--navbar-focus) 0px -5px inset, var(--navbar-shadow) 0px 5px;
 }
 
 .navButtons {
   display: none;
-  gap: var(--spacing-s);
+  gap: var(--spacing-m);
 }
 
 .menuButton {
@@ -68,10 +51,10 @@
   right: 0;
   top: 0;
   background-color: transparent !important;
-  color: var(--text-color) !important;
   border: 0;
   height: 100%;
   width: var(--spacing-xl);
+  text-transform: lowercase;
 }
 
 .menuButton svg {
@@ -84,29 +67,23 @@
   overflow: hidden;
 }
 
-.menu-open main {
-  filter: brightness(70%) sepia(10%);
+.menu-open main,
+.menu-open footer {
+  filter: brightness(20%) sepia(10%);
   background-color: var(--background-color);
 }
 
-@media (max-width: 750px) {
-  .navbar {
-    border-bottom: 2px solid var(--navbar-focus);
-  }
-
-  .navLinks,
-  .darkModeButtonContainer {
-    display: none;
-  }
-}
-
 @media (min-width: 751px) {
+  .navbar {
+    background-color: var(--navbar-background);
+  }
+
   .menuButton {
     display: none;
   }
 
-  .navButtons {
+  .navLinks {
     display: flex;
-    align-items: center;
+    gap: var(--spacing-m);
   }
 }

@@ -31,6 +31,10 @@
   margin: 0;
 }
 
+.projectDetails h4 {
+  color: var(--card-subheader) !important;
+}
+
 .projectHeader {
   text-decoration: none;
   display: inline-block;

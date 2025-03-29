@@ -21,6 +21,7 @@ export const Navbar = () => {
   const { isDark, toggleDarkMode } = useColorScheme();
 
   const navigationLinks: Array<NavigationLink> = [
+    { to: "/", text: t("common.home") },
     { to: "/projects", text: t("common.projects") },
     { to: "/cv", text: t("common.cv") },
     { to: "/cssart", text: "CSS art" },
@@ -82,27 +83,22 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar" ref={navigationRef}>
-      <div>
-        <NavLink className="navLink" to="/">
-          {t("common.home")}
-        </NavLink>
-        <div className="navLinks">
-          {navigationLinks.map((link) => (
-            <NavLink className="navLink" to={link.to} key={link.to}>
-              {link.text}
-            </NavLink>
-          ))}
-        </div>
+      <div className="navLinks">
+        {navigationLinks.map((link) => (
+          <NavLink className="navLink" to={link.to} key={link.to}>
+            {link.text}
+          </NavLink>
+        ))}
+        <LanguageMenu />
+        <ToggleButton
+          onClick={toggleDarkMode}
+          value={isDark}
+          label={t("settings.theme.dark")}
+        />
       </div>
+
       <div>
-        <div className="navButtons">
-          <LanguageMenu />
-          <ToggleButton
-            onClick={toggleDarkMode}
-            value={isDark}
-            label={t("settings.theme.dark")}
-          />
-        </div>
+        <div className="navButtons"></div>
         <button
           ref={mobileMenuButtonRef}
           className="menuButton"
