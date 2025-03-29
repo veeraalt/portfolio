@@ -168,6 +168,7 @@ main > div {
 
 main > div > div {
   width: 100%;
+  margin-top: var(--spacing-s);
 }
 
 @media (min-width: 801px) {
