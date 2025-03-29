@@ -17,11 +17,16 @@
   },
 
   "home": {
-    "hi": "Hi, my name is",
     "name": "Veera Alt",
-    "intro1": "I'm a fullstack developer based in Sydney, Australia. I specialize in creating responsive and accessible websites that are aesthetically pleasing.",
-    "intro2": "I've had the privilege to contribute software to diverse projects, from a large university to a bustling auctioning website and a growing IT staffing company.",
-    "intro3": "When I'm not coding, I enjoy bouldering and diving into various projects, from learning to knit to crafting furniture."
+    "title": "fullstack developer",
+    "intro1": "Fullstack developer based in Australia, specializing in responsive and accessible websites that look good. Passionate about the entire process from design to deployment, I stay up-to-date with the latest technologies and trends.",
+    "intro2": "I've had the privilege to contribute software to diverse projects, from ",
+    "to": " to ",
+    "and": " and ",
+    "intro3": "When I'm not coding, I enjoy bouldering, reading and diving into various projects, from learning to knit to crafting furniture.",
+    "keyword1": "a large university",
+    "keyword2": "a bustling web auction",
+    "keyword3": "a growing IT staffing company"
   },
   "projects": {
     "personal": "Personal projects",
@@ -37,8 +42,7 @@
   },
   "contact": {
     "title": "Contact me",
-    "intro": "Interested in working with me? Shoot me a message here or in",
-    "linkedin": "linkedin",
+    "intro": "Interested in working with me? Shoot me a message here or in linkedin.",
     "form": {
       "name": "Name",
       "email": "Email address",

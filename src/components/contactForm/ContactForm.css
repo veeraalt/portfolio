@@ -2,7 +2,7 @@
   display: flex;
   flex: 2;
   flex-direction: column;
-  max-width: 420px;
+  width: 100%;
   gap: var(--spacing-m);
 }
 
@@ -15,7 +15,6 @@
 .contactFormInput {
   background-color: var(--form-background-color);
   border: none;
-  border-radius: var(--spacing-s);
   padding: var(--spacing-m);
   font-size: medium;
 }
@@ -30,8 +29,7 @@
 }
 
 .submitButton {
-  background-color: transparent;
-  margin-top: var(--spacing-s);
+  margin-top: var(--spacing-m);
 }
 
 .submitButton:disabled,
@@ -40,6 +38,42 @@
   background-color: var(--button-disabled);
   outline: 2px solid var(--button-disabled) !important;
   color: var(--text-color) !important;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid var(--button-color);
+  color: var(--button-text-color) !important;
+  font-size: medium;
+  position: relative;
+  height: var(--spacing-xl);
+  text-decoration: none;
+  width: 100%;
+}
+
+.button svg {
+  fill: var(--button-text-color) !important;
+}
+
+.button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:before {
+  background-color: var(--button-shadow);
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  width: 100%;
+  z-index: -1;
+}
+
+.button:focus:before,
+.button:hover:before {
+  background-color: var(--button-focus);
 }
 
 .alertMessage {
@@ -61,5 +95,9 @@
 @media (min-width: 501px) {
   .submitButton {
     width: 40%;
+  }
+
+  .contactForm {
+    width: 75%;
   }
 }

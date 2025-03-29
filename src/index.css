@@ -1,20 +1,20 @@
 /* App colors */
 :root {
   --white: #f5f4f2;
-  --cream: #e4e5f7;
+  --cream: #fefcfe;
   --brown: #45413a;
+  --grey-lightest: #d8dbca;
   --grey-light: #a3a3a3;
   --grey: #494949;
   --grey-dark: #323232;
-  --grey-darkest: #242424;
+  --grey-darkest: #1d1d1d;
   --black: #040404;
   --button-disabled: #837f7e;
   --button-disabled-dark: #736f6e;
-  --lilac-light: #d5d5f7;
-  --lilac: #a09af1;
-  --lilac-dark: #8a7fd7;
-  --blue: #7cd1d9;
-  --blue-dark: #5b48e0;
+  --cactus-lightest: #d0d9c0;
+  --cactus-light: #b4c299;
+  --cactus: #a2b381;
+  --cactus-dark: #515e39;
 }
 
 /* Brand colors */
@@ -38,39 +38,46 @@
 /* Layout colors */
 :root {
   --background-color: var(--cream);
-  --text-color: black;
-  --primary-color: var(--blue-dark);
-  --focus-color: var(--black);
-  --button-focus-color: var(--lilac-light);
-  --button-outline-color: var(--primary-color);
-  --navbar-background: var(--lilac);
-  --navbar-focus: var(--lilac-dark);
-  --navbar-shadow: var(--lilac-dark);
-  --card-color: var(--lilac-light);
+  --text-color: var(--black);
+  --primary-color: var(--cactus-dark);
+  --navbar-background: var(--background-color);
+  --navbar-focus: var(--cactus);
+  --navbar-shadow: var(--cactus-lightest);
+  --card-color: var(--cactus-lightest);
   --card-subheader: var(--brown);
   --card-sidetext: var(--brown);
+  --subcard-color: var(--cactus);
   --form-background-color: var(--white);
-  --form-focus-color: var(--blue-dark);
+  --form-focus-color: var(--cactus);
+  --footer-background: var(--grey-lightest);
+  --icon-focus: var(--cactus-dark);
   --button-disabled: var(--grey-light);
-  --footer-background: var(--lilac-light);
+  --button-color: var(--cactus);
+  --button-shadow: var(--cactus-lightest);
+  --button-focus: var(--cactus-light);
+  --button-text-color: var(--black);
 }
 
 /* Layout colors for dark color scheme */
 [data-theme="dark"] {
   --background-color: var(--black);
   --text-color: var(--white);
-  --primary-color: var(--blue);
-  --button-outline-color: var(--primary-color);
-  --button-focus-color: var(--grey-dark);
-  --button-focus-outline-color: var(--primary-color);
-  --navbar-background: var(--grey-darkest);
-  --navbar-focus: var(--grey);
-  --card-color: var(--grey-dark);
-  --card-subheader: var(--white);
+  --primary-color: var(--cactus);
+  --navbar-background: var(--background-color);
+  --navbar-focus: var(--cactus-dark);
+  --navbar-shadow: var(--cactus);
+  --card-color: var(--grey-darkest);
+  --card-subheader: var(--grey-light);
   --card-sidetext: var(--white);
+  --subcard-color: var(--grey-dark);
   --form-background-color: var(--white);
   --form-focus-color: var(--primary-color);
-  --footer-background: var(--grey);
+  --footer-background: var(--grey-darkest);
+  --icon-focus: var(--cactus);
+  --button-color: var(--cactus-dark);
+  --button-shadow: var(--cactus-light);
+  --button-focus: var(--cactus);
+  --button-text-color: var(--black);
 }
 
 /* Layout */
@@ -82,14 +89,10 @@
   --spacing-ml: 1.5rem;
   --spacing-l: 2rem;
   --spacing-xl: 3rem;
-  /* 100% device view height - navbar height - footer height, padding and margin */
-  --viewheight: calc(
-    100dvh - 2 * var(--spacing-xl) - 3.5rem - var(--spacing-l)
-  );
-  --viewheight-mobile: calc(100dvh - 2 * var(--spacing-xl));
+  /* 100% device view height - navbar height - footer height */
+  --viewheight: calc(100dvh - 2 * var(--spacing-xl) - var(--spacing-l));
   /* 100% device view width - padding */
   --viewwidth: calc(100dvw - 2 * var(--spacing-l));
-  --viewwidth-mobile: calc(100dvw - 2 * var(--spacing-ml));
   --max-content-width: 800px;
   --font: "Inter", "Roboto", sans-serif;
 }
@@ -109,11 +112,16 @@ body {
   margin: 0;
   height: calc(100dvh - var(--spacing-xl));
   background-color: var(--background-color);
-  opacity: 0.9;
 }
 
 h1 {
   color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: lowercase;
+  opacity: 0.8;
 }
 
 a,
@@ -129,38 +137,43 @@ span {
 }
 
 svg {
-  fill: var(--primary-color);
+  fill: var(--button-color);
+}
+
+a:focus svg,
+a:hover svg,
+button:focus svg,
+button:hover svg {
+  fill: var(--icon-focus);
 }
 
 main {
   min-height: var(--viewheight);
-  padding: var(--spacing-l);
-  padding-bottom: var(--spacing-xl);
-  margin-top: var(--spacing-xl);
+  margin: var(--spacing-xl) var(--spacing-m);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 
 main > div {
+  width: 100%;
   height: 100%;
-  width: calc(var(--max-content-width) - 2 * var(--spacing-l));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 600px) {
-  main {
-    padding-top: 0;
-    min-height: var(--viewheight-mobile);
-  }
-
-  main > div {
-    max-width: var(--viewwidth-mobile);
-  }
+main > div > div {
+  width: 100%;
 }
 
-@media (min-width: 601px) and (max-width: 800px) {
+@media (min-width: 801px) {
   main > div {
-    max-width: var(--viewwidth);
+    margin-top: var(--spacing-xl);
+    width: calc(var(--max-content-width) - 2 * var(--spacing-l));
   }
 }
