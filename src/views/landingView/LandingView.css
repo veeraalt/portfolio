@@ -14,6 +14,10 @@
   margin: var(--spacing-s);
 }
 
+.introOuterContainer {
+  padding: var(--spacing-m) var(--spacing-l) var(--spacing-m) 0 !important;
+}
+
 .introContainer {
   display: flex;
   align-items: center;
@@ -25,11 +29,6 @@
 
 .introContainer > p {
   flex: 5;
-}
-
-.profileImage {
-  /*max-width: 400px;*/
-  right: 0;
 }
 
 .pageLink {
