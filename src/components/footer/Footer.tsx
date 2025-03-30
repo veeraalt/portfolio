@@ -50,7 +50,7 @@ export const Footer = () => (
     <img
       className="profileImage"
       src="/data/veera-outline.png"
-      alt="Image of Veera"
+      alt="Profile image of Veera"
     />
   </footer>
 );

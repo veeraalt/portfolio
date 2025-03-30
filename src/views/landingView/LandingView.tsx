@@ -15,7 +15,7 @@ const LandingView = () => {
     <div className="infoContainer">
       <h1 className="name">{t("home.name")}</h1>
       <h2 className="shortIntro">{t("home.title")}</h2>
-      <div className="introOuterContainer">
+      <div className="introOuterContainer card">
         <div className="introContainer">
           <PersonIcon />
           <p>{t("home.intro1")}</p>

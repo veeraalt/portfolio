@@ -8,9 +8,10 @@
 }
 
 .card {
-  /*min-width: 70%;*/
   background-color: var(--card-color);
   padding: var(--spacing-m);
+  position: relative;
+  z-index: 2;
 }
 
 .contactLinkContainer {
