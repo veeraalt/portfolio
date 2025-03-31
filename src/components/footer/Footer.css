@@ -22,12 +22,12 @@
 }
 
 .profileImage {
-  height: calc(var(--viewwidth) * 0.5);
+  height: calc(min(var(--viewwidth), var(--viewheight)) * 0.4);
   max-height: 300px;
   margin-left: 1rem;
-  z-index: 1;
   position: absolute;
   right: 1rem;
+  z-index: 1;
 }
 
 @media (max-width: 700px) {
