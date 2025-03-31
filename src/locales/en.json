@@ -48,7 +48,7 @@
       "email": "Email address",
       "message": "Message",
       "successMessage": "Yay! The message was sent successfully.",
-      "errorMessage": "Oh no! Something went wrong. Please try again later or contact me via Linkedin."
+      "errorMessage": "Oh no! Something went wrong. Please try again later or contact me via linkedin."
     }
   },
   "settings": {

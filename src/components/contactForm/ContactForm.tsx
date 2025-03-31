@@ -102,9 +102,8 @@ const ContactForm = () => {
 
       {alertType && (
         <Alert
-          className="alertMessage"
+          className={`alertMessage ${alertType}`}
           severity={alertType}
-          variant="filled"
           onClose={resetAlert}
         >
           {alertMessage}

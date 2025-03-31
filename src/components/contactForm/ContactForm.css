@@ -17,6 +17,7 @@
   border: none;
   padding: var(--spacing-m);
   font-size: medium;
+  z-index: 1;
 }
 
 .contactFormInput:focus,
@@ -35,9 +36,14 @@
 .submitButton:disabled,
 .submitButton:disabled:hover,
 .submitButton:disabled:focus {
-  background-color: var(--button-disabled);
-  outline: 2px solid var(--button-disabled) !important;
+  border: 1px solid var(--button-disabled) !important;
   color: var(--text-color) !important;
+}
+
+.submitButton:disabled:before,
+.submitButton:disabled:hover:before,
+.submitButton:disabled:focus:before {
+  background-color: var(--button-disabled);
 }
 
 .button {
@@ -55,8 +61,10 @@
   fill: var(--button-text-color) !important;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: transparent;
+  outline: 1px solid var(--button-focus);
   cursor: pointer;
 }
 
@@ -68,7 +76,7 @@
   right: -7px;
   top: -9px;
   width: 100%;
-  z-index: -1;
+  opacity: 0.4;
 }
 
 .button:focus:before,
@@ -77,9 +85,18 @@
 }
 
 .alertMessage {
-  border-radius: 10px !important;
+  border-radius: 0 !important;
   margin-top: var(--spacing-s);
   font-family: var(--font) !important;
+  z-index: 1;
+}
+
+.alertMessage.success {
+  background-color: var(--success);
+}
+
+.alertMessage.error {
+  background-color: var(--error);
 }
 
 .alertMessage div:first-child {

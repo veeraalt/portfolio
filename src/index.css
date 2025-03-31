@@ -15,6 +15,8 @@
   --cactus-light: #b4c299;
   --cactus: #a2b381;
   --cactus-dark: #515e39;
+  --success: #abc9a3;
+  --error: #f1a1a0;
 }
 
 /* Brand colors */
@@ -53,11 +55,11 @@
   --footer-background: var(--grey-lightest);
   --icon-focus: var(--cactus-dark);
   --button-disabled: var(--grey-light);
-  --button-color: var(--cactus);
-  --button-shadow: var(--cactus-lightest);
-  --button-focus: var(--cactus-light);
+  --button-color: var(--cactus-dark);
+  --button-shadow: var(--cactus-light);
+  --button-focus: var(--cactus);
   --button-text-color: var(--black);
-  --background-image: url("data/cute-background.png");
+  --background-image: url("/data/cute-background.png");
 }
 
 /* Layout colors for dark color scheme */
@@ -78,10 +80,10 @@
   --footer-background: var(--grey-darkest);
   --icon-focus: var(--cactus);
   --button-color: var(--cactus-dark);
-  --button-shadow: var(--cactus-light);
-  --button-focus: var(--cactus);
-  --button-text-color: var(--black);
-  --background-image: url("data/cute-background-dark.png");
+  --button-shadow: var(--cactus);
+  --button-focus: var(--cactus-light);
+  --button-text-color: var(--white);
+  --background-image: url("/data/cute-background-dark.png");
 }
 
 /* Layout */
