@@ -15,12 +15,12 @@
   align-items: center;
   width: 80%;
   background-color: var(--title-background);
+  cursor: pointer;
 }
 
 .shortIntro {
   font-family: "Source Code Pro", monospace;
   color: var(--background-color) !important;
-  cursor: pointer;
   transition: opacity 0.3s ease-in-out;
   margin: var(--spacing-xs);
 }
