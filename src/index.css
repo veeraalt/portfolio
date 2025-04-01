@@ -60,6 +60,7 @@
   --button-focus: var(--cactus);
   --button-text-color: var(--black);
   --background-image: url("/data/cute-background.png");
+  --title-background: var(--grey-dark);
 }
 
 /* Layout colors for dark color scheme */
@@ -84,6 +85,7 @@
   --button-focus: var(--cactus-light);
   --button-text-color: var(--white);
   --background-image: url("/data/cute-background-dark.png");
+  --title-background: var(--cactus-light);
 }
 
 /* Layout */
