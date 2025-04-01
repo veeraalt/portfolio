@@ -24,7 +24,7 @@ export const Navbar = () => {
     { to: "/", text: t("common.home") },
     { to: "/projects", text: t("common.projects") },
     { to: "/cv", text: t("common.cv") },
-    { to: "/cssart", text: "CSS art" },
+    { to: "/cssart", text: t("common.art") },
     { to: "/contact", text: t("common.contact") },
   ];
 

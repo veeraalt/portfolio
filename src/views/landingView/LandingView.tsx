@@ -1,10 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import {
   FaUser as PersonIcon,
   FaCode as WorkIcon,
-  FaBook as HobbyIcon,
+  FaHammer as HobbyIcon,
 } from "react-icons/fa6";
 import "./LandingView.css";
 

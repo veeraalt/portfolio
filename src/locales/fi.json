@@ -5,6 +5,7 @@
     "projects": "Projektit",
     "cv": "CV",
     "contact": "Ota yhteyttä",
+    "art": "CSS-taide",
     "open": "Avaa",
     "close": "Sulje",
     "menu": "Menu",
@@ -19,11 +20,11 @@
   "home": {
     "name": "Veera Alt",
     "title": "fullstack-kehittäjä",
-    "intro1": "Asun Australiassa, ja olen erikoistunut responsiivisiin ja saavutettaviin nettisivuihin, jotka näyttävät hyvältä. Olen innostunut koko prosessista suunnittelusta julkaisuun, ja pysyn ajan tasalla uusimmista teknologioista ja trendeistä.",
+    "intro1": "Olen erikoistunut responsiivisiin ja saavutettaviin nettisivuihin, jotka näyttävät hyvältä. Olen innostunut koko prosessista suunnittelusta julkaisuun, ja pysyn ajan tasalla uusimmista teknologioista ja trendeistä.",
     "intro2": "Olen saanut osallistua monipuolisiin projekteihin, joihin kuuluu mm. ",
     "to": ", ",
     "and": " ja ",
-    "intro3": "Kun en ole koodaamassa, nautin boulderoinnista, lukemisesta ja erilaisiin projekteihin uppoutumisesta, kuten opetella neulomaan tai rakentamaan huonekaluja.",
+    "intro3": "Kun en ole koodaamassa, olen luultavasti boulderoimassa tai jonkin uuden projektin parissa, oli se sitten neulomisen opettelua tai huonekalujen rakentamista. Rakastan luomista ja ongelmanratkaisua kaikissa muodoissa.",
     "keyword1": "suuri yliopisto",
     "keyword2": "vilkas nettihuutokauppa",
     "keyword3": "kasvava IT-henkilöstöyritys"
@@ -48,7 +49,7 @@
       "email": "Sähköpostiosoite",
       "message": "Viesti",
       "successMessage": "Jes! Viestisi on lähetetty onnistuneesti.",
-      "errorMessage": "Oi ei! Jokin meni pieleen. Kokeile uudestaan myöhemmin tai ota yhteyttä Linkedinin kautta."
+      "errorMessage": "Oi ei! Jokin meni pieleen. Kokeile uudestaan myöhemmin tai ota yhteyttä linkedinin kautta."
     }
   },
   "settings": {
