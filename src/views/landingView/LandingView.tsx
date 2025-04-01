@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
   FaUser as PersonIcon,
@@ -10,10 +10,36 @@ import "./LandingView.css";
 const LandingView = () => {
   const { t } = useTranslation();
 
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    if (isHovered) {
+      interval = setInterval(() => {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % 5);
+      }, 1200); // Change word every 1.2 seconds
+    } else {
+      setCurrentWordIndex(0); // Reset to first word when not hovered
+    }
+
+    return () => clearInterval(interval); // Cleanup the interval on component unmount
+  }, [isHovered]);
+
   return (
     <div className="infoContainer">
       <h1 className="name">{t("home.name")}</h1>
-      <h2 className="shortIntro">{t("home.title")}</h2>
+      <div
+        className="titleContainer"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <h2 className="shortIntro">
+          {isHovered
+            ? t(`home.title${currentWordIndex + 1}`)
+            : t("home.title1")}
+        </h2>
+      </div>
       <div className="introOuterContainer card">
         <div className="introContainer">
           <PersonIcon />

@@ -19,7 +19,11 @@
 
   "home": {
     "name": "Veera Alt",
-    "title": "fullstack-kehittäjä",
+    "title1": "fullstack-kehittäjä",
+    "title2": "kiipeilijä",
+    "title3": "käsityöläinen",
+    "title4": "leffafani",
+    "title5": "ongelmanratkaisija",
     "intro1": "Olen erikoistunut responsiivisiin ja saavutettaviin nettisivuihin, jotka näyttävät hyvältä. Olen innostunut koko prosessista suunnittelusta julkaisuun, ja pysyn ajan tasalla uusimmista teknologioista ja trendeistä.",
     "intro2": "Olen saanut osallistua monipuolisiin projekteihin, joihin kuuluu mm. ",
     "to": ", ",
